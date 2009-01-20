@@ -1,0 +1,670 @@
+<ui version="4.0" >
+ <class>form_MainWindow</class>
+ <widget class="QMainWindow" name="form_MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Neutron 3D - Beta 0.0.1</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="media/images.qrc" >
+    <normaloff>:/incons/Neutron-logo.png</normaloff>:/incons/Neutron-logo.png</iconset>
+  </property>
+  <property name="styleSheet" >
+   <string notr="true" >/* ---------------------- All ---------------------- */
+* {
+	color: rgb(215, 215, 215);
+	background-color: rgb(72, 72, 72);
+	font-family: "Lucida Grande, Segoe UI";
+	font-size: 10px;
+}
+
+/* ---------------------- Line Edit ---------------------- */
+QLineEdit { 
+	color: rgb(40, 40, 40);
+	background-color: rgb(140, 160, 160);
+	selection-background-color: rgb(245, 150, 40);
+	padding: 0px 5px 0px 5px;
+	border: 2px groove rgb(45,45,45);
+	border-radius: 10px;
+}
+
+/* ---------------------- Label ---------------------- */
+QLabel { 
+	background-color: rgb(72, 72, 72, 0);
+}
+
+/* ---------------------- Push Button ---------------------- */
+QPushButton {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
+	border-radius: 4px;
+	border-width: 2px;	
+	border-style: groove;
+	border-left-color: rgb(60, 60, 60);
+	border-top-color: rgb(60, 60, 60);
+	border-right-color: rgb(45, 45, 45);
+	border-bottom-color: rgb(45, 45, 45);
+}
+
+QPushButton::pressed {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(92, 92, 92, 255), stop:0.5 rgba(70, 70, 70, 255), stop:0.59 rgba(80, 80, 80, 255), stop:1 rgba(92, 92, 92, 255));
+	border-radius: 4px;
+	border-width: 2px;	
+	border-style: groove;
+	border-left-color: rgb(45, 45, 45);
+	border-top-color: rgb(45, 45, 45);
+	border-right-color: rgb(60, 60, 60);
+	border-bottom-color: rgb(60, 60, 60);
+}
+
+QPushButton::checked {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(92, 92, 92, 255), stop:0.5 rgba(70, 70, 70, 255), stop:0.59 rgba(80, 80, 80, 255), stop:1 rgba(92, 92, 92, 255));
+
+	border-radius: 4px;
+	border-width: 2px;	
+	border-style: groove;
+	border-left-color: rgb(45, 45, 45);
+	border-top-color: rgb(45, 45, 45);
+	border-right-color: rgb(60, 60, 60);
+	border-bottom-color: rgb(60, 60, 60);
+}
+
+
+/* ---------------------- Combo Box ---------------------- */
+QComboBox {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
+	
+	border-radius: 4px;
+	border-width: 2px;	
+	border-style: groove;
+	border-left-color: rgb(60, 60, 60);
+	border-top-color: rgb(60, 60, 60);
+	border-right-color: rgb(45, 45, 45);
+	border-bottom-color: rgb(45, 45, 45);
+	padding: 0px 5px 0px 5px;
+ }
+
+QComboBox::drop-down { 
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
+	
+	image: url(:/dark/up-down-dark-arrow.png);
+	padding: 0px 2px 0px 2px;
+	width: 15px; 
+	border-left: 1px solid rgb(40,40,40);
+}
+
+QComboBox::down-arrow {
+	image: url(:/dark/up-down-dark-arrow.png);
+}
+
+ QComboBox QAbstractItemView {
+	color: black;
+	background-color:rgb(140, 160, 160);  
+	border: 2px groove rgb(45,45,45);
+	selection-color: black;
+	selection-background-color: rgb(245, 150, 40);
+	padding: 4px 0px 4px 0px;
+ }
+
+/* ---------------------- List View ---------------------- */
+QListView {
+	color: black;
+	background-color:rgb(140, 160, 160);
+	selection-background-color: rgb(245, 150, 40);
+	padding: 0px 5px 0px 5px;
+	border: 2px groove rgb(45,45,45);
+	border-radius: 4px;
+}
+
+/* ---------------------- Tree View ---------------------- */
+QTreeView {
+	color: black;
+	background-color:rgb(140, 160, 160);
+	selection-background-color: rgb(245, 150, 40);
+	padding: 0px 5px 0px 5px;
+	border: 2px groove rgb(45,45,45);
+	border-radius: 4px;
+}
+
+/* ---------------------- Group Box ---------------------- */
+QGroupBox {
+	background-color: rgb(82, 82, 82);
+	border: 1px solid rgb(45,45,45);
+	border-radius: 4px;
+}
+
+QGroupBox::title {
+	background-color: rgb(82,82,82,0);
+	subcontrol-origin: margin;
+	subcontrol-position: top left;
+	padding: 2px 5px 0px 15px;
+ }
+
+/* ---------------------- Text Edit ---------------------- */
+QTextEdit {
+	color: black;
+	background-color:rgb(140, 160, 160);
+	selection-background-color: rgb(245, 150, 40);
+	padding: 0px 5px 0px 5px;
+	border: 2px groove rgb(45,45,45);
+	border-radius: 4px;
+}
+
+
+
+/* ---------------------- Scroll Bar Vertical ---------------------- */
+QScrollBar {
+	border: 1px solid rgb(45,45,45);
+	border-radius: 4px;
+ }
+
+ QScrollBar::handle::vertical {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
+
+	image: url(:/dark/up-down-dark-arrow.png);
+	min-height: 30px;
+	border: 1px solid rgb(45,45,45);
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+ }
+
+QScrollBar::down-arrow::vertical {
+	background: green;
+	min-height: 10px;
+	min-width: 10px;
+}
+
+QScrollBar::sub-page::vertical {
+	background: rgb(80,80,80);
+}
+
+QScrollBar::add-page::vertical {
+	background: rgb(110,110,110);
+}
+
+/* ---------------------- Scroll Bar Horizontal ---------------------- */
+QScrollBar {
+	border: 1px solid rgb(45,45,45);
+	border-radius: 4px;
+ }
+
+ QScrollBar::handle::horizontal {
+		background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
+
+	image: url(:/dark/left-right-dark-arrow.png);
+	min-width: 30px;
+	border: 1px solid rgb(45,45,45);
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+ }
+
+QScrollBar::down-arrow::horizontal {
+	background: green;
+	min-height: 10px;
+	min-width: 10px;
+}
+
+QScrollBar::sub-page::horizontal {
+	background: rgb(80,80,80);
+}
+
+QScrollBar::add-page::horizontal {
+	background: rgb(110,110,110);
+}
+
+
+/* ---------------------- Check Box ---------------------- */
+QCheckBox {
+	background-color: rgb(72,72,72,0);
+}
+
+QCheckBox::indicator {
+	background-color: rgb(140, 160, 160);
+	selection-background-color: rgb(245, 150, 40);
+	border: 2px groove rgb(45,45,45);
+	border-radius: 4px;
+	width: 13px;
+	height: 13px;
+}
+QCheckBox::indicator::pressed {
+	background-color: rgb(245, 150, 40);
+}
+
+ QCheckBox::indicator:checked {
+	background-color: rgb(245, 150, 40);
+	width: 13px;
+	height: 13px;
+	image: url(:/dark/checked-dark-checkBox.png);
+ }
+
+/* ---------------------- Radio Button ---------------------- */
+QRadioButton {
+	background-color: rgb(72,72,72,0);
+}
+
+QRadioButton::indicator {
+	background-color: rgb(140, 160, 160);
+	border: 2px groove rgb(45,45,45);
+	border-radius: 9px;
+	width: 14px;
+	height: 14px;
+}
+
+ QRadioButton::indicator:checked {
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(245, 150, 40, 255), stop:1 rgba(235, 117, 0, 255));
+
+	width: 14px;
+	height: 14px;
+	image: url(:/dark/right-dark-arrow.png);
+ }
+
+/* ---------------------- Spin Box ---------------------- */
+QSpinBox {
+	color: black;
+	background-color: rgb(140, 160, 160);
+	selection-background-color: rgb(245, 150, 40);
+	border-radius: 4px;
+	border-width: 2px;	
+	border-style: groove;
+	border-left-color: rgb(60, 60, 60);
+	border-top-color: rgb(60, 60, 60);
+	border-right-color: rgb(45, 45, 45);
+	border-bottom-color: rgb(45, 45, 45);
+	padding: 0px 5px 0px 5px;
+ }
+
+QSpinBox::up-button { 
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
+	
+	image: url(:/dark/up-dark-arrow.png);
+	width: 15px; 
+	border-left: 1px solid rgb(40,40,40);
+	border-bottom: 1px solid rgb(40,40,40);
+	border-top-right-radius: 4px;
+}
+
+QSpinBox::up-button::pressed {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(92, 92, 92, 255), stop:0.5 rgba(70, 70, 70, 255), stop:0.59 rgba(80, 80, 80, 255), stop:1 rgba(92, 92, 92, 255));
+}
+
+QSpinBox::down-button {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
+	
+	image: url(:/dark/down-dark-arrow.png);
+	width: 15px; 
+	border-left: 1px solid rgb(40,40,40);
+	border-top: 1px solid rgb(40,40,40);
+	border-bottom-right-radius: 4px;
+}
+
+QSpinBox::down-button::pressed {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(92, 92, 92, 255), stop:0.5 rgba(70, 70, 70, 255), stop:0.59 rgba(80, 80, 80, 255), stop:1 rgba(92, 92, 92, 255));
+}
+
+/* ---------------------- Double Spin Box ---------------------- */
+QDoubleSpinBox {
+	color: black;
+	background-color: rgb(140, 160, 160);
+	selection-background-color: rgb(245, 150, 40);
+	border-radius: 4px;
+	border-width: 2px;	
+	border-style: groove;
+	border-left-color: rgb(60, 60, 60);
+	border-top-color: rgb(60, 60, 60);
+	border-right-color: rgb(45, 45, 45);
+	border-bottom-color: rgb(45, 45, 45);
+	padding: 0px 5px 0px 5px;
+ }
+
+QDoubleSpinBox::up-button { 
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
+	
+	image: url(:/dark/up-dark-arrow.png);
+	width: 15px; 
+	border-left: 1px solid rgb(40,40,40);
+	border-bottom: 1px solid rgb(40,40,40);
+	border-top-right-radius: 4px;
+}
+
+QDoubleSpinBox::up-button::pressed {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(92, 92, 92, 255), stop:0.5 rgba(70, 70, 70, 255), stop:0.59 rgba(80, 80, 80, 255), stop:1 rgba(92, 92, 92, 255));
+}
+
+QDoubleSpinBox::down-button {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
+	
+	image: url(:/dark/down-dark-arrow.png);
+	width: 15px; 
+	border-left: 1px solid rgb(40,40,40);
+	border-top: 1px solid rgb(40,40,40);
+	border-bottom-right-radius: 4px;
+}
+
+QDoubleSpinBox::down-button::pressed {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(92, 92, 92, 255), stop:0.5 rgba(70, 70, 70, 255), stop:0.59 rgba(80, 80, 80, 255), stop:1 rgba(92, 92, 92, 255));
+}
+
+/* ---------------------- Line Edit ---------------------- */
+QProgressBar { 
+	color: rgb(215, 215, 215);
+	background-color: rgb(40, 40, 40);
+	border: 2px groove rgb(45,45,45);
+	border-radius: 4px;
+	text-align: center;
+}
+QProgressBar::chunk { 
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(60, 75, 75, 255), stop:0.5 rgba(36, 45, 45, 255), stop:0.59 rgba(49, 61, 61, 255), stop:1 rgba(142, 177, 177, 255));
+
+	border-right: 1px solid rgb(40,40,40);
+	width: 20px;
+	margin: 0px 0.2px 0px 0px;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" />
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Scene" />
+    <addaction name="actionOpen_Scene" />
+    <addaction name="separator" />
+    <addaction name="actionSave_Scene" />
+    <addaction name="actionSave_Scene_As" />
+    <addaction name="separator" />
+    <addaction name="actionImport" />
+    <addaction name="actionExport_All" />
+    <addaction name="actionExport_Select" />
+    <addaction name="separator" />
+    <addaction name="actionProject_Manager" />
+    <addaction name="separator" />
+    <addaction name="actionRecent_Files" />
+    <addaction name="actionRecent_Project" />
+    <addaction name="separator" />
+   </widget>
+   <widget class="QMenu" name="menuEdit" >
+    <property name="title" >
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo" />
+    <addaction name="actionRendo" />
+    <addaction name="separator" />
+    <addaction name="actionCut" />
+    <addaction name="actionCopy" />
+    <addaction name="actionPaste" />
+    <addaction name="actionDelete" />
+    <addaction name="separator" />
+    <addaction name="actionSelect_All" />
+    <addaction name="actionSelect_Branch" />
+    <addaction name="actionSelect_Tree" />
+    <addaction name="separator" />
+    <addaction name="actionPreferences" />
+   </widget>
+   <widget class="QMenu" name="menuView" >
+    <property name="title" >
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuLayout_2" >
+     <property name="title" >
+      <string>Layout</string>
+     </property>
+     <addaction name="actionAnimation_2" />
+     <addaction name="actionModeling_2" />
+     <addaction name="actionRender_2" />
+     <addaction name="separator" />
+     <addaction name="actionOpen" />
+     <addaction name="actionSave" />
+     <addaction name="actionSave_As" />
+     <addaction name="actionRestore" />
+     <addaction name="actionRestore_Default" />
+    </widget>
+    <addaction name="menuLayout_2" />
+   </widget>
+   <widget class="QMenu" name="menuHelp" >
+    <property name="title" >
+     <string>Display</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuWindow" >
+    <property name="title" >
+     <string>Window</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp_2" >
+    <property name="title" >
+     <string>Help</string>
+    </property>
+    <addaction name="actionNeutron_Help" />
+    <addaction name="actionWhat_s_New" />
+    <addaction name="actionAbout" />
+   </widget>
+   <addaction name="menuFile" />
+   <addaction name="menuEdit" />
+   <addaction name="menuView" />
+   <addaction name="menuHelp" />
+   <addaction name="menuWindow" />
+   <addaction name="menuHelp_2" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <action name="actionNew_Scene" >
+   <property name="text" >
+    <string>New Scene</string>
+   </property>
+  </action>
+  <action name="actionOpen_Scene" >
+   <property name="text" >
+    <string>Open Scene</string>
+   </property>
+  </action>
+  <action name="actionSave_Scene" >
+   <property name="text" >
+    <string>Save Scene</string>
+   </property>
+  </action>
+  <action name="actionSave_Scene_As" >
+   <property name="text" >
+    <string>Save Scene As...</string>
+   </property>
+  </action>
+  <action name="actionImport" >
+   <property name="text" >
+    <string>Import...</string>
+   </property>
+  </action>
+  <action name="actionExport_All" >
+   <property name="text" >
+    <string>Export All...</string>
+   </property>
+  </action>
+  <action name="actionExport_Select" >
+   <property name="text" >
+    <string>Export Selection...</string>
+   </property>
+  </action>
+  <action name="actionProject_Manager" >
+   <property name="text" >
+    <string>Project Manager</string>
+   </property>
+  </action>
+  <action name="actionRecent_Files" >
+   <property name="text" >
+    <string>Recent Files</string>
+   </property>
+  </action>
+  <action name="actionRecent_Project" >
+   <property name="text" >
+    <string>Recent Project</string>
+   </property>
+  </action>
+  <action name="actionUndo" >
+   <property name="text" >
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionRendo" >
+   <property name="text" >
+    <string>Rendo</string>
+   </property>
+  </action>
+  <action name="actionCopy" >
+   <property name="text" >
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionCut" >
+   <property name="text" >
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionPaste" >
+   <property name="text" >
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionDelete" >
+   <property name="text" >
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionSelect_All" >
+   <property name="text" >
+    <string>Select All</string>
+   </property>
+  </action>
+  <action name="actionSelect_Branch" >
+   <property name="text" >
+    <string>Select Branch</string>
+   </property>
+  </action>
+  <action name="actionSelect_Tree" >
+   <property name="text" >
+    <string>Select Tree</string>
+   </property>
+  </action>
+  <action name="actionDefault" >
+   <property name="text" >
+    <string>Default</string>
+   </property>
+  </action>
+  <action name="actionAnimation" >
+   <property name="text" >
+    <string>Animation</string>
+   </property>
+  </action>
+  <action name="actionRender" >
+   <property name="text" >
+    <string>Render</string>
+   </property>
+  </action>
+  <action name="actionModeling" >
+   <property name="text" >
+    <string>Modeling</string>
+   </property>
+  </action>
+  <action name="actionSave_Layout" >
+   <property name="text" >
+    <string>Save Layout</string>
+   </property>
+  </action>
+  <action name="actionOpen_Layout" >
+   <property name="text" >
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionDelete_Layout" >
+   <property name="text" >
+    <string>Save As...</string>
+   </property>
+  </action>
+  <action name="actionDelete_2" >
+   <property name="text" >
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionRestore_Defaults" >
+   <property name="text" >
+    <string>Restore Defaults</string>
+   </property>
+  </action>
+  <action name="actionModeling_2" >
+   <property name="text" >
+    <string>Modeling</string>
+   </property>
+  </action>
+  <action name="actionAnimation_2" >
+   <property name="text" >
+    <string>Animation</string>
+   </property>
+  </action>
+  <action name="actionRender_2" >
+   <property name="text" >
+    <string>Render</string>
+   </property>
+  </action>
+  <action name="actionOpen" >
+   <property name="text" >
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave" >
+   <property name="text" >
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_As" >
+   <property name="text" >
+    <string>Save As...</string>
+   </property>
+  </action>
+  <action name="actionRestore" >
+   <property name="text" >
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="actionRestore_Default" >
+   <property name="text" >
+    <string>Restore Default</string>
+   </property>
+  </action>
+  <action name="actionPreferences" >
+   <property name="text" >
+    <string>Preferences...</string>
+   </property>
+  </action>
+  <action name="actionNeutron_Help" >
+   <property name="text" >
+    <string>Neutron Help</string>
+   </property>
+  </action>
+  <action name="actionWhat_s_New" >
+   <property name="text" >
+    <string>What's New in Neutron</string>
+   </property>
+  </action>
+  <action name="actionAbout" >
+   <property name="text" >
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="media/images.qrc" />
+ </resources>
+ <connections/>
+</ui>
