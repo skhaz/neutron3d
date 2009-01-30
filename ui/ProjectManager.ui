@@ -21,12 +21,6 @@
     <height>480</height>
    </size>
   </property>
-  <property name="maximumSize" >
-   <size>
-    <width>780</width>
-    <height>480</height>
-   </size>
-  </property>
   <property name="windowTitle" >
    <string>Form</string>
   </property>
@@ -385,722 +379,916 @@ QProgressBar::chunk {
 
 </string>
   </property>
-  <widget class="QLabel" name="lbl_projectPath" >
-   <property name="geometry" >
-    <rect>
-     <x>20</x>
-     <y>10</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
+  <layout class="QGridLayout" name="gridLayout_3" >
+   <property name="margin" >
+    <number>5</number>
    </property>
-   <property name="font" >
-    <font>
-     <family>Lucida Grande, Segoe UI</family>
-     <pointsize>-1</pointsize>
-    </font>
+   <property name="spacing" >
+    <number>5</number>
    </property>
-   <property name="layoutDirection" >
-    <enum>Qt::LeftToRight</enum>
-   </property>
-   <property name="autoFillBackground" >
-    <bool>false</bool>
-   </property>
-   <property name="text" >
-    <string>Project Path:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="tbx_path" >
-   <property name="geometry" >
-    <rect>
-     <x>11</x>
-     <y>30</y>
-     <width>600</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="font" >
-    <font>
-     <family>Lucida Grande, Segoe UI</family>
-     <pointsize>-1</pointsize>
-    </font>
-   </property>
-   <property name="layoutDirection" >
-    <enum>Qt::LeftToRight</enum>
-   </property>
-   <property name="styleSheet" >
-    <string notr="true" />
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-   <property name="frame" >
-    <bool>true</bool>
-   </property>
-   <property name="cursorPosition" >
-    <number>0</number>
-   </property>
-   <property name="readOnly" >
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QGroupBox" name="grb_selectProject" >
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>60</y>
-     <width>370</width>
-     <height>370</height>
-    </rect>
-   </property>
-   <property name="font" >
-    <font>
-     <family>Lucida Grande, Segoe UI</family>
-     <pointsize>-1</pointsize>
-    </font>
-   </property>
-   <property name="layoutDirection" >
-    <enum>Qt::LeftToRight</enum>
-   </property>
-   <property name="styleSheet" >
-    <string notr="true" />
-   </property>
-   <property name="title" >
-    <string>Select a Project</string>
-   </property>
-   <widget class="QLabel" name="lbl_shortBy" >
-    <property name="geometry" >
-     <rect>
-      <x>10</x>
-      <y>330</y>
-      <width>121</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="layoutDirection" >
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="text" >
-     <string>Sort By:</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_importList" >
-    <property name="geometry" >
-     <rect>
-      <x>258</x>
-      <y>180</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="text" >
-     <string>Import List</string>
-    </property>
-   </widget>
-   <widget class="QListView" name="lst_project" >
-    <property name="geometry" >
-     <rect>
-      <x>8</x>
-      <y>20</y>
-      <width>240</width>
-      <height>300</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="cursor" stdset="0" >
-     <cursorShape>ArrowCursor</cursorShape>
-    </property>
-    <property name="toolTip" >
-     <string/>
-    </property>
-    <property name="statusTip" >
-     <string/>
-    </property>
-    <property name="whatsThis" >
-     <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+   <item row="0" column="0" >
+    <layout class="QVBoxLayout" name="verticalLayout_3" >
+     <item>
+      <widget class="QLabel" name="lbl_projectPath" >
+       <property name="font" >
+        <font>
+         <family>Lucida Grande, Segoe UI</family>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection" >
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground" >
+        <bool>false</bool>
+       </property>
+       <property name="text" >
+        <string>Project Path:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="tbx_path" >
+       <property name="font" >
+        <font>
+         <family>Lucida Grande, Segoe UI</family>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection" >
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet" >
+        <string notr="true" />
+       </property>
+       <property name="text" >
+        <string/>
+       </property>
+       <property name="frame" >
+        <bool>true</bool>
+       </property>
+       <property name="cursorPosition" >
+        <number>0</number>
+       </property>
+       <property name="readOnly" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" >
+    <layout class="QHBoxLayout" name="horizontalLayout" >
+     <item>
+      <widget class="QGroupBox" name="grb_selectProject" >
+       <property name="font" >
+        <font>
+         <family>Lucida Grande, Segoe UI</family>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection" >
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet" >
+        <string notr="true" />
+       </property>
+       <property name="title" >
+        <string>Select a Project</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout" >
+        <property name="leftMargin" >
+         <number>5</number>
+        </property>
+        <property name="topMargin" >
+         <number>20</number>
+        </property>
+        <property name="rightMargin" >
+         <number>5</number>
+        </property>
+        <property name="bottomMargin" >
+         <number>5</number>
+        </property>
+        <property name="spacing" >
+         <number>5</number>
+        </property>
+        <item row="0" column="0" colspan="2" >
+         <widget class="QListView" name="lst_project" >
+          <property name="font" >
+           <font>
+            <family>Lucida Grande, Segoe UI</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="cursor" stdset="0" >
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="toolTip" >
+           <string/>
+          </property>
+          <property name="statusTip" >
+           <string/>
+          </property>
+          <property name="whatsThis" >
+           <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 &lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Lucida Grande ,Segoe UI'; font-weight:400; font-style:normal;">
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">List of current projects&lt;/p>&lt;/body>&lt;/html></string>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="tabKeyNavigation" >
-     <bool>true</bool>
-    </property>
-    <property name="dragEnabled" >
-     <bool>true</bool>
-    </property>
-    <property name="dragDropMode" >
-     <enum>QAbstractItemView::DragOnly</enum>
-    </property>
-    <property name="resizeMode" >
-     <enum>QListView::Fixed</enum>
-    </property>
-    <property name="layoutMode" >
-     <enum>QListView::SinglePass</enum>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_addProject" >
-    <property name="geometry" >
-     <rect>
-      <x>258</x>
-      <y>50</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="whatsThis" >
-     <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
-&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Lucida Grande ,Segoe UI'; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Click to add an existing project.&lt;/p>&lt;/body>&lt;/html></string>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="text" >
-     <string>Add Project</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_exportList" >
-    <property name="geometry" >
-     <rect>
-      <x>258</x>
-      <y>210</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="text" >
-     <string>Export List</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_setActive" >
-    <property name="geometry" >
-     <rect>
-      <x>258</x>
-      <y>100</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="text" >
-     <string>Set Active</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_removeFromList" >
-    <property name="geometry" >
-     <rect>
-      <x>258</x>
-      <y>130</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="text" >
-     <string>Remove from List</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_newProject" >
-    <property name="geometry" >
-     <rect>
-      <x>258</x>
-      <y>20</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="whatsThis" >
-     <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+          </property>
+          <property name="styleSheet" >
+           <string notr="true" />
+          </property>
+          <property name="tabKeyNavigation" >
+           <bool>true</bool>
+          </property>
+          <property name="dragEnabled" >
+           <bool>true</bool>
+          </property>
+          <property name="dragDropMode" >
+           <enum>QAbstractItemView::DragOnly</enum>
+          </property>
+          <property name="resizeMode" >
+           <enum>QListView::Fixed</enum>
+          </property>
+          <property name="layoutMode" >
+           <enum>QListView::SinglePass</enum>
+          </property>
+         </widget>
+        </item>
+        <item rowspan="2" row="0" column="2" >
+         <layout class="QVBoxLayout" name="verticalLayout" >
+          <item>
+           <widget class="QPushButton" name="bt_newProject" >
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="whatsThis" >
+             <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 &lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Lucida Grande ,Segoe UI'; font-weight:400; font-style:normal;">
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Click to create a new project.&lt;/p>&lt;/body>&lt;/html></string>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="text" >
-     <string>New Project</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_deleteProject" >
-    <property name="geometry" >
-     <rect>
-      <x>258</x>
-      <y>260</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="toolTip" >
-     <string/>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="text" >
-     <string>Delete Project</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="cbx_shortBy" >
-    <property name="geometry" >
-     <rect>
-      <x>148</x>
-      <y>330</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="layoutDirection" >
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <item>
-     <property name="text" >
-      <string>All</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Name</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Date</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Size</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>-----------------</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Add New</string>
-     </property>
-    </item>
-   </widget>
-  </widget>
-  <widget class="QGroupBox" name="grb_defineFolderType" >
-   <property name="geometry" >
-    <rect>
-     <x>390</x>
-     <y>60</y>
-     <width>380</width>
-     <height>370</height>
-    </rect>
-   </property>
-   <property name="font" >
-    <font>
-     <family>Lucida Grande, Segoe UI</family>
-     <pointsize>-1</pointsize>
-    </font>
-   </property>
-   <property name="layoutDirection" >
-    <enum>Qt::LeftToRight</enum>
-   </property>
-   <property name="styleSheet" >
-    <string notr="true" />
-   </property>
-   <property name="title" >
-    <string>Define Folder Type</string>
-   </property>
-   <widget class="QTreeView" name="trw_defineFolderType" >
-    <property name="geometry" >
-     <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>240</width>
-      <height>300</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_makeDefault" >
-    <property name="enabled" >
-     <bool>true</bool>
-    </property>
-    <property name="geometry" >
-     <rect>
-      <x>260</x>
-      <y>20</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="text" >
-     <string>Make Default</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_usePreset" >
-    <property name="geometry" >
-     <rect>
-      <x>12</x>
-      <y>330</y>
-      <width>66</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="layoutDirection" >
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="text" >
-     <string>Use Preset</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_addFolder" >
-    <property name="geometry" >
-     <rect>
-      <x>260</x>
-      <y>50</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="text" >
-     <string>Add Folder</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_folderType" >
-    <property name="geometry" >
-     <rect>
-      <x>260</x>
-      <y>100</y>
-      <width>100</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="layoutDirection" >
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="text" >
-     <string>Folder Type</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="cbx_usePreset" >
-    <property name="geometry" >
-     <rect>
-      <x>79</x>
-      <y>330</y>
-      <width>171</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="layoutDirection" >
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <item>
-     <property name="text" >
-      <string>Small Project</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Medium Project</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Big Project</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>-----------------</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Add New Preset</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QComboBox" name="cbx_folderType" >
-    <property name="geometry" >
-     <rect>
-      <x>260</x>
-      <y>120</y>
-      <width>110</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="sizePolicy" >
-     <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="layoutDirection" >
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="maxVisibleItems" >
-     <number>16</number>
-    </property>
-    <item>
-     <property name="text" >
-      <string>General</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Animations</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Characters</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Data</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Material Library</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Models</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Scenes</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Sounds</string>
-     </property>
-     <property name="icon" >
-      <iconset>
-       <normalon>images/sound.png</normalon>
-      </iconset>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Textures</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>-----------------</string>
-     </property>
-    </item>
-    <item>
-     <property name="text" >
-      <string>Add New Type</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QPushButton" name="bt_deleteFolder" >
-    <property name="geometry" >
-     <rect>
-      <x>260</x>
-      <y>180</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font" >
-     <font>
-      <family>Lucida Grande, Segoe UI</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet" >
-     <string notr="true" />
-    </property>
-    <property name="text" >
-     <string>Delete Folder</string>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QPushButton" name="bt_close" >
-   <property name="geometry" >
-    <rect>
-     <x>650</x>
-     <y>440</y>
-     <width>100</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="minimumSize" >
-    <size>
-     <width>100</width>
-     <height>30</height>
-    </size>
-   </property>
-   <property name="maximumSize" >
-    <size>
-     <width>100</width>
-     <height>30</height>
-    </size>
-   </property>
-   <property name="font" >
-    <font>
-     <family>Lucida Grande, Segoe UI</family>
-     <pointsize>-1</pointsize>
-    </font>
-   </property>
-   <property name="whatsThis" >
-    <string/>
-   </property>
-   <property name="styleSheet" >
-    <string notr="true" />
-   </property>
-   <property name="text" >
-    <string>Close</string>
-   </property>
-  </widget>
-  <zorder>grb_defineFolderType</zorder>
-  <zorder>grb_selectProject</zorder>
-  <zorder>lbl_projectPath</zorder>
-  <zorder>tbx_path</zorder>
-  <zorder>bt_close</zorder>
+            </property>
+            <property name="styleSheet" >
+             <string notr="true" />
+            </property>
+            <property name="text" >
+             <string>New Project</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bt_addProject" >
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="whatsThis" >
+             <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Lucida Grande ,Segoe UI'; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Click to add an existing project.&lt;/p>&lt;/body>&lt;/html></string>
+            </property>
+            <property name="styleSheet" >
+             <string notr="true" />
+            </property>
+            <property name="text" >
+             <string>Add Project</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_3" >
+            <property name="orientation" >
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType" >
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bt_setActive" >
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet" >
+             <string notr="true" />
+            </property>
+            <property name="text" >
+             <string>Set Active</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bt_removeFromList" >
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet" >
+             <string notr="true" />
+            </property>
+            <property name="text" >
+             <string>Remove from List</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2" >
+            <property name="orientation" >
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType" >
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bt_importList" >
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet" >
+             <string notr="true" />
+            </property>
+            <property name="text" >
+             <string>Import List</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bt_exportList" >
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet" >
+             <string notr="true" />
+            </property>
+            <property name="text" >
+             <string>Export List</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer" >
+            <property name="orientation" >
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType" >
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bt_deleteProject" >
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="toolTip" >
+             <string/>
+            </property>
+            <property name="styleSheet" >
+             <string notr="true" />
+            </property>
+            <property name="text" >
+             <string>Delete Project</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_4" >
+            <property name="orientation" >
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QLabel" name="lbl_shortBy" >
+          <property name="font" >
+           <font>
+            <family>Lucida Grande, Segoe UI</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="layoutDirection" >
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text" >
+           <string>Sort By:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QComboBox" name="cbx_shortBy" >
+          <property name="minimumSize" >
+           <size>
+            <width>150</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>16777215</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="font" >
+           <font>
+            <family>Lucida Grande, Segoe UI</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="layoutDirection" >
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet" >
+           <string notr="true" />
+          </property>
+          <item>
+           <property name="text" >
+            <string>All</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Name</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Date</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Size</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>-----------------</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Add New</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="grb_defineFolderType" >
+       <property name="font" >
+        <font>
+         <family>Lucida Grande, Segoe UI</family>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection" >
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet" >
+        <string notr="true" />
+       </property>
+       <property name="title" >
+        <string>Define Folder Type</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2" >
+        <property name="leftMargin" >
+         <number>5</number>
+        </property>
+        <property name="topMargin" >
+         <number>20</number>
+        </property>
+        <property name="rightMargin" >
+         <number>5</number>
+        </property>
+        <property name="bottomMargin" >
+         <number>5</number>
+        </property>
+        <property name="spacing" >
+         <number>5</number>
+        </property>
+        <item row="0" column="0" colspan="2" >
+         <widget class="QTreeView" name="trw_defineFolderType" >
+          <property name="font" >
+           <font>
+            <family>Lucida Grande, Segoe UI</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet" >
+           <string notr="true" />
+          </property>
+         </widget>
+        </item>
+        <item rowspan="2" row="0" column="2" >
+         <layout class="QVBoxLayout" name="verticalLayout_2" >
+          <item>
+           <widget class="QPushButton" name="bt_makeDefault" >
+            <property name="enabled" >
+             <bool>true</bool>
+            </property>
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet" >
+             <string notr="true" />
+            </property>
+            <property name="text" >
+             <string>Make Default</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bt_addFolder" >
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet" >
+             <string notr="true" />
+            </property>
+            <property name="text" >
+             <string>Add Folder</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_5" >
+            <property name="orientation" >
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType" >
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_folderType" >
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="layoutDirection" >
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="text" >
+             <string>Folder Type</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cbx_folderType" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="layoutDirection" >
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet" >
+             <string notr="true" />
+            </property>
+            <property name="maxVisibleItems" >
+             <number>16</number>
+            </property>
+            <item>
+             <property name="text" >
+              <string>General</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Animations</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Characters</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Data</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Material Library</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Models</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Scenes</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Sounds</string>
+             </property>
+             <property name="icon" >
+              <iconset>
+               <normalon>images/sound.png</normalon>
+              </iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Textures</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>-----------------</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Add New Type</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_6" >
+            <property name="orientation" >
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType" >
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bt_deleteFolder" >
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Lucida Grande, Segoe UI</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet" >
+             <string notr="true" />
+            </property>
+            <property name="text" >
+             <string>Delete Folder</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_7" >
+            <property name="orientation" >
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QLabel" name="lbl_usePreset" >
+          <property name="font" >
+           <font>
+            <family>Lucida Grande, Segoe UI</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="layoutDirection" >
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text" >
+           <string>Use Preset</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QComboBox" name="cbx_usePreset" >
+          <property name="minimumSize" >
+           <size>
+            <width>150</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>16777215</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="font" >
+           <font>
+            <family>Lucida Grande, Segoe UI</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="layoutDirection" >
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet" >
+           <string notr="true" />
+          </property>
+          <item>
+           <property name="text" >
+            <string>Small Project</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Medium Project</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Big Project</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>-----------------</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Add New Preset</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" >
+    <layout class="QHBoxLayout" name="horizontalLayout_2" >
+     <item>
+      <widget class="QPushButton" name="bt_close" >
+       <property name="minimumSize" >
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize" >
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font" >
+        <font>
+         <family>Lucida Grande, Segoe UI</family>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="whatsThis" >
+        <string/>
+       </property>
+       <property name="styleSheet" >
+        <string notr="true" />
+       </property>
+       <property name="text" >
+        <string>Close</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer" >
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>298</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <tabstops>
   <tabstop>tbx_path</tabstop>
@@ -1118,10 +1306,9 @@ p, li { white-space: pre-wrap; }
   <tabstop>bt_addFolder</tabstop>
   <tabstop>cbx_folderType</tabstop>
   <tabstop>cbx_usePreset</tabstop>
-  <tabstop>bt_close</tabstop>
  </tabstops>
  <resources>
-  <include location="media/images.qrc" />
+  <include location="../media/images.qrc" />
  </resources>
  <connections/>
 </ui>
