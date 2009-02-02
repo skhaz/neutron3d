@@ -2426,7 +2426,7 @@ p, li { white-space: pre-wrap; }
   <tabstop>bt_help</tabstop>
  </tabstops>
  <resources>
-  <include location="media/images.qrc" />
+  <include location="../media/images.qrc" />
  </resources>
  <connections/>
 </ui>
