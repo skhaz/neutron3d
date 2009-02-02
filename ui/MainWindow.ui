@@ -13,7 +13,7 @@
    <string>Neutron 3D - Beta 0.0.1</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="media/images.qrc" >
+   <iconset resource="../media/images.qrc" >
     <normaloff>:/incons/Neutron-logo.png</normaloff>:/incons/Neutron-logo.png</iconset>
   </property>
   <property name="styleSheet" >
@@ -664,7 +664,7 @@ QProgressBar::chunk {
   </action>
  </widget>
  <resources>
-  <include location="media/images.qrc" />
+  <include location="../media/images.qrc" />
  </resources>
  <connections/>
 </ui>

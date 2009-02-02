@@ -439,6 +439,12 @@ QProgressBar::chunk {
    </item>
    <item row="1" column="0" >
     <layout class="QHBoxLayout" name="horizontalLayout" >
+     <property name="spacing" >
+      <number>5</number>
+     </property>
+     <property name="leftMargin" >
+      <number>0</number>
+     </property>
      <item>
       <widget class="QGroupBox" name="grb_selectProject" >
        <property name="font" >
@@ -554,6 +560,22 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item>
+           <spacer name="verticalSpacer_9" >
+            <property name="orientation" >
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType" >
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>20</width>
+              <height>10</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QPushButton" name="bt_addProject" >
             <property name="minimumSize" >
              <size>
@@ -633,6 +655,22 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item>
+           <spacer name="verticalSpacer_11" >
+            <property name="orientation" >
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType" >
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>20</width>
+              <height>10</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QPushButton" name="bt_removeFromList" >
             <property name="minimumSize" >
              <size>
@@ -703,6 +741,22 @@ p, li { white-space: pre-wrap; }
              <string>Import List</string>
             </property>
            </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_10" >
+            <property name="orientation" >
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType" >
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>20</width>
+              <height>10</height>
+             </size>
+            </property>
+           </spacer>
           </item>
           <item>
            <widget class="QPushButton" name="bt_exportList" >
@@ -949,6 +1003,22 @@ p, li { white-space: pre-wrap; }
              <string>Make Default</string>
             </property>
            </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_8" >
+            <property name="orientation" >
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType" >
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>20</width>
+              <height>10</height>
+             </size>
+            </property>
+           </spacer>
           </item>
           <item>
            <widget class="QPushButton" name="bt_addFolder" >
