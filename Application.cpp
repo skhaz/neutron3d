@@ -1,5 +1,8 @@
 
 #include "Application.h"
+#include "QFile"
+#include "QString"
+#include "QTextStream"
 
 
 
@@ -17,7 +20,10 @@ Application::~Application()
 
 void Application::postLaunch()
 {
-	QString filename("themes/dark/dark.theme");
+	mainWindow->showMaximized();
+
+	// carrega o stylesheet
+	QString filename("/media/neutro3D_styleSheet.css");
 	QFile file(filename);
 
 	if (file.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -29,5 +35,6 @@ void Application::postLaunch()
 	}
 
 	mainWindow->showMaximized();
+
 }
 
