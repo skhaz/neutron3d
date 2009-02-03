@@ -7,7 +7,11 @@ OBJECTS_DIR = tmp/obj
 MOC_DIR = tmp/moc
 RCC_DIR = tmp/rcc
 
-CONFIG += warn_on
+CONFIG += \
+	ordered \
+	warn_on
+
+SUBDIRS += ui
 
 SOURCES += \
 	Main.cpp \
@@ -18,5 +22,6 @@ HEADERS += \
 	Application.h \
 	MainWindow.h
 
-include(ui/Ui.pri)
+RESOURCES += \
+	media/themes/dark/dark.qrc
 
