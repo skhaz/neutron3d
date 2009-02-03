@@ -17,6 +17,17 @@ Application::~Application()
 
 void Application::postLaunch()
 {
+	QString filename("themes/dark.theme");
+	QFile file(filename);
+
+	if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+	{
+		QString style = QTextStream(&file).readAll();
+		file.close();
+
+		setStyleSheet(style);
+	}
+
 	mainWindow->showMaximized();
 }
 
