@@ -3,7 +3,7 @@ TEMPLATE = app
 TARGET = neutron3d
 DESTDIR = output
 
-OBJECTS_DIR = tmp/obj
+OBJECTS_DIR = temp/obj
 MOC_DIR = temp/moc
 RCC_DIR = temp/rcc
 
