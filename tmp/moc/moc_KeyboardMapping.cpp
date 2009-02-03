@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'KeyboardMapping.h'
 **
-** Created: Tue 3. Feb 13:59:58 2009
+** Created: Tue Feb 3 12:14:28 2009
 **      by: The Qt Meta Object Compiler version 59 (Qt 4.4.3)
 **
 ** WARNING! All changes made in this file will be lost!

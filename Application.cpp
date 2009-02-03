@@ -17,7 +17,7 @@ Application::~Application()
 
 void Application::postLaunch()
 {
-	QString filename("themes/dark.theme");
+	QString filename("themes/dark/dark.theme");
 	QFile file(filename);
 
 	if (file.open(QIODevice::ReadOnly | QIODevice::Text))
