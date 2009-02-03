@@ -11,10 +11,12 @@ CONFIG += warn_on
 
 SOURCES += \
 	Main.cpp \
-	Application.cpp
+	Application.cpp \
+	MainWindow.cpp
 
 HEADERS += \
-	Application.h
+	Application.h \
+	MainWindow.h
 
 include(ui/Ui.pri)
 
