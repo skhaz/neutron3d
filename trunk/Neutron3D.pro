@@ -15,7 +15,7 @@ CONFIG += \
 INCLUDEPATH += \
 	ui/
 
-include(ui/Ui.pro)
+include(ui/Ui.pri)
 
 SOURCES += \
 	Main.cpp \

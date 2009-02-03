@@ -1,6 +1,7 @@
 
-TEMPLATE = subdirs
-
+INCLUDEPATH += $$PWD
+DEPENDPATH += $$PWD
+ 
 FORMS += \
 	KeyboardMapping.ui
 
