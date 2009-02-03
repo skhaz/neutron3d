@@ -2,7 +2,12 @@
 #ifndef _MainWindow_h
 #define _MainWindow_h
 
+#include "ui/KeyboardMapping.h"
+
+
 #include <QMainWindow>
+#include <QMessageBox>
+#include <QString>
 
 
 
