@@ -5,6 +5,8 @@
 #include "MainWindow.h"
 
 #include <QApplication>
+#include <QFile>
+#include <QString>
 #include <QTimer>
 
 
