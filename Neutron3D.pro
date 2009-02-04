@@ -10,7 +10,7 @@ RCC_DIR = temp/rcc
 CONFIG += \
 	ordered \
 	warn_on \
-	release
+	console
 
 INCLUDEPATH += \
 	ui/
@@ -26,6 +26,6 @@ HEADERS += \
 	Application.h \
 	MainWindow.h
 
-RESOURCES += \
-	media/themes/dark/dark.qrc
+#RESOURCES += \
+#	media/themes/dark/dark.qrc
 

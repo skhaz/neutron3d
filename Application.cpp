@@ -17,23 +17,23 @@ Application::~Application()
 {
 	delete mainWindow;
 }
-
+#include <QMessageBox>
 void Application::postLaunch()
 {
 	mainWindow->showMaximized();
 
 	// carrega o stylesheet
-	QString filename("/media/neutro3D_styleSheet.css");
-	QFile file(filename);
+	QString filename("media/neutro3D_styleSheet.css");
+	QFile file;
 
 	if (file.open(QIODevice::ReadOnly | QIODevice::Text))
 	{
 		QString style = QTextStream(&file).readAll();
 		file.close();
 
-		setStyleSheet(style);
-	}
-
+		setStyleSheet(style); QMessageBox::warning(0, "", style);
+	} else { QMessageBox::warning(0, "", "erro"); }
+ 
 	mainWindow->showMaximized();
 
 }
