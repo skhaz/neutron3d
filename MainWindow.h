@@ -44,6 +44,7 @@ class MainWindow : public QMainWindow
 		QAction* selectBranchAction;
 		QAction* selectTreeAction;
 		QAction* PreferenceshAction;
+        QAction* keyBoardMappingAction;
 
 		// Help Menu
 		QAction* helpAction;
@@ -51,6 +52,10 @@ class MainWindow : public QMainWindow
 		QAction* aboutAction;
 		
 		QMenu* fileMenu;
+
+	protected slots:
+        void keyBoardMappingSlot();
+
 };
 
 #endif

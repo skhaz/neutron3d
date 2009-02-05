@@ -10,8 +10,8 @@ MainWindow::MainWindow(QWidget* parent)
 : QMainWindow(parent)
 {
 	// só para testes
-	KeyboardMapping* k = new KeyboardMapping(this);
-	k->show();
+    //KeyboardMapping* k = new KeyboardMapping(this);
+    //k->show();
 
 	
 	QMenuBar* menu = menuBar();
@@ -77,7 +77,7 @@ MainWindow::MainWindow(QWidget* parent)
 	recentProjectAction->setIcon(QIcon("/media/icon/recentProject.png"));
 	recentProjectAction->setShortcut(tr(""));
 	recentProjectAction->setStatusTip("Recent Project");
-	connect(recentProjectAction, SIGNAL(triggered()), SLOT());
+    connect(recentProjectAction, SIGNAL(triggered()), SLOT(recentProjectSlot()));
 
 	exitAction = new QAction("&Quit", this);
 	exitAction->setIcon(QIcon("/media/icon/door_out.png"));
@@ -167,6 +167,12 @@ MainWindow::MainWindow(QWidget* parent)
 	PreferenceshAction->setShortcut(tr(""));
 	PreferenceshAction->setStatusTip("Preferences");
 	connect(PreferenceshAction, SIGNAL(triggered()), SLOT());
+
+    keyBoardMappingAction = new QAction("Keyboard Mapping", this);
+    keyBoardMappingAction->setShortcut(tr(""));
+    keyBoardMappingAction->setStatusTip("Keyboard Mapping");
+    connect(keyBoardMappingAction, SIGNAL(triggered()), SLOT(keyBoardMappingSlot()));
+
 	
 	fileMenu = menu->addMenu("&Edit");
 
@@ -183,6 +189,7 @@ MainWindow::MainWindow(QWidget* parent)
 	fileMenu->addAction(selectTreeAction);
 	fileMenu->addSeparator();
 	fileMenu->addAction(PreferenceshAction);
+    fileMenu->addAction(keyBoardMappingAction);
 
 		
 
@@ -237,5 +244,11 @@ MainWindow::MainWindow(QWidget* parent)
 
 MainWindow::~MainWindow()
 {
+}
+
+void MainWindow::keyBoardMappingSlot()
+{
+   KeyboardMapping* k = new KeyboardMapping(this);
+    k->show();
 }
 
