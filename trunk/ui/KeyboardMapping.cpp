@@ -1,5 +1,4 @@
 #include "KeyboardMapping.h"
-#include <QMessageBox>
 
 
 KeyboardMapping::KeyboardMapping(QWidget* parent)

@@ -1,5 +1,4 @@
 #include "ProjectManager.h"
-#include <QMessageBox>
 
 
 ProjectManager::ProjectManager(QWidget* parent)
