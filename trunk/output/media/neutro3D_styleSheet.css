@@ -56,7 +56,6 @@ QLabel {
  }
 
  QMenu::item {
-
     padding: 1px 10px 1px 20px;
     border: 1px solid transparent; /* guarda espaço para borda do item selecionado */
  }
