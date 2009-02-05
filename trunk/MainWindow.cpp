@@ -37,7 +37,7 @@ MainWindow::MainWindow(QWidget* parent)
 	saveAction->setStatusTip("Save scene");
 	connect(saveAction, SIGNAL(triggered()), SLOT());
 
-	saveAsAction = new QAction("&Save Scene As...", this);
+	saveAsAction = new QAction("Save Scene &As...", this);
 	saveAsAction->setIcon(QIcon("/media/icon/save.png"));
 	saveAsAction->setShortcut(tr("Shift+Ctrl+s"));
 	saveAsAction->setStatusTip("Save Scene As");
@@ -55,25 +55,25 @@ MainWindow::MainWindow(QWidget* parent)
 	exportAllAction->setStatusTip("Export all objects in scene");
 	connect(exportAllAction, SIGNAL(triggered()), SLOT());
 
-	exportSelectionAction = new QAction("&Export Selection...", this);
+	exportSelectionAction = new QAction("Export S&election...", this);
 	exportSelectionAction->setIcon(QIcon("/media/icon/exportSelection.png"));
 	exportSelectionAction->setShortcut(tr(""));
 	exportSelectionAction->setStatusTip("Export Selected Objects");
 	connect(exportSelectionAction, SIGNAL(triggered()), SLOT());
 
-	projectManagerAction = new QAction("&Project Manager", this);
+	projectManagerAction = new QAction("Project &Manager", this);
 	projectManagerAction->setIcon(QIcon("/media/icon/projectManager.png"));
 	projectManagerAction->setShortcut(tr(""));
 	projectManagerAction->setStatusTip("Project Manager");
 	connect(projectManagerAction, SIGNAL(triggered()), SLOT());
 
-	recentFilesAction = new QAction("&Recent Files", this);
+	recentFilesAction = new QAction("Re&cent Files", this);
 	recentFilesAction->setIcon(QIcon("/media/icon/recentFiles.png"));
 	recentFilesAction->setShortcut(tr(""));
 	recentFilesAction->setStatusTip("Recent Files");
 	connect(recentFilesAction, SIGNAL(triggered()), SLOT());
 
-	recentProjectAction = new QAction("&Recent Project", this);
+	recentProjectAction = new QAction("Recent Pro&ject", this);
 	recentProjectAction->setIcon(QIcon("/media/icon/recentProject.png"));
 	recentProjectAction->setShortcut(tr(""));
 	recentProjectAction->setStatusTip("Recent Project");
@@ -121,49 +121,49 @@ MainWindow::MainWindow(QWidget* parent)
 	rendoAction->setStatusTip("Rendo");
 	connect(rendoAction, SIGNAL(triggered()), SLOT());
 
-	cutAction = new QAction("&Cut", this);
+	cutAction = new QAction("Cut", this);
 	cutAction->setIcon(QIcon("/media/icon/cut.png"));
 	cutAction->setShortcut(tr("Ctrl+x"));
 	cutAction->setStatusTip("Cut");
 	connect(cutAction, SIGNAL(triggered()), SLOT());
 
-	copyAction = new QAction("&Copy", this);
+	copyAction = new QAction("Copy", this);
 	copyAction->setIcon(QIcon("/media/icon/copy.png"));
 	copyAction->setShortcut(tr("Ctrl+c"));
 	copyAction->setStatusTip("Copy");
 	connect(copyAction, SIGNAL(triggered()), SLOT());
 
-	pasteAction = new QAction("&Paste", this);
+	pasteAction = new QAction("Paste", this);
 	pasteAction->setIcon(QIcon("/media/icon/paste.png"));
 	pasteAction->setShortcut(tr("Ctrl+v"));
 	pasteAction->setStatusTip("Paste");
 	connect(pasteAction, SIGNAL(triggered()), SLOT());
 
-	deleteAction = new QAction("&Delete", this);
+	deleteAction = new QAction("Delete", this);
 	deleteAction->setIcon(QIcon("/media/icon/delete.png"));
 	deleteAction->setShortcut(tr(""));
 	deleteAction->setStatusTip("Delete");
 	connect(deleteAction, SIGNAL(triggered()), SLOT());
 
-	selectAllAction = new QAction("&Select All", this);
+	selectAllAction = new QAction("Select All", this);
 	selectAllAction->setIcon(QIcon("/media/icon/selectAll.png"));
 	selectAllAction->setShortcut(tr("Ctrl+a"));
 	selectAllAction->setStatusTip("Select All");
 	connect(selectAllAction, SIGNAL(triggered()), SLOT());
 
-	selectBranchAction = new QAction("&Select Branch", this);
+	selectBranchAction = new QAction("Select Branch", this);
 	selectBranchAction->setIcon(QIcon("/media/icon/selectBranch.png"));
 	selectBranchAction->setShortcut(tr(""));
 	selectBranchAction->setStatusTip("Select Branch");
 	connect(selectBranchAction, SIGNAL(triggered()), SLOT());
 
-	selectTreeAction = new QAction("&Select Tree", this);
+	selectTreeAction = new QAction("Select Tree", this);
 	selectTreeAction->setIcon(QIcon("/media/icon/selectTree.png"));
 	selectTreeAction->setShortcut(tr(""));
 	selectTreeAction->setStatusTip("Select Tree");
 	connect(selectTreeAction, SIGNAL(triggered()), SLOT());
 
-	PreferenceshAction = new QAction("&Preferences...", this);
+	PreferenceshAction = new QAction("Preferences...", this);
 	PreferenceshAction->setShortcut(tr(""));
 	PreferenceshAction->setStatusTip("Preferences");
 	connect(PreferenceshAction, SIGNAL(triggered()), SLOT());
@@ -207,7 +207,7 @@ MainWindow::MainWindow(QWidget* parent)
 	// ************************************************
 	//	Help Menu
 	// ************************************************
-	helpAction = new QAction("Neutron 3D &Help", this);
+	helpAction = new QAction("Neutron 3D Help", this);
 	helpAction->setIcon(QIcon("/media/icon/neutroHelp.png"));
 	helpAction->setShortcut(tr(""));
 	helpAction->setStatusTip("Neutron 3D Help");
@@ -219,7 +219,7 @@ MainWindow::MainWindow(QWidget* parent)
 	whatsNewAction->setStatusTip("What's New in Neutron 3");
 	connect(whatsNewAction, SIGNAL(triggered()), SLOT());
 
-	aboutAction = new QAction("&About", this);
+	aboutAction = new QAction("About", this);
 	aboutAction->setIcon(QIcon("/media/icon/about.png"));
 	aboutAction->setShortcut(tr(""));
 	aboutAction->setStatusTip("About Neutron 3D");
