@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget* parent)
 {
 	// só para testes
 	KeyboardMapping* k = new KeyboardMapping(this);
-	//k->show();
+	k->show();
 
 	
 	QMenuBar* menu = menuBar();
