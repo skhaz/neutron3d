@@ -1,6 +1,6 @@
 
 TEMPLATE = app
-TARGET = neutron3d
+TARGET = Neutron3D
 DESTDIR = output
 
 OBJECTS_DIR = temp/obj
