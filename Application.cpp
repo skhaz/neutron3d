@@ -1,14 +1,14 @@
 
 #include "Application.h"
-#include "QFile"
-#include "QString"
-#include "QTextStream"
+#include <QFile>
+#include <QString>
+#include <QTextStream>
 
 
 
 Application::Application(int& argc, char** argv)
-: QApplication(argc, argv)
-, mainWindow(new MainWindow)
+	: QApplication(argc, argv)
+	, mainWindow(new MainWindow)
 {
 	QTimer::singleShot(0, this, SLOT(postLaunch()));
 }
@@ -23,8 +23,8 @@ void Application::postLaunch()
 	mainWindow->showMaximized();
 
 	// carrega o stylesheet
-	QString filename("/output/media/neutro3D_styleSheet.css");
-	QFile file;
+    QString filename("media/neutro3D_styleSheet.css");
+    QFile file(filename);
 
 	if (file.open(QIODevice::ReadOnly | QIODevice::Text))
 	{
@@ -39,4 +39,5 @@ void Application::postLaunch()
 	mainWindow->showMaximized();
 
 }
+
 
