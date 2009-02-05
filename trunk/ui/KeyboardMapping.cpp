@@ -1,4 +1,3 @@
-
 #include "KeyboardMapping.h"
 #include <QMessageBox>
 
