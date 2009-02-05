@@ -3,14 +3,14 @@ INCLUDEPATH += $$PWD
 DEPENDPATH += $$PWD
  
 FORMS += \
-	KeyboardMapping.ui
+        KeyboardMapping.ui \
         ProjectManager.ui
 
 SOURCES += \
-	KeyboardMapping.cpp
+        KeyboardMapping.cpp \
         ProjectManager.cpp
 
 HEADERS += \
-	KeyboardMapping.h
+        KeyboardMapping.h \
         ProjectManager.h
 
