@@ -34,10 +34,8 @@ QLabel {
  }
 
  QMenuBar::item {
-     spacing: 3px; /* spacing between menu bar items */
-     padding: 1px 8px;
+     padding: 2px 8px 2px 8px;
      background: transparent;
-     /* border-radius: 4px; */
  }
 
  QMenuBar::item:selected { /* when selected using mouse or keyboard */
@@ -54,28 +52,29 @@ QLabel {
 	border-style: solid;
 	border-color: rgb(45, 45, 45);
 	border-width: 1px;
+	padding: 10px 0px 10px 0px;
  }
 
  QMenu::item {
-	margin: 3px 0px 3px 0px;
-    padding: 2px 10px 2px 30px;
+
+    padding: 1px 10px 1px 20px;
     border: 1px solid transparent; /* guarda espaço para borda do item selecionado */
  }
 
  QMenu::item:selected {
-	border-top-color: rgb(45, 45, 45);
-	border-left-color: rgb(45, 45, 45, 0);
-	border-right-color: rgb(45, 45, 45, 0);
-	border-bottom-color: rgb(45, 45, 45);
-	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(92, 92, 92, 255), stop:0.5 rgba(70, 70, 70, 255), stop:0.59 rgba(80, 80, 80, 255), stop:1 rgba(92, 92, 92, 255));
+	color: black;
+	border-color: rgb(45, 45, 45);
 	background-color:rgb(140, 160, 160); 
+
  }
 
  QMenu::separator {
     height: 2px;
-    background: rgb(92, 92, 92);
-    margin-left: 10px;
-    margin-right: 5px;
+    background: rgb(102, 102, 102);
+    margin-left: 15px;
+    margin-right: 1px;
+	margin-top: 2px;
+	margin-bottom: 2px;
  }
 
 
