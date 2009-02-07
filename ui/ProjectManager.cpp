@@ -6,7 +6,7 @@ ProjectManager::ProjectManager(QWidget* parent)
 {
     setupUi(this);
 
-    connect(bt_close, SIGNAL(clicked()), SLOT(close()));
+	connect(bt_close, SIGNAL(clicked()), SLOT(close()));
 }
 
 ProjectManager::~ProjectManager()
