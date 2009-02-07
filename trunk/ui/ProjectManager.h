@@ -6,16 +6,14 @@
 #include <QWidget>
 #include <QDialog>
 
-
-
 class ProjectManager : public QDialog, private Ui_ProjectManager
 {
-    public:
-        ProjectManager(QWidget* parent = 0);
-        ~ProjectManager();
-
-    private:
-        Q_OBJECT
+	public:
+		ProjectManager(QWidget* parent = 0);
+		~ProjectManager();
+	
+	private:
+		Q_OBJECT
 };
 
 #endif

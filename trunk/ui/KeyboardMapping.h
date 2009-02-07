@@ -6,8 +6,6 @@
 #include <QWidget>
 #include <QDialog>
 
-
-
 class KeyboardMapping : public QDialog, private Ui_KeyboardMapping
 {
 	public:
