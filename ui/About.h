@@ -1,5 +1,5 @@
-#ifndef _About_h
-#define _About_h
+#ifndef ABOUT_H
+#define ABOUT_H
 
 #include "ui_About.h"
 

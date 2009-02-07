@@ -1,5 +1,5 @@
-#ifndef _KeyboardMapping_h
-#define _KeyboardMapping_h
+#ifndef KEYBOARDMAPPING_H
+#define KEYBOARDMAPPING_H
 
 #include "ui_KeyboardMapping.h"
 

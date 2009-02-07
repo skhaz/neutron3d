@@ -5,6 +5,7 @@
 #include "ui/KeyboardMapping.h"
 #include "ui/ProjectManager.h"
 #include "ui/About.h"
+#include "Preferences.h"
 
 
 #include <QMainWindow>
@@ -61,9 +62,11 @@ class MainWindow : public QMainWindow
 		void saveAsFileSlot();
 		void importFileSlot();
 		void exportAllFileSlot();
+		void exportSelectedFileSlot();
 		void projectManagerSlot();
         void keyBoardMappingSlot();
 	
+		void preferencesSlot();
 		void aboutSlot();
 		
 
