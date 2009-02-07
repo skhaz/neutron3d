@@ -4,6 +4,7 @@
 
 #include "ui/KeyboardMapping.h"
 #include "ui/ProjectManager.h"
+#include "ui/About.h"
 
 
 #include <QMainWindow>
@@ -57,8 +58,13 @@ class MainWindow : public QMainWindow
 	protected slots:
 		void openFileSlot();
 		void saveFileSlot();
+		void saveAsFileSlot();
+		void importFileSlot();
+		void exportAllFileSlot();
 		void projectManagerSlot();
         void keyBoardMappingSlot();
+	
+		void aboutSlot();
 		
 
 };

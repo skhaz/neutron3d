@@ -38,19 +38,19 @@ MainWindow::MainWindow(QWidget* parent)
 	saveAsAction->setIcon(QIcon("/media/icon/save.png"));
 	saveAsAction->setShortcut(tr("Shift+Ctrl+s"));
 	saveAsAction->setStatusTip("Save Scene As");
-	connect(saveAsAction, SIGNAL(triggered()), SLOT());
+	connect(saveAsAction, SIGNAL(triggered()), SLOT(saveAsFileSlot()));
 
 	importAction = new QAction("&Import...", this);
 	importAction->setIcon(QIcon("/media/icon/import.png"));
 	importAction->setShortcut(tr("Ctrl+i"));
 	importAction->setStatusTip("Import objetc or scene");
-	connect(importAction, SIGNAL(triggered()), SLOT());
+	connect(importAction, SIGNAL(triggered()), SLOT(importFileSlot()));
 
 	exportAllAction = new QAction("&Export All...", this);
 	exportAllAction->setIcon(QIcon("/media/icon/exportAll.png"));
 	exportAllAction->setShortcut(tr(""));
 	exportAllAction->setStatusTip("Export all objects in scene");
-	connect(exportAllAction, SIGNAL(triggered()), SLOT());
+	connect(exportAllAction, SIGNAL(triggered()), SLOT(exportAllFileSlot()));
 
 	exportSelectionAction = new QAction("Export S&election...", this);
 	exportSelectionAction->setIcon(QIcon("/media/icon/exportSelection.png"));
@@ -60,7 +60,7 @@ MainWindow::MainWindow(QWidget* parent)
 
 	projectManagerAction = new QAction("Project &Manager", this);
 	projectManagerAction->setIcon(QIcon("/media/icon/projectManager.png"));
-	projectManagerAction->setShortcut(tr(""));
+	projectManagerAction->setShortcut(tr("7"));
 	projectManagerAction->setStatusTip("Project Manager");
 	connect(projectManagerAction, SIGNAL(triggered()), SLOT(projectManagerSlot()));
 
@@ -166,7 +166,7 @@ MainWindow::MainWindow(QWidget* parent)
 	connect(PreferenceshAction, SIGNAL(triggered()), SLOT());
 
     keyBoardMappingAction = new QAction("Keyboard Mapping", this);
-    keyBoardMappingAction->setShortcut(tr(""));
+    keyBoardMappingAction->setShortcut(tr("6"));
     keyBoardMappingAction->setStatusTip("Keyboard Mapping");
     connect(keyBoardMappingAction, SIGNAL(triggered()), SLOT(keyBoardMappingSlot()));
 
@@ -227,7 +227,7 @@ MainWindow::MainWindow(QWidget* parent)
 	aboutAction->setIcon(QIcon("/media/icon/about.png"));
 	aboutAction->setShortcut(tr(""));
 	aboutAction->setStatusTip("About Neutron 3D");
-	connect(aboutAction, SIGNAL(triggered()), SLOT());
+	connect(aboutAction, SIGNAL(triggered()), SLOT(aboutSlot()));
 
 	fileMenu = menu->addMenu("&Help"); 
 
@@ -268,9 +268,41 @@ void MainWindow::openFileSlot()
 void MainWindow::saveFileSlot()
 {
 	QFileDialog* saveFileDialog = new QFileDialog(this);
-	saveFileDialog->setWindowTitle("Save Scene File");
+	saveFileDialog->setWindowTitle("Save Scene");
 	saveFileDialog->setViewMode(QFileDialog::List);
 	saveFileDialog->setAcceptMode(QFileDialog::AcceptSave);
-	saveFileDialog->setNameFilter(tr("Neutron 3D Scene Files (*.nkb *.nka)"));
 	saveFileDialog->getSaveFileName(this, tr("Save Scene"), "untitled", tr("Scene Files (*.nkb *.nka)"));
+}
+
+void MainWindow::saveAsFileSlot()
+{
+	QFileDialog* saveAsFileDialog = new QFileDialog(this);
+	saveAsFileDialog->setWindowTitle("Save Scene As");
+	saveAsFileDialog->setViewMode(QFileDialog::List);
+	saveAsFileDialog->setAcceptMode(QFileDialog::AcceptSave);
+	saveAsFileDialog->getSaveFileName(this, tr("Save Scene As"), "untitled", tr("Scene Files (*.nkb *.nka)"));
+}
+
+void MainWindow::importFileSlot()
+{
+	QFileDialog* importFileDialog = new QFileDialog(this);
+	importFileDialog->setWindowTitle("Import  File");
+	importFileDialog->setViewMode(QFileDialog::List);
+	importFileDialog->setAcceptMode(QFileDialog::AcceptOpen);
+	importFileDialog->getOpenFileName(this, tr("Import File"), "home", tr("Import Files (*.nkb *.nka *.fbx *.obj *.3ds *.rib *.dwg)"));
+}
+
+void MainWindow::exportAllFileSlot()
+{
+	QFileDialog* exportAllFileDialog = new QFileDialog(this);
+	exportAllFileDialog->setWindowTitle("Export Scene");
+	exportAllFileDialog->setViewMode(QFileDialog::List);
+	exportAllFileDialog->setAcceptMode(QFileDialog::AcceptSave);
+	exportAllFileDialog->getSaveFileName(this, tr("Export Scene"), "untitled", tr("Scene Files (*.nkb *.nka *.fbx *.obj)"));
+}
+
+void MainWindow::aboutSlot()
+{
+	About* abt = new About(this);
+	abt->show();
 }

@@ -28,7 +28,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_ProjectManager
+class Ui_form_ProjectManager
 {
 public:
     QGridLayout *gridLayout_4;
@@ -515,7 +515,7 @@ public:
 };
 
 namespace Ui {
-    class ProjectManager: public Ui_ProjectManager {};
+    class ProjectManager: public Ui_form_ProjectManager {};
 } // namespace Ui
 
 QT_END_NAMESPACE

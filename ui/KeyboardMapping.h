@@ -6,7 +6,7 @@
 #include <QWidget>
 #include <QDialog>
 
-class KeyboardMapping : public QDialog, private Ui_KeyboardMapping
+class KeyboardMapping : public QDialog, private Ui_form_KeyboardMapping
 {
 	public:
 		KeyboardMapping(QWidget* parent = 0);
