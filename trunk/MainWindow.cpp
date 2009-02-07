@@ -56,7 +56,7 @@ MainWindow::MainWindow(QWidget* parent)
 	exportSelectionAction->setIcon(QIcon("/media/icon/exportSelection.png"));
 	exportSelectionAction->setShortcut(tr(""));
 	exportSelectionAction->setStatusTip("Export Selected Objects");
-	connect(exportSelectionAction, SIGNAL(triggered()), SLOT());
+	connect(exportSelectionAction, SIGNAL(triggered()), SLOT(exportSelectedFileSlot()));
 
 	projectManagerAction = new QAction("Project &Manager", this);
 	projectManagerAction->setIcon(QIcon("/media/icon/projectManager.png"));
@@ -163,7 +163,7 @@ MainWindow::MainWindow(QWidget* parent)
 	PreferenceshAction = new QAction("Preferences...", this);
 	PreferenceshAction->setShortcut(tr(""));
 	PreferenceshAction->setStatusTip("Preferences");
-	connect(PreferenceshAction, SIGNAL(triggered()), SLOT());
+	connect(PreferenceshAction, SIGNAL(triggered()), SLOT(preferencesSlot()));
 
     keyBoardMappingAction = new QAction("Keyboard Mapping", this);
     keyBoardMappingAction->setShortcut(tr("6"));
@@ -298,8 +298,24 @@ void MainWindow::exportAllFileSlot()
 	exportAllFileDialog->setWindowTitle("Export Scene");
 	exportAllFileDialog->setViewMode(QFileDialog::List);
 	exportAllFileDialog->setAcceptMode(QFileDialog::AcceptSave);
-	exportAllFileDialog->getSaveFileName(this, tr("Export Scene"), "untitled", tr("Scene Files (*.nkb *.nka *.fbx *.obj)"));
+	exportAllFileDialog->getSaveFileName(this, tr("Export Scene"), "untitled", tr("Export Files (*.nkb *.nka *.fbx *.obj)"));
 }
+
+void MainWindow::exportSelectedFileSlot()
+{
+	QFileDialog* exportSelectedFileDialog = new QFileDialog(this);
+	exportSelectedFileDialog->setWindowTitle("Export Selected Objects");
+	exportSelectedFileDialog->setViewMode(QFileDialog::List);
+	exportSelectedFileDialog->setAcceptMode(QFileDialog::AcceptSave);
+	exportSelectedFileDialog->getSaveFileName(this, tr("Export Selected Objects"), "untitled", tr("Export Files (*.nkb *.nka *.fbx *.obj)"));
+}
+
+void MainWindow::preferencesSlot()
+{
+	Preferences* pref = new Preferences(this);
+	pref->show();
+}
+
 
 void MainWindow::aboutSlot()
 {

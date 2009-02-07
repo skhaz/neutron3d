@@ -1,5 +1,5 @@
-#ifndef _ProjectManager_h
-#define _ProjectManager_h
+#ifndef PROJECTMANAGER_H
+#define PROJECTMANAGER_H
 
 #include "ui_ProjectManager.h"
 
