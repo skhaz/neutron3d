@@ -26,7 +26,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_KeyboardMapping
+class Ui_form_KeyboardMapping
 {
 public:
     QGroupBox *grb_keyboard;
@@ -950,7 +950,7 @@ public:
 };
 
 namespace Ui {
-    class KeyboardMapping: public Ui_KeyboardMapping {};
+    class KeyboardMapping: public Ui_form_KeyboardMapping {};
 } // namespace Ui
 
 QT_END_NAMESPACE
