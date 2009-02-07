@@ -55,8 +55,11 @@ class MainWindow : public QMainWindow
 		QMenu* fileMenu;
 
 	protected slots:
-        void keyBoardMappingSlot();
+		void openFileSlot();
+		void saveFileSlot();
 		void projectManagerSlot();
+        void keyBoardMappingSlot();
+		
 
 };
 

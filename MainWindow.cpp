@@ -3,6 +3,7 @@
 #include <QAction>
 #include <QIcon>
 #include <QMenuBar>
+#include <QFileDialog>
 
 
 
@@ -25,13 +26,13 @@ MainWindow::MainWindow(QWidget* parent)
 	openAction->setIcon(QIcon("/media/icon/open.png"));
 	openAction->setShortcut(tr("Ctrl+o"));
 	openAction->setStatusTip("Open scene");
-	connect(openAction, SIGNAL(triggered()), SLOT());
+	connect(openAction, SIGNAL(triggered()), SLOT(openFileSlot()));
 
 	saveAction = new QAction("&Save", this);
 	saveAction->setIcon(QIcon("/media/icon/save.png"));
 	saveAction->setShortcut(tr("Ctrl+S"));
 	saveAction->setStatusTip("Save scene");
-	connect(saveAction, SIGNAL(triggered()), SLOT());
+	connect(saveAction, SIGNAL(triggered()), SLOT(saveFileSlot()));
 
 	saveAsAction = new QAction("Save Scene &As...", this);
 	saveAsAction->setIcon(QIcon("/media/icon/save.png"));
@@ -252,4 +253,24 @@ void MainWindow::projectManagerSlot()
 {
 	ProjectManager* pm = new ProjectManager(this);
 	pm->show();
+	
+}
+
+void MainWindow::openFileSlot()
+{
+	QFileDialog* openFileDialog = new QFileDialog(this);
+	openFileDialog->setWindowTitle("Open Scene File");
+	openFileDialog->setViewMode(QFileDialog::List);
+	openFileDialog->setAcceptMode(QFileDialog::AcceptOpen);
+	openFileDialog->getOpenFileName(this, tr("Open Scene"), "home", tr("Scene Files (*.nkb *.nka)"));
+}
+
+void MainWindow::saveFileSlot()
+{
+	QFileDialog* saveFileDialog = new QFileDialog(this);
+	saveFileDialog->setWindowTitle("Save Scene File");
+	saveFileDialog->setViewMode(QFileDialog::List);
+	saveFileDialog->setAcceptMode(QFileDialog::AcceptSave);
+	saveFileDialog->setNameFilter(tr("Neutron 3D Scene Files (*.nkb *.nka)"));
+	saveFileDialog->getSaveFileName(this, tr("Save Scene"), "untitled", tr("Scene Files (*.nkb *.nka)"));
 }

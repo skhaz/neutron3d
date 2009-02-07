@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'ProjectManager.ui'
 **
-** Created: Fri Feb 6 22:55:54 2009
+** Created: Sat Feb 7 01:44:06 2009
 **      by: Qt User Interface Compiler version 4.4.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -19,7 +19,6 @@
 #include <QtGui/QGroupBox>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
 #include <QtGui/QListView>
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
@@ -33,9 +32,10 @@ class Ui_ProjectManager
 {
 public:
     QGridLayout *gridLayout_4;
-    QVBoxLayout *verticalLayout_3;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_2;
+    QLabel *lbl_projectPath_2;
     QLabel *lbl_projectPath;
-    QLineEdit *tbx_path;
     QGridLayout *gridLayout_3;
     QGroupBox *grb_selectProject;
     QGridLayout *gridLayout_2;
@@ -88,33 +88,33 @@ public:
     ProjectManager->setStyleSheet(QString::fromUtf8(""));
     gridLayout_4 = new QGridLayout(ProjectManager);
     gridLayout_4->setSpacing(5);
-    gridLayout_4->setMargin(5);
     gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
-    verticalLayout_3 = new QVBoxLayout();
-    verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-    lbl_projectPath = new QLabel(ProjectManager);
-    lbl_projectPath->setObjectName(QString::fromUtf8("lbl_projectPath"));
+    horizontalLayout = new QHBoxLayout();
+    horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+    horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+    horizontalLayout->addItem(horizontalSpacer_2);
+
+    lbl_projectPath_2 = new QLabel(ProjectManager);
+    lbl_projectPath_2->setObjectName(QString::fromUtf8("lbl_projectPath_2"));
     QFont font;
     font.setFamily(QString::fromUtf8("Lucida Grande, Segoe UI"));
+    lbl_projectPath_2->setFont(font);
+    lbl_projectPath_2->setLayoutDirection(Qt::LeftToRight);
+    lbl_projectPath_2->setAutoFillBackground(false);
+
+    horizontalLayout->addWidget(lbl_projectPath_2);
+
+    lbl_projectPath = new QLabel(ProjectManager);
+    lbl_projectPath->setObjectName(QString::fromUtf8("lbl_projectPath"));
     lbl_projectPath->setFont(font);
     lbl_projectPath->setLayoutDirection(Qt::LeftToRight);
     lbl_projectPath->setAutoFillBackground(false);
 
-    verticalLayout_3->addWidget(lbl_projectPath);
-
-    tbx_path = new QLineEdit(ProjectManager);
-    tbx_path->setObjectName(QString::fromUtf8("tbx_path"));
-    tbx_path->setFont(font);
-    tbx_path->setLayoutDirection(Qt::LeftToRight);
-    tbx_path->setStyleSheet(QString::fromUtf8(""));
-    tbx_path->setFrame(true);
-    tbx_path->setCursorPosition(0);
-    tbx_path->setReadOnly(true);
-
-    verticalLayout_3->addWidget(tbx_path);
+    horizontalLayout->addWidget(lbl_projectPath);
 
 
-    gridLayout_4->addLayout(verticalLayout_3, 0, 0, 1, 1);
+    gridLayout_4->addLayout(horizontalLayout, 0, 0, 1, 1);
 
     gridLayout_3 = new QGridLayout();
     gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
@@ -251,9 +251,6 @@ public:
 
     gridLayout_2->addWidget(lbl_shortBy, 1, 0, 1, 1);
 
-    lst_project->raise();
-    cbx_shortBy->raise();
-    lbl_shortBy->raise();
 
     gridLayout_3->addWidget(grb_selectProject, 0, 1, 1, 1);
 
@@ -397,7 +394,6 @@ public:
 
     gridLayout_4->addLayout(horizontalLayout_2, 2, 0, 1, 1);
 
-    QWidget::setTabOrder(tbx_path, lst_project);
     QWidget::setTabOrder(lst_project, bt_newProject);
     QWidget::setTabOrder(bt_newProject, bt_addProject);
     QWidget::setTabOrder(bt_addProject, bt_setActive);
@@ -419,8 +415,8 @@ public:
     void retranslateUi(QWidget *ProjectManager)
     {
     ProjectManager->setWindowTitle(QApplication::translate("ProjectManager", "Project Manager", 0, QApplication::UnicodeUTF8));
+    lbl_projectPath_2->setText(QApplication::translate("ProjectManager", "c:\\documents\\neutron3d\\projects", 0, QApplication::UnicodeUTF8));
     lbl_projectPath->setText(QApplication::translate("ProjectManager", "Project Path:", 0, QApplication::UnicodeUTF8));
-    tbx_path->setText(QString());
     grb_selectProject->setTitle(QApplication::translate("ProjectManager", "Select a Project", 0, QApplication::UnicodeUTF8));
 
 #ifndef QT_NO_WHATSTHIS
