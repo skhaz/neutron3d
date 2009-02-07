@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'KeyboardMapping.ui'
 **
-** Created: Thu 5. Feb 17:59:21 2009
+** Created: Fri Feb 6 23:00:21 2009
 **      by: Qt User Interface Compiler version 4.4.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -543,28 +543,34 @@ public:
     tbx_scriptEditor->setLineWrapMode(QTextEdit::NoWrap);
     bt_acceptScript = new QPushButton(grb_commandScript);
     bt_acceptScript->setObjectName(QString::fromUtf8("bt_acceptScript"));
-    bt_acceptScript->setGeometry(QRect(415, 20, 100, 30));
+    bt_acceptScript->setGeometry(QRect(415, 20, 100, 32));
+    bt_acceptScript->setMinimumSize(QSize(100, 32));
     bt_clearScript = new QPushButton(grb_commandScript);
     bt_clearScript->setObjectName(QString::fromUtf8("bt_clearScript"));
-    bt_clearScript->setGeometry(QRect(415, 55, 100, 30));
+    bt_clearScript->setGeometry(QRect(415, 55, 100, 32));
+    bt_clearScript->setMinimumSize(QSize(100, 32));
     bt_ok = new QPushButton(KeyboardMapping);
     bt_ok->setObjectName(QString::fromUtf8("bt_ok"));
-    bt_ok->setGeometry(QRect(920, 55, 100, 30));
+    bt_ok->setGeometry(QRect(920, 55, 100, 32));
+    bt_ok->setMinimumSize(QSize(100, 32));
     bt_cancel = new QPushButton(KeyboardMapping);
     bt_cancel->setObjectName(QString::fromUtf8("bt_cancel"));
-    bt_cancel->setGeometry(QRect(920, 90, 100, 30));
+    bt_cancel->setGeometry(QRect(920, 90, 100, 32));
+    bt_cancel->setMinimumSize(QSize(100, 32));
     lbl_presetShortcut = new QLabel(KeyboardMapping);
     lbl_presetShortcut->setObjectName(QString::fromUtf8("lbl_presetShortcut"));
     lbl_presetShortcut->setGeometry(QRect(20, 15, 76, 25));
     cbx_presetShortcut = new QComboBox(KeyboardMapping);
     cbx_presetShortcut->setObjectName(QString::fromUtf8("cbx_presetShortcut"));
-    cbx_presetShortcut->setGeometry(QRect(100, 15, 161, 25));
+    cbx_presetShortcut->setGeometry(QRect(100, 15, 161, 26));
     bt_exportKeyMap = new QPushButton(KeyboardMapping);
     bt_exportKeyMap->setObjectName(QString::fromUtf8("bt_exportKeyMap"));
-    bt_exportKeyMap->setGeometry(QRect(280, 15, 100, 25));
+    bt_exportKeyMap->setGeometry(QRect(280, 15, 100, 32));
+    bt_exportKeyMap->setMinimumSize(QSize(100, 32));
     bt_help = new QPushButton(KeyboardMapping);
     bt_help->setObjectName(QString::fromUtf8("bt_help"));
-    bt_help->setGeometry(QRect(920, 125, 100, 30));
+    bt_help->setGeometry(QRect(920, 125, 100, 32));
+    bt_help->setMinimumSize(QSize(100, 32));
     grb_description = new QGroupBox(KeyboardMapping);
     grb_description->setObjectName(QString::fromUtf8("grb_description"));
     grb_description->setGeometry(QRect(530, 55, 381, 116));
@@ -578,7 +584,8 @@ public:
     lbl_description->setWordWrap(true);
     bt_restoreDefaults = new QPushButton(KeyboardMapping);
     bt_restoreDefaults->setObjectName(QString::fromUtf8("bt_restoreDefaults"));
-    bt_restoreDefaults->setGeometry(QRect(385, 15, 100, 25));
+    bt_restoreDefaults->setGeometry(QRect(385, 15, 100, 32));
+    bt_restoreDefaults->setMinimumSize(QSize(100, 32));
     grb_help = new QGroupBox(KeyboardMapping);
     grb_help->setObjectName(QString::fromUtf8("grb_help"));
     grb_help->setGeometry(QRect(530, 175, 381, 81));
@@ -597,7 +604,7 @@ public:
 "}"));
     cbx_group = new QComboBox(grb_newCommand);
     cbx_group->setObjectName(QString::fromUtf8("cbx_group"));
-    cbx_group->setGeometry(QRect(95, 90, 176, 25));
+    cbx_group->setGeometry(QRect(95, 90, 176, 26));
     tbx_descriptionCommand = new QLineEdit(grb_newCommand);
     tbx_descriptionCommand->setObjectName(QString::fromUtf8("tbx_descriptionCommand"));
     tbx_descriptionCommand->setGeometry(QRect(95, 60, 276, 22));
@@ -618,13 +625,16 @@ public:
     tbx_nameCommand->setGeometry(QRect(95, 30, 276, 22));
     bt_newCommand = new QPushButton(grb_newCommand);
     bt_newCommand->setObjectName(QString::fromUtf8("bt_newCommand"));
-    bt_newCommand->setGeometry(QRect(385, 25, 100, 30));
+    bt_newCommand->setGeometry(QRect(385, 25, 100, 32));
+    bt_newCommand->setMinimumSize(QSize(100, 32));
     bt_editCommand = new QPushButton(grb_newCommand);
     bt_editCommand->setObjectName(QString::fromUtf8("bt_editCommand"));
-    bt_editCommand->setGeometry(QRect(385, 55, 100, 30));
+    bt_editCommand->setGeometry(QRect(385, 60, 100, 32));
+    bt_editCommand->setMinimumSize(QSize(100, 32));
     bt_deleteNewCommand = new QPushButton(grb_newCommand);
     bt_deleteNewCommand->setObjectName(QString::fromUtf8("bt_deleteNewCommand"));
-    bt_deleteNewCommand->setGeometry(QRect(385, 85, 100, 30));
+    bt_deleteNewCommand->setGeometry(QRect(385, 95, 100, 32));
+    bt_deleteNewCommand->setMinimumSize(QSize(100, 32));
     QWidget::setTabOrder(cbx_presetShortcut, bt_exportKeyMap);
     QWidget::setTabOrder(bt_exportKeyMap, bt_restoreDefaults);
     QWidget::setTabOrder(bt_restoreDefaults, lv_group);
@@ -882,7 +892,7 @@ public:
     tbx_scriptEditor->setHtml(QApplication::translate("KeyboardMapping", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Lucida Grande, Segoe UI'; font-size:8pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
     bt_acceptScript->setText(QApplication::translate("KeyboardMapping", "Accept", 0, QApplication::UnicodeUTF8));
     bt_clearScript->setText(QApplication::translate("KeyboardMapping", "Clear", 0, QApplication::UnicodeUTF8));

@@ -61,7 +61,7 @@ MainWindow::MainWindow(QWidget* parent)
 	projectManagerAction->setIcon(QIcon("/media/icon/projectManager.png"));
 	projectManagerAction->setShortcut(tr(""));
 	projectManagerAction->setStatusTip("Project Manager");
-	connect(projectManagerAction, SIGNAL(triggered()), SLOT());
+	connect(projectManagerAction, SIGNAL(triggered()), SLOT(projectManagerSlot()));
 
 	recentFilesAction = new QAction("Re&cent Files", this);
 	recentFilesAction->setIcon(QIcon("/media/icon/recentFiles.png"));
@@ -73,7 +73,7 @@ MainWindow::MainWindow(QWidget* parent)
 	recentProjectAction->setIcon(QIcon("/media/icon/recentProject.png"));
 	recentProjectAction->setShortcut(tr(""));
 	recentProjectAction->setStatusTip("Recent Project");
-    connect(recentProjectAction, SIGNAL(triggered()), SLOT(recentProjectSlot()));
+    connect(recentProjectAction, SIGNAL(triggered()), SLOT());
 
 	exitAction = new QAction("&Quit", this);
 	exitAction->setIcon(QIcon("/media/icon/door_out.png"));
@@ -248,3 +248,8 @@ void MainWindow::keyBoardMappingSlot()
     k->show();
 }
 
+void MainWindow::projectManagerSlot()
+{
+	ProjectManager* pm = new ProjectManager(this);
+	pm->show();
+}

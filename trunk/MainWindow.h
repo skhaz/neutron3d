@@ -3,6 +3,7 @@
 #define _MainWindow_h
 
 #include "ui/KeyboardMapping.h"
+#include "ui/ProjectManager.h"
 
 
 #include <QMainWindow>
@@ -55,6 +56,7 @@ class MainWindow : public QMainWindow
 
 	protected slots:
         void keyBoardMappingSlot();
+		void projectManagerSlot();
 
 };
 
