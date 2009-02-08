@@ -17,12 +17,16 @@ class Application : public QApplication
 	public:
 		Application(int& argc, char** argv);
 		~Application();
+	
+		void loadStyle();
 
 	protected slots:
 		void postLaunch();
 
 	private:
 		Q_OBJECT
+	
+		
 
 		MainWindow* mainWindow;
 };
