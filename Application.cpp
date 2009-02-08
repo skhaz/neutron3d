@@ -22,22 +22,25 @@ void Application::postLaunch()
 {
 	mainWindow->showMaximized();
 
-	// carrega o stylesheet
-    QString filename("media/neutro3D_styleSheet.css");
-    QFile file(filename);
-
-	if (file.open(QIODevice::ReadOnly | QIODevice::Text))
-	{
-		QString style = QTextStream(&file).readAll();
-		file.close();
-
-		setStyleSheet(style); 
-		
-	} 
+	// carrega o stylesheet	
+	loadStyle();
 
  
 	mainWindow->showMaximized();
 
 }
 
+void Application::loadStyle()
+{
+    QString filename("media/neutro3D_styleSheet.css");
+    QFile file(filename);
+	
+	if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+	{
+		QString style = QTextStream(&file).readAll();
+		file.close();
+		
+		setStyleSheet(style); 
+	} 
+}
 
