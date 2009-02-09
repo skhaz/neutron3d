@@ -6,7 +6,7 @@
 #include <QWidget>
 #include <QDialog>
 
-class ProjectManager : public QDialog, private Ui_form_ProjectManager
+class ProjectManager : public QDialog, private Ui_ProjectManager
 {
 	public:
 		ProjectManager(QWidget* parent = 0);

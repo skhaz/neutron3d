@@ -1,6 +1,6 @@
 <ui version="4.0" >
- <class>form_EditFolderType</class>
- <widget class="QDialog" name="form_EditFolderType" >
+ <class>EditFolderType</class>
+ <widget class="QDialog" name="EditFolderType" >
   <property name="geometry" >
    <rect>
     <x>0</x>
