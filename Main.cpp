@@ -12,6 +12,7 @@ int main(int argc, char** argv)
      splash.show();
      app.processEvents();
 
+
      // colocar um timer aqui ....
 
      splash.finish(&MainWindow);
