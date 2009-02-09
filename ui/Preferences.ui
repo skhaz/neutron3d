@@ -1,6 +1,6 @@
 <ui version="4.0" >
- <class>form_Preferences</class>
- <widget class="QWidget" name="form_Preferences" >
+ <class>Preferences</class>
+ <widget class="QWidget" name="Preferences" >
   <property name="geometry" >
    <rect>
     <x>0</x>

@@ -6,7 +6,7 @@
 #include <QWidget>
 #include <QDialog>
 
-class Preferences : public QDialog, private Ui_form_Preferences
+class Preferences : public QDialog, private Ui_Preferences
 {
 	public:
 		Preferences(QWidget* parent = 0);

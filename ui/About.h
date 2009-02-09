@@ -6,7 +6,7 @@
 #include <QWidget>
 #include <QDialog>
 
-class About : public QDialog, private Ui_form_About
+class About : public QDialog, private Ui_About
 {
 	public:
 		About(QWidget* parent = 0);

@@ -1,6 +1,6 @@
 <ui version="4.0" >
- <class>form_About</class>
- <widget class="QWidget" name="form_About" >
+ <class>About</class>
+ <widget class="QWidget" name="About" >
   <property name="geometry" >
    <rect>
     <x>0</x>

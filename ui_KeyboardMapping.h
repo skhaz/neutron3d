@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'KeyboardMapping.ui'
 **
-** Created: Fri Feb 6 23:00:21 2009
+** Created: Mon 9. Feb 08:20:03 2009
 **      by: Qt User Interface Compiler version 4.4.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -26,7 +26,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_form_KeyboardMapping
+class Ui_KeyboardMapping
 {
 public:
     QGroupBox *grb_keyboard;
@@ -950,7 +950,7 @@ public:
 };
 
 namespace Ui {
-    class KeyboardMapping: public Ui_form_KeyboardMapping {};
+    class KeyboardMapping: public Ui_KeyboardMapping {};
 } // namespace Ui
 
 QT_END_NAMESPACE
