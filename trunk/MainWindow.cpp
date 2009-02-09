@@ -60,7 +60,7 @@ MainWindow::MainWindow(QWidget* parent)
 
 	projectManagerAction = new QAction("Project &Manager", this);
 	projectManagerAction->setIcon(QIcon("/media/icon/projectManager.png"));
-	projectManagerAction->setShortcut(tr("7"));
+    projectManagerAction->setShortcut(tr("Ctrl+7"));
 	projectManagerAction->setStatusTip("Project Manager");
 	connect(projectManagerAction, SIGNAL(triggered()), SLOT(projectManagerSlot()));
 
@@ -166,7 +166,7 @@ MainWindow::MainWindow(QWidget* parent)
 	connect(PreferenceshAction, SIGNAL(triggered()), SLOT(preferencesSlot()));
 
     keyBoardMappingAction = new QAction("Keyboard Mapping", this);
-    keyBoardMappingAction->setShortcut(tr("6"));
+    keyBoardMappingAction->setShortcut(tr("Ctrl+6"));
     keyBoardMappingAction->setStatusTip("Keyboard Mapping");
     connect(keyBoardMappingAction, SIGNAL(triggered()), SLOT(keyBoardMappingSlot()));
 
@@ -262,7 +262,7 @@ void MainWindow::openFileSlot()
 	openFileDialog->setWindowTitle("Open Scene File");
 	openFileDialog->setViewMode(QFileDialog::List);
 	openFileDialog->setAcceptMode(QFileDialog::AcceptOpen);
-	openFileDialog->getOpenFileName(this, tr("Open Scene"), "home", tr("Scene Files (*.nkb *.nka)"));
+    openFileDialog->getOpenFileName(this, tr("Open Scene"), "", tr("Scene Files (*.nkb *.nka)"));
 }
 
 void MainWindow::saveFileSlot()
@@ -289,7 +289,7 @@ void MainWindow::importFileSlot()
 	importFileDialog->setWindowTitle("Import  File");
 	importFileDialog->setViewMode(QFileDialog::List);
 	importFileDialog->setAcceptMode(QFileDialog::AcceptOpen);
-	importFileDialog->getOpenFileName(this, tr("Import File"), "home", tr("Import Files (*.nkb *.nka *.fbx *.obj *.3ds *.rib *.dwg)"));
+    importFileDialog->getOpenFileName(this, tr("Import File"), "", tr("Import Files (*.nkb *.nka *.fbx *.obj *.3ds *.rib *.dwg)"));
 }
 
 void MainWindow::exportAllFileSlot()
