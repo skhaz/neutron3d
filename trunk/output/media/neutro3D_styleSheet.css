@@ -388,7 +388,7 @@ QDoubleSpinBox::down-button::pressed {
 	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(92, 92, 92, 255), stop:0.5 rgba(70, 70, 70, 255), stop:0.59 rgba(80, 80, 80, 255), stop:1 rgba(92, 92, 92, 255));
 }
 
-/* ---------------------- Line Edit ---------------------- */
+/* ---------------------- Progress Bar ---------------------- */
 QProgressBar { 
 	color: rgb(215, 215, 215);
 	background-color: rgb(40, 40, 40);
