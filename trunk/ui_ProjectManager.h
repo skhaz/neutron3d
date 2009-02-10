@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'ProjectManager.ui'
 **
-** Created: Mon 9. Feb 08:20:03 2009
+** Created: Tue 10. Feb 10:46:58 2009
 **      by: Qt User Interface Compiler version 4.4.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -39,6 +39,7 @@ public:
     QGridLayout *gridLayout_3;
     QGroupBox *grb_selectProject;
     QGridLayout *gridLayout_2;
+    QListView *lst_project;
     QVBoxLayout *verticalLayout;
     QPushButton *bt_newProject;
     QSpacerItem *verticalSpacer_9;
@@ -54,11 +55,11 @@ public:
     QSpacerItem *verticalSpacer;
     QPushButton *bt_deleteProject;
     QSpacerItem *verticalSpacer_4;
-    QListView *lst_project;
-    QComboBox *cbx_shortBy;
     QLabel *lbl_shortBy;
+    QComboBox *cbx_shortBy;
     QGroupBox *grb_defineFolderType;
     QGridLayout *gridLayout;
+    QTreeView *trw_defineFolderType;
     QVBoxLayout *verticalLayout_2;
     QPushButton *bt_makeDefault;
     QSpacerItem *verticalSpacer_8;
@@ -69,7 +70,6 @@ public:
     QSpacerItem *verticalSpacer_6;
     QPushButton *bt_deleteFolder;
     QSpacerItem *verticalSpacer_7;
-    QTreeView *trw_defineFolderType;
     QLabel *lbl_usePreset;
     QComboBox *cbx_usePreset;
     QHBoxLayout *horizontalLayout_2;
@@ -125,6 +125,20 @@ public:
     grb_selectProject->setStyleSheet(QString::fromUtf8(""));
     gridLayout_2 = new QGridLayout(grb_selectProject);
     gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+    gridLayout_2->setContentsMargins(-1, 20, -1, -1);
+    lst_project = new QListView(grb_selectProject);
+    lst_project->setObjectName(QString::fromUtf8("lst_project"));
+    lst_project->setFont(font);
+    lst_project->viewport()->setProperty("cursor", QVariant(QCursor(Qt::ArrowCursor)));
+    lst_project->setStyleSheet(QString::fromUtf8(""));
+    lst_project->setTabKeyNavigation(true);
+    lst_project->setDragEnabled(true);
+    lst_project->setDragDropMode(QAbstractItemView::DragOnly);
+    lst_project->setResizeMode(QListView::Fixed);
+    lst_project->setLayoutMode(QListView::SinglePass);
+
+    gridLayout_2->addWidget(lst_project, 0, 0, 1, 2);
+
     verticalLayout = new QVBoxLayout();
     verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
     bt_newProject = new QPushButton(grb_selectProject);
@@ -221,18 +235,12 @@ public:
 
     gridLayout_2->addLayout(verticalLayout, 0, 2, 1, 1);
 
-    lst_project = new QListView(grb_selectProject);
-    lst_project->setObjectName(QString::fromUtf8("lst_project"));
-    lst_project->setFont(font);
-    lst_project->viewport()->setProperty("cursor", QVariant(QCursor(Qt::ArrowCursor)));
-    lst_project->setStyleSheet(QString::fromUtf8(""));
-    lst_project->setTabKeyNavigation(true);
-    lst_project->setDragEnabled(true);
-    lst_project->setDragDropMode(QAbstractItemView::DragOnly);
-    lst_project->setResizeMode(QListView::Fixed);
-    lst_project->setLayoutMode(QListView::SinglePass);
+    lbl_shortBy = new QLabel(grb_selectProject);
+    lbl_shortBy->setObjectName(QString::fromUtf8("lbl_shortBy"));
+    lbl_shortBy->setFont(font);
+    lbl_shortBy->setLayoutDirection(Qt::LeftToRight);
 
-    gridLayout_2->addWidget(lst_project, 0, 0, 1, 2);
+    gridLayout_2->addWidget(lbl_shortBy, 1, 0, 1, 1);
 
     cbx_shortBy = new QComboBox(grb_selectProject);
     cbx_shortBy->setObjectName(QString::fromUtf8("cbx_shortBy"));
@@ -244,13 +252,6 @@ public:
 
     gridLayout_2->addWidget(cbx_shortBy, 1, 1, 1, 1);
 
-    lbl_shortBy = new QLabel(grb_selectProject);
-    lbl_shortBy->setObjectName(QString::fromUtf8("lbl_shortBy"));
-    lbl_shortBy->setFont(font);
-    lbl_shortBy->setLayoutDirection(Qt::LeftToRight);
-
-    gridLayout_2->addWidget(lbl_shortBy, 1, 0, 1, 1);
-
 
     gridLayout_3->addWidget(grb_selectProject, 0, 1, 1, 1);
 
@@ -261,6 +262,14 @@ public:
     grb_defineFolderType->setStyleSheet(QString::fromUtf8(""));
     gridLayout = new QGridLayout(grb_defineFolderType);
     gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+    gridLayout->setContentsMargins(-1, 20, -1, -1);
+    trw_defineFolderType = new QTreeView(grb_defineFolderType);
+    trw_defineFolderType->setObjectName(QString::fromUtf8("trw_defineFolderType"));
+    trw_defineFolderType->setFont(font);
+    trw_defineFolderType->setStyleSheet(QString::fromUtf8(""));
+
+    gridLayout->addWidget(trw_defineFolderType, 0, 0, 1, 2);
+
     verticalLayout_2 = new QVBoxLayout();
     verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
     bt_makeDefault = new QPushButton(grb_defineFolderType);
@@ -346,13 +355,6 @@ public:
 
     gridLayout->addLayout(verticalLayout_2, 0, 2, 2, 1);
 
-    trw_defineFolderType = new QTreeView(grb_defineFolderType);
-    trw_defineFolderType->setObjectName(QString::fromUtf8("trw_defineFolderType"));
-    trw_defineFolderType->setFont(font);
-    trw_defineFolderType->setStyleSheet(QString::fromUtf8(""));
-
-    gridLayout->addWidget(trw_defineFolderType, 0, 0, 1, 2);
-
     lbl_usePreset = new QLabel(grb_defineFolderType);
     lbl_usePreset->setObjectName(QString::fromUtf8("lbl_usePreset"));
     lbl_usePreset->setFont(font);
@@ -419,6 +421,25 @@ public:
     lbl_projectPath->setText(QApplication::translate("ProjectManager", "Project Path:", 0, QApplication::UnicodeUTF8));
     grb_selectProject->setTitle(QApplication::translate("ProjectManager", "Select a Project", 0, QApplication::UnicodeUTF8));
 
+#ifndef QT_NO_TOOLTIP
+    lst_project->setToolTip(QString());
+#endif // QT_NO_TOOLTIP
+
+
+#ifndef QT_NO_STATUSTIP
+    lst_project->setStatusTip(QString());
+#endif // QT_NO_STATUSTIP
+
+
+#ifndef QT_NO_WHATSTHIS
+    lst_project->setWhatsThis(QApplication::translate("ProjectManager", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Lucida Grande ,Segoe UI'; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">List of current projects</p></body></html>", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_WHATSTHIS
+
+
 #ifndef QT_NO_WHATSTHIS
     bt_newProject->setWhatsThis(QApplication::translate("ProjectManager", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -448,25 +469,7 @@ public:
 #endif // QT_NO_TOOLTIP
 
     bt_deleteProject->setText(QApplication::translate("ProjectManager", "Delete Project", 0, QApplication::UnicodeUTF8));
-
-#ifndef QT_NO_TOOLTIP
-    lst_project->setToolTip(QString());
-#endif // QT_NO_TOOLTIP
-
-
-#ifndef QT_NO_STATUSTIP
-    lst_project->setStatusTip(QString());
-#endif // QT_NO_STATUSTIP
-
-
-#ifndef QT_NO_WHATSTHIS
-    lst_project->setWhatsThis(QApplication::translate("ProjectManager", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Lucida Grande ,Segoe UI'; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">List of current projects</p></body></html>", 0, QApplication::UnicodeUTF8));
-#endif // QT_NO_WHATSTHIS
-
+    lbl_shortBy->setText(QApplication::translate("ProjectManager", "Sort By:", 0, QApplication::UnicodeUTF8));
     cbx_shortBy->clear();
     cbx_shortBy->insertItems(0, QStringList()
      << QApplication::translate("ProjectManager", "All", 0, QApplication::UnicodeUTF8)
@@ -476,7 +479,6 @@ public:
      << QApplication::translate("ProjectManager", "-----------------", 0, QApplication::UnicodeUTF8)
      << QApplication::translate("ProjectManager", "Add New", 0, QApplication::UnicodeUTF8)
     );
-    lbl_shortBy->setText(QApplication::translate("ProjectManager", "Sort By:", 0, QApplication::UnicodeUTF8));
     grb_defineFolderType->setTitle(QApplication::translate("ProjectManager", "Define Folder Type", 0, QApplication::UnicodeUTF8));
     bt_makeDefault->setText(QApplication::translate("ProjectManager", "Make Default", 0, QApplication::UnicodeUTF8));
     bt_addFolder->setText(QApplication::translate("ProjectManager", "Add Folder", 0, QApplication::UnicodeUTF8));

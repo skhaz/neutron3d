@@ -19,6 +19,8 @@ Application::Application(int& argc, char** argv): QApplication(argc, argv)
     // Splash Screen
     QPixmap pixmap("media/themes/dark/splash.png");
     QSplashScreen splash(pixmap);
+
+    splash.showMessage ( "Loading components...", Qt::AlignLeft | Qt::AlignBottom, Qt::white );
     splash.show();
     processEvents();
 
@@ -26,10 +28,15 @@ Application::Application(int& argc, char** argv): QApplication(argc, argv)
     QWaitCondition sleep;
 
     mutex.lock();
-    sleep.wait(&mutex, 3000); // pausa 2 segundos
+    sleep.wait(&mutex, 1000); // pausa 2 segundos
     mutex.unlock();
-    splash.finish(mainWindow);
+    splash.showMessage ( "Open Neutron 3D - Version 0.1.0 Beta", Qt::AlignLeft | Qt::AlignBottom, Qt::white );
+    mutex.lock();
+    sleep.wait(&mutex, 2000); // pausa 2 segundos
+    mutex.unlock();
 
+
+    splash.finish(mainWindow);
 
 
 

@@ -26,6 +26,13 @@ HEADERS += \
 	Application.h \
 	MainWindow.h
 
+#QMAKESPEC = win-g++-64
+#QMAKESPEC = win-g++-32
+#QMAKESPEC = linux-g++-64
+#QMAKESPEC = linux-g++-32
+#QMAKESPEC = mac-g++-64
+#QMAKESPEC = mac-g++-32
+
 #RESOURCES += \
 #	media/themes/dark/dark.qrc
 
