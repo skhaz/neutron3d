@@ -106,6 +106,52 @@
         <string>Select a Project</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_2" >
+        <property name="topMargin" >
+         <number>20</number>
+        </property>
+        <item row="0" column="0" colspan="2" >
+         <widget class="QListView" name="lst_project" >
+          <property name="font" >
+           <font>
+            <family>Lucida Grande, Segoe UI</family>
+           </font>
+          </property>
+          <property name="cursor" stdset="0" >
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="toolTip" >
+           <string/>
+          </property>
+          <property name="statusTip" >
+           <string/>
+          </property>
+          <property name="whatsThis" >
+           <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Lucida Grande ,Segoe UI'; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">List of current projects&lt;/p>&lt;/body>&lt;/html></string>
+          </property>
+          <property name="styleSheet" >
+           <string notr="true" />
+          </property>
+          <property name="tabKeyNavigation" >
+           <bool>true</bool>
+          </property>
+          <property name="dragEnabled" >
+           <bool>true</bool>
+          </property>
+          <property name="dragDropMode" >
+           <enum>QAbstractItemView::DragOnly</enum>
+          </property>
+          <property name="resizeMode" >
+           <enum>QListView::Fixed</enum>
+          </property>
+          <property name="layoutMode" >
+           <enum>QListView::SinglePass</enum>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="2" >
          <layout class="QVBoxLayout" name="verticalLayout" >
           <item>
@@ -425,46 +471,18 @@ p, li { white-space: pre-wrap; }
           </item>
          </layout>
         </item>
-        <item row="0" column="0" colspan="2" >
-         <widget class="QListView" name="lst_project" >
+        <item row="1" column="0" >
+         <widget class="QLabel" name="lbl_shortBy" >
           <property name="font" >
            <font>
             <family>Lucida Grande, Segoe UI</family>
            </font>
           </property>
-          <property name="cursor" stdset="0" >
-           <cursorShape>ArrowCursor</cursorShape>
+          <property name="layoutDirection" >
+           <enum>Qt::LeftToRight</enum>
           </property>
-          <property name="toolTip" >
-           <string/>
-          </property>
-          <property name="statusTip" >
-           <string/>
-          </property>
-          <property name="whatsThis" >
-           <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
-&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Lucida Grande ,Segoe UI'; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">List of current projects&lt;/p>&lt;/body>&lt;/html></string>
-          </property>
-          <property name="styleSheet" >
-           <string notr="true" />
-          </property>
-          <property name="tabKeyNavigation" >
-           <bool>true</bool>
-          </property>
-          <property name="dragEnabled" >
-           <bool>true</bool>
-          </property>
-          <property name="dragDropMode" >
-           <enum>QAbstractItemView::DragOnly</enum>
-          </property>
-          <property name="resizeMode" >
-           <enum>QListView::Fixed</enum>
-          </property>
-          <property name="layoutMode" >
-           <enum>QListView::SinglePass</enum>
+          <property name="text" >
+           <string>Sort By:</string>
           </property>
          </widget>
         </item>
@@ -525,21 +543,6 @@ p, li { white-space: pre-wrap; }
           </item>
          </widget>
         </item>
-        <item row="1" column="0" >
-         <widget class="QLabel" name="lbl_shortBy" >
-          <property name="font" >
-           <font>
-            <family>Lucida Grande, Segoe UI</family>
-           </font>
-          </property>
-          <property name="layoutDirection" >
-           <enum>Qt::LeftToRight</enum>
-          </property>
-          <property name="text" >
-           <string>Sort By:</string>
-          </property>
-         </widget>
-        </item>
        </layout>
       </widget>
      </item>
@@ -560,6 +563,21 @@ p, li { white-space: pre-wrap; }
         <string>Define Folder Type</string>
        </property>
        <layout class="QGridLayout" name="gridLayout" >
+        <property name="topMargin" >
+         <number>20</number>
+        </property>
+        <item row="0" column="0" colspan="2" >
+         <widget class="QTreeView" name="trw_defineFolderType" >
+          <property name="font" >
+           <font>
+            <family>Lucida Grande, Segoe UI</family>
+           </font>
+          </property>
+          <property name="styleSheet" >
+           <string notr="true" />
+          </property>
+         </widget>
+        </item>
         <item rowspan="2" row="0" column="2" >
          <layout class="QVBoxLayout" name="verticalLayout_2" >
           <item>
@@ -819,18 +837,6 @@ p, li { white-space: pre-wrap; }
            </spacer>
           </item>
          </layout>
-        </item>
-        <item row="0" column="0" colspan="2" >
-         <widget class="QTreeView" name="trw_defineFolderType" >
-          <property name="font" >
-           <font>
-            <family>Lucida Grande, Segoe UI</family>
-           </font>
-          </property>
-          <property name="styleSheet" >
-           <string notr="true" />
-          </property>
-         </widget>
         </item>
         <item row="1" column="0" >
          <widget class="QLabel" name="lbl_usePreset" >
