@@ -5,6 +5,8 @@
 #include <QTextStream>
 #include <QSplashScreen>
 #include <QPixmap>
+#include <QProgressBar>
+#include <QLayout>
 
 // Remover depois serve apenas para o slash screen
 #include <QTime>
@@ -20,6 +22,24 @@ Application::Application(int& argc, char** argv): QApplication(argc, argv)
     QPixmap pixmap("media/themes/dark/splash.png");
     QSplashScreen splash(pixmap);
 
+    QProgressBar* pBar = new QProgressBar(&splash);
+    pBar->setAlignment(Qt::AlignBottom | Qt::AlignCenter);
+    pBar->setMaximumSize(2000, 15);
+    pBar->setGeometry(  0, 0, 700, 15 );
+    pBar->setMinimum(0);
+    pBar->setMaximum(99);
+    pBar->setValue(0);
+
+    QVBoxLayout* layout = new QVBoxLayout;
+    QSpacerItem* verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+    layout->setContentsMargins( 0,0,0,0);
+    layout->addItem(verticalSpacer);
+    layout->addWidget(pBar);
+    splash.setLayout(layout);
+
+
+
+
     splash.showMessage ( "Loading components...", Qt::AlignLeft | Qt::AlignBottom, Qt::white );
     splash.show();
     processEvents();
@@ -28,7 +48,7 @@ Application::Application(int& argc, char** argv): QApplication(argc, argv)
     QWaitCondition sleep;
 
     mutex.lock();
-    sleep.wait(&mutex, 1000); // pausa 2 segundos
+    sleep.wait(&mutex, 1000); // pausa 1 segundos
     mutex.unlock();
     splash.showMessage ( "Open Neutron 3D - Version 0.1.0 Beta", Qt::AlignLeft | Qt::AlignBottom, Qt::white );
     mutex.lock();
