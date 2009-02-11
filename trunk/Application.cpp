@@ -24,17 +24,19 @@ Application::Application(int& argc, char** argv): QApplication(argc, argv)
 
     QProgressBar* pBar = new QProgressBar(&splash);
     pBar->setAlignment(Qt::AlignBottom | Qt::AlignCenter);
-    pBar->setMaximumSize(2000, 15);
-    pBar->setGeometry(  0, 0, 700, 15 );
+    pBar->setMaximumSize(2000, 5);
+    pBar->setGeometry(  0, 0, 700, 5 );
     pBar->setMinimum(0);
     pBar->setMaximum(99);
     pBar->setValue(0);
 
     QVBoxLayout* layout = new QVBoxLayout;
     QSpacerItem* verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+    QSpacerItem* verticalSpacer1 = new QSpacerItem(40, 18, QSizePolicy::Fixed, QSizePolicy::Fixed);
     layout->setContentsMargins( 0,0,0,0);
     layout->addItem(verticalSpacer);
     layout->addWidget(pBar);
+    layout->addItem(verticalSpacer1);
     splash.setLayout(layout);
 
 
