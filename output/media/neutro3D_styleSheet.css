@@ -404,3 +404,70 @@ QProgressBar::chunk {
 	margin: 0px 0.2px 0px 0px;
 }
 
+
+/* ---------------------- Progress Bar ---------------------- */
+
+QTabWidget::pane 
+{
+    border: 1px solid rgb(45,45,45);
+}
+
+QTabWidget::tab-bar 
+{
+    left: 5px; /* move as tabs para a direita */
+}
+
+
+QTabBar::tab 
+{
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
+	border-top-width: 2px;
+	border-left-width: 2px;
+	border-right-width: 2px;
+	border-bottom-width: 1px;
+	border-top-style: groove;
+	border-left-style: groove;
+	border-right-style: groove;
+	border-bottom-style: solid;
+	border-top-color: rgb(60, 60, 60);
+	border-left-color: rgb(60, 60, 60);
+	border-right-color: rgb(45, 45, 45);
+	border-bottom-color: rgb(45, 45, 45);
+
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width: 50px;
+	min-height: 16px;
+    padding: 2px 6px 2px 6px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover 
+{
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(92, 92, 92, 255), stop:0.5 rgba(70, 70, 70, 255), stop:0.59 rgba(80, 80, 80, 255), stop:1 rgba(92, 92, 92, 255));
+}
+
+QTabBar::tab:selected 
+{
+color: black;
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(92, 92, 92, 255), stop:0.5 rgba(70, 70, 70, 255), stop:0.59 rgba(80, 80, 80, 255), stop:1 rgba(92, 92, 92, 255));
+	background-color: rgb(245, 150, 40);
+
+	border-top-width: 2px;
+	border-left-width: 2px;
+	border-right-width: 2px;
+	border-bottom-width: 1px;
+	border-top-style: groove;
+	border-left-style: groove;
+	border-right-style: groove;
+	border-bottom-style: solid;
+	border-top-color: rgb(45, 45, 45);
+	border-left-color: rgb(45, 45, 45);
+	border-right-color: rgb(60, 60, 60);
+	border-bottom-color: rgb(45, 45, 45);
+
+}
+
+QTabBar::tab:!selected 
+{
+    margin-top: 2px; /* make non-selected tabs look smaller */
+}
