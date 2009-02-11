@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'Preferences.ui'
 **
-** Created: Tue 10. Feb 10:46:58 2009
+** Created: Wed 11. Feb 07:56:42 2009
 **      by: Qt User Interface Compiler version 4.4.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -95,7 +95,7 @@ public:
 
     void retranslateUi(QWidget *Preferences)
     {
-    Preferences->setWindowTitle(QApplication::translate("Preferences", "Neutron 3D - Preferences", 0, QApplication::UnicodeUTF8));
+    Preferences->setWindowTitle(QApplication::translate("Preferences", "Preferences", 0, QApplication::UnicodeUTF8));
     lbl_categories->setText(QApplication::translate("Preferences", "Categories", 0, QApplication::UnicodeUTF8));
     tab_details->setTabText(tab_details->indexOf(tab), QApplication::translate("Preferences", "Display", 0, QApplication::UnicodeUTF8));
     tab_details->setTabText(tab_details->indexOf(tab_2), QApplication::translate("Preferences", "Performace", 0, QApplication::UnicodeUTF8));
