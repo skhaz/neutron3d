@@ -131,14 +131,14 @@ QComboBox {
 QComboBox::drop-down { 
 	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
 	
-	image: url(:/dark/up-down-dark-arrow.png);
+	image: url(:themes/dark/up-down-dark-arrow.png);
 	padding: 0px 2px 0px 2px;
 	width: 15px; 
 	border-left: 1px solid rgb(40,40,40);
 }
 
 QComboBox::down-arrow {
-	image: url(:/dark/up-down-dark-arrow.png);
+	image: url(:themes/dark/up-down-dark-arrow.png);
 }
 
  QComboBox QAbstractItemView {
@@ -235,7 +235,7 @@ QScrollBar {
  QScrollBar::handle::horizontal {
 		background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
 
-	image: url(:/dark/left-right-dark-arrow.png);
+	image: url(:themes/dark/left-right-dark-arrow.png);
 	min-width: 30px;
 	border: 1px solid rgb(45,45,45);
 	border-top-right-radius: 4px;
@@ -320,7 +320,7 @@ QSpinBox {
 QSpinBox::up-button { 
 	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
 	
-	image: url(:/dark/up-dark-arrow.png);
+	image: url(:themes/dark/up-dark-arrow.png);
 	width: 15px; 
 	border-left: 1px solid rgb(40,40,40);
 	border-bottom: 1px solid rgb(40,40,40);
@@ -334,7 +334,7 @@ QSpinBox::up-button::pressed {
 QSpinBox::down-button {
 	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
 	
-	image: url(:/dark/down-dark-arrow.png);
+	image: url(:themes/dark/down-dark-arrow.png);
 	width: 15px; 
 	border-left: 1px solid rgb(40,40,40);
 	border-top: 1px solid rgb(40,40,40);
@@ -363,7 +363,7 @@ QDoubleSpinBox {
 QDoubleSpinBox::up-button { 
 	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
 	
-	image: url(:/dark/up-dark-arrow.png);
+	image: url(:themes/dark/up-dark-arrow.png);
 	width: 15px; 
 	border-left: 1px solid rgb(40,40,40);
 	border-bottom: 1px solid rgb(40,40,40);
@@ -377,7 +377,7 @@ QDoubleSpinBox::up-button::pressed {
 QDoubleSpinBox::down-button {
 	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(72, 72, 72, 255), stop:0.5 rgba(50, 50, 50, 255), stop:0.59 rgba(60, 60, 60, 255), stop:1 rgba(72, 72, 72, 255));
 	
-	image: url(:/dark/down-dark-arrow.png);
+	image: url(:themes/dark/down-dark-arrow.png);
 	width: 15px; 
 	border-left: 1px solid rgb(40,40,40);
 	border-top: 1px solid rgb(40,40,40);
