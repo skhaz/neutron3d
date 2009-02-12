@@ -104,12 +104,14 @@ void Application::splashScreen()
 	{
 		pBar->setValue(i);
 
-		splash.showMessage ( "Loading components...", Qt::AlignLeft | Qt::AlignBottom, Qt::white );
+		splash.showMessage (QString("Loading components... %1%").arg(i), Qt::AlignLeft | Qt::AlignBottom, Qt::white );
 		
 		// pausa
 		mutex.lock();
-		sleep.wait(&mutex, 10); 
+		sleep.wait(&mutex, 50); 
 		mutex.unlock();
+
+		processEvents();
 	}
 
     splash.finish(mainWindow);	
