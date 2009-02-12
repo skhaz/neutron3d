@@ -19,6 +19,7 @@ class Application : public QApplication
 		~Application();
 	
 		void loadStyle();
+		void splashScreen();
 
 	protected slots:
 		void postLaunch();
