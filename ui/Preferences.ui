@@ -19,9 +19,6 @@
    <string>Preferences</string>
   </property>
   <layout class="QGridLayout" name="gridLayout" >
-   <property name="spacing" >
-    <number>5</number>
-   </property>
    <item row="0" column="0" colspan="2" >
     <widget class="QLabel" name="lbl_categories" >
      <property name="text" >
@@ -52,20 +49,32 @@
     </widget>
    </item>
    <item row="1" column="1" colspan="2" >
-    <widget class="QTabWidget" name="tab_details" >
+    <widget class="QStackedWidget" name="stackedWidget" >
      <property name="currentIndex" >
-      <number>1</number>
+      <number>0</number>
      </property>
-     <widget class="QWidget" name="tab" >
-      <attribute name="title" >
-       <string>Display</string>
-      </attribute>
+     <widget class="QWidget" name="page" >
+      <layout class="QGridLayout" name="gridLayout_2" >
+       <item row="0" column="0" >
+        <widget class="QTabWidget" name="tab_details" >
+         <property name="currentIndex" >
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="tab" >
+          <attribute name="title" >
+           <string>Display</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="tab_2" >
+          <attribute name="title" >
+           <string>Performace</string>
+          </attribute>
+         </widget>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QWidget" name="tab_2" >
-      <attribute name="title" >
-       <string>Performace</string>
-      </attribute>
-     </widget>
+     <widget class="QWidget" name="page_2" />
     </widget>
    </item>
    <item row="2" column="0" colspan="2" >
