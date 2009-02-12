@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'Preferences.ui'
 **
-** Created: Wed 11. Feb 16:22:52 2009
+** Created: Thu 12. Feb 17:01:34 2009
 **      by: Qt User Interface Compiler version 4.4.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -18,6 +18,7 @@
 #include <QtGui/QLabel>
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
+#include <QtGui/QStackedWidget>
 #include <QtGui/QTabWidget>
 #include <QtGui/QTreeView>
 #include <QtGui/QWidget>
@@ -30,9 +31,13 @@ public:
     QGridLayout *gridLayout;
     QLabel *lbl_categories;
     QTreeView *trv_categories;
+    QStackedWidget *stackedWidget;
+    QWidget *page;
+    QGridLayout *gridLayout_2;
     QTabWidget *tab_details;
     QWidget *tab;
     QWidget *tab_2;
+    QWidget *page_2;
     QSpacerItem *horizontalSpacer;
     QPushButton *bt_close;
 
@@ -43,7 +48,6 @@ public:
     Preferences->resize(600, 400);
     Preferences->setMinimumSize(QSize(600, 400));
     gridLayout = new QGridLayout(Preferences);
-    gridLayout->setSpacing(5);
     gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
     lbl_categories = new QLabel(Preferences);
     lbl_categories->setObjectName(QString::fromUtf8("lbl_categories"));
@@ -62,7 +66,13 @@ public:
 
     gridLayout->addWidget(trv_categories, 1, 0, 1, 1);
 
-    tab_details = new QTabWidget(Preferences);
+    stackedWidget = new QStackedWidget(Preferences);
+    stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
+    page = new QWidget();
+    page->setObjectName(QString::fromUtf8("page"));
+    gridLayout_2 = new QGridLayout(page);
+    gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+    tab_details = new QTabWidget(page);
     tab_details->setObjectName(QString::fromUtf8("tab_details"));
     tab = new QWidget();
     tab->setObjectName(QString::fromUtf8("tab"));
@@ -71,7 +81,14 @@ public:
     tab_2->setObjectName(QString::fromUtf8("tab_2"));
     tab_details->addTab(tab_2, QString());
 
-    gridLayout->addWidget(tab_details, 1, 1, 1, 2);
+    gridLayout_2->addWidget(tab_details, 0, 0, 1, 1);
+
+    stackedWidget->addWidget(page);
+    page_2 = new QWidget();
+    page_2->setObjectName(QString::fromUtf8("page_2"));
+    stackedWidget->addWidget(page_2);
+
+    gridLayout->addWidget(stackedWidget, 1, 1, 1, 2);
 
     horizontalSpacer = new QSpacerItem(480, 17, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -87,6 +104,7 @@ public:
 
     retranslateUi(Preferences);
 
+    stackedWidget->setCurrentIndex(0);
     tab_details->setCurrentIndex(1);
 
 
