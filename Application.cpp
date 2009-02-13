@@ -108,7 +108,7 @@ void Application::splashScreen()
 		
 		// pausa
 		mutex.lock();
-		sleep.wait(&mutex, 50); 
+        sleep.wait(&mutex, 10);
 		mutex.unlock();
 
 		processEvents();
