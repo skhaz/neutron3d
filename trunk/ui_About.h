@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'About.ui'
 **
-** Created: Thu 12. Feb 17:01:33 2009
+** Created: Fri 13. Feb 09:40:19 2009
 **      by: Qt User Interface Compiler version 4.4.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -48,7 +48,7 @@ public:
 
     void retranslateUi(QWidget *About)
     {
-    About->setWindowTitle(QApplication::translate("About", "About Neutron 3D", 0, QApplication::UnicodeUTF8));
+    About->setWindowTitle(QApplication::translate("About", "About", 0, QApplication::UnicodeUTF8));
     lbl_about->setText(QApplication::translate("About", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
