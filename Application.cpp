@@ -8,7 +8,7 @@
 #include <QProgressBar>
 #include <QLayout>
 #include <QString>
-#include <QRect>
+
 
 // Remover depois serve apenas para o slash screen
 #include <QTime>
@@ -32,14 +32,10 @@ Application::~Application()
 
 void Application::postLaunch()
 {
-	mainWindow->showMaximized();
-
 	// carrega o stylesheet	
 	loadStyle();
 
- 
 	mainWindow->showMaximized();
-
 }
 
 void Application::loadStyle()
