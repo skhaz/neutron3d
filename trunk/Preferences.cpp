@@ -6,26 +6,26 @@
 Preferences::Preferences(QWidget* parent)
 : QDialog(parent)
 {
-	setWindowTitle("Preferences");
+	setWindowTitle(tr("Preferences"));
 	resize( 650, 350);
     setMinimumSize( 450, 350 );
 	
 	
 	QListWidget *lst_categories = new QListWidget(this);
-	lst_categories->setMinimumSize( 150, 300);
+	lst_categories->setMinimumSize( 150, 100);
 	lst_categories->setMaximumSize( 150, 16777215);
-	lst_categories->addItem("General");
-	lst_categories->addItem("Mouse");
-	lst_categories->addItem("Selection");
-	lst_categories->addItem("Polygon");
-	lst_categories->addItem("Curves");
-	lst_categories->addItem("Colors");
+	lst_categories->addItem(tr("General"));
+	lst_categories->addItem(tr("Mouse"));
+	lst_categories->addItem(tr("Selection"));
+	lst_categories->addItem(tr("Polygon"));
+	lst_categories->addItem(tr("Curves"));
+	lst_categories->addItem(tr("Colors"));
 	
 
     QStackedWidget *stk_details = new QStackedWidget(this);
 	QWidget *generalPage = new QWidget();
 	QWidget *mousePage = new QWidget();
-	stk_details->setMinimumSize( 100, 300);
+	stk_details->setMinimumSize( 100, 100);
 	stk_details->setFrameShape( QFrame::Box );
 	stk_details->setFrameShadow( QFrame::Plain);
 	stk_details->addWidget(generalPage);
@@ -38,9 +38,9 @@ Preferences::Preferences(QWidget* parent)
 	layout->addWidget(stk_details);
 	
 	
-	QPushButton *bt_close = new QPushButton("Close", this);
+	QPushButton *bt_close = new QPushButton(tr("Close"), this);
 	bt_close->setFixedSize ( 100, 30 );
-	QPushButton *bt_apply = new QPushButton("Apply", this);
+	QPushButton *bt_apply = new QPushButton(tr("Apply"), this);
 	bt_apply->setFixedSize ( 100, 30 );
 	
 	QSpacerItem *hSpacer = new QSpacerItem(260, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);

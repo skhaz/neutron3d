@@ -16,73 +16,73 @@ MainWindow::MainWindow(QWidget* parent)
 	// ************************************************
 	//	File Menu
 	// ************************************************
-	newAction = new QAction("&New", this);
+	newAction = new QAction(tr("&New"), this);
 	newAction->setIcon(QIcon("/media/icon/newFile.png"));
 	newAction->setShortcut(tr("Ctrl+n"));
-	newAction->setStatusTip("Create new scene");
+	newAction->setStatusTip(tr("Create new scene"));
 	connect(newAction, SIGNAL(triggered()), SLOT());
 
-	openAction = new QAction("&Open", this);
+	openAction = new QAction(tr("&Open"), this);
 	openAction->setIcon(QIcon("/media/icon/open.png"));
 	openAction->setShortcut(tr("Ctrl+o"));
-	openAction->setStatusTip("Open scene");
+	openAction->setStatusTip(tr("Open scene"));
 	connect(openAction, SIGNAL(triggered()), SLOT(openFileSlot()));
 
-	saveAction = new QAction("&Save", this);
+	saveAction = new QAction(tr("&Save"), this);
 	saveAction->setIcon(QIcon("/media/icon/save.png"));
 	saveAction->setShortcut(tr("Ctrl+S"));
-	saveAction->setStatusTip("Save scene");
+	saveAction->setStatusTip(tr("Save scene"));
 	connect(saveAction, SIGNAL(triggered()), SLOT(saveFileSlot()));
 
-	saveAsAction = new QAction("Save Scene &As...", this);
+	saveAsAction = new QAction(tr("Save Scene &As..."), this);
 	saveAsAction->setIcon(QIcon("/media/icon/save.png"));
 	saveAsAction->setShortcut(tr("Shift+Ctrl+s"));
-	saveAsAction->setStatusTip("Save Scene As");
+	saveAsAction->setStatusTip(tr("Save Scene As"));
 	connect(saveAsAction, SIGNAL(triggered()), SLOT(saveAsFileSlot()));
 
-	importAction = new QAction("&Import...", this);
+	importAction = new QAction(tr("&Import..."), this);
 	importAction->setIcon(QIcon("/media/icon/import.png"));
 	importAction->setShortcut(tr("Ctrl+i"));
-	importAction->setStatusTip("Import objetc or scene");
+	importAction->setStatusTip(tr("Import objetc or scene"));
 	connect(importAction, SIGNAL(triggered()), SLOT(importFileSlot()));
 
-	exportAllAction = new QAction("&Export All...", this);
+	exportAllAction = new QAction(tr("&Export All..."), this);
 	exportAllAction->setIcon(QIcon("/media/icon/exportAll.png"));
 	exportAllAction->setShortcut(tr(""));
-	exportAllAction->setStatusTip("Export all objects in scene");
+	exportAllAction->setStatusTip(tr("Export all objects in scene"));
 	connect(exportAllAction, SIGNAL(triggered()), SLOT(exportAllFileSlot()));
 
-	exportSelectionAction = new QAction("Export S&election...", this);
+	exportSelectionAction = new QAction(tr("Export S&election..."), this);
 	exportSelectionAction->setIcon(QIcon("/media/icon/exportSelection.png"));
 	exportSelectionAction->setShortcut(tr(""));
-	exportSelectionAction->setStatusTip("Export Selected Objects");
+	exportSelectionAction->setStatusTip(tr("Export Selected Objects"));
 	connect(exportSelectionAction, SIGNAL(triggered()), SLOT(exportSelectedFileSlot()));
 
-	projectManagerAction = new QAction("Project &Manager", this);
+	projectManagerAction = new QAction(tr("Project &Manager"), this);
 	projectManagerAction->setIcon(QIcon("/media/icon/projectManager.png"));
     projectManagerAction->setShortcut(tr("Ctrl+7"));
-	projectManagerAction->setStatusTip("Project Manager");
+	projectManagerAction->setStatusTip(tr("Project Manager"));
 	connect(projectManagerAction, SIGNAL(triggered()), SLOT(projectManagerSlot()));
 
-	recentFilesAction = new QAction("Re&cent Files", this);
+	recentFilesAction = new QAction(tr("Re&cent Files"), this);
 	recentFilesAction->setIcon(QIcon("/media/icon/recentFiles.png"));
 	recentFilesAction->setShortcut(tr(""));
-	recentFilesAction->setStatusTip("Recent Files");
+	recentFilesAction->setStatusTip(tr("Recent Files"));
 	connect(recentFilesAction, SIGNAL(triggered()), SLOT());
 
-	recentProjectAction = new QAction("Recent Pro&ject", this);
+	recentProjectAction = new QAction(tr("Recent Pro&ject"), this);
 	recentProjectAction->setIcon(QIcon("/media/icon/recentProject.png"));
 	recentProjectAction->setShortcut(tr(""));
-	recentProjectAction->setStatusTip("Recent Project");
+	recentProjectAction->setStatusTip(tr("Recent Project"));
     connect(recentProjectAction, SIGNAL(triggered()), SLOT());
 
-	exitAction = new QAction("&Quit", this);
+	exitAction = new QAction(tr("&Quit"), this);
 	exitAction->setIcon(QIcon("/media/icon/door_out.png"));
 	exitAction->setShortcut(tr("Ctrl+q"));
-	exitAction->setStatusTip("Quit application");
+	exitAction->setStatusTip(tr("Quit application"));
 	connect(exitAction, SIGNAL(triggered()), SLOT(close()));
 
-	fileMenu = menu->addMenu("&File"); 
+	fileMenu = menu->addMenu(tr("&File")); 
 	 
 	fileMenu->addAction(newAction);
 	fileMenu->addAction(openAction);
@@ -106,72 +106,72 @@ MainWindow::MainWindow(QWidget* parent)
 	// ************************************************
 	//	Edit Menu
 	// ************************************************
-	undoAction = new QAction("&Undo", this);
+	undoAction = new QAction(tr("&Undo"), this);
 	undoAction->setIcon(QIcon("/media/icon/undo.png"));
 	undoAction->setShortcut(tr("Ctrl+z"));
-	undoAction->setStatusTip("Undo");
+	undoAction->setStatusTip(tr("Undo"));
 	connect(undoAction, SIGNAL(triggered()), SLOT());
 
-	rendoAction = new QAction("&Rendo", this);
+	rendoAction = new QAction(tr("&Rendo"), this);
 	rendoAction->setIcon(QIcon("/media/icon/rendo.png"));
 	rendoAction->setShortcut(tr("Shift+Ctrl+z"));
-	rendoAction->setStatusTip("Rendo");
+	rendoAction->setStatusTip(tr("Rendo"));
 	connect(rendoAction, SIGNAL(triggered()), SLOT());
 
-	cutAction = new QAction("Cut", this);
+	cutAction = new QAction(tr("Cut"), this);
 	cutAction->setIcon(QIcon("/media/icon/cut.png"));
 	cutAction->setShortcut(tr("Ctrl+x"));
-	cutAction->setStatusTip("Cut");
+	cutAction->setStatusTip(tr("Cut"));
 	connect(cutAction, SIGNAL(triggered()), SLOT());
 
-	copyAction = new QAction("Copy", this);
+	copyAction = new QAction(tr("Copy"), this);
 	copyAction->setIcon(QIcon("/media/icon/copy.png"));
 	copyAction->setShortcut(tr("Ctrl+c"));
-	copyAction->setStatusTip("Copy");
+	copyAction->setStatusTip(tr("Copy"));
 	connect(copyAction, SIGNAL(triggered()), SLOT());
 
-	pasteAction = new QAction("Paste", this);
+	pasteAction = new QAction(tr("Paste"), this);
 	pasteAction->setIcon(QIcon("/media/icon/paste.png"));
 	pasteAction->setShortcut(tr("Ctrl+v"));
-	pasteAction->setStatusTip("Paste");
+	pasteAction->setStatusTip(tr("Paste"));
 	connect(pasteAction, SIGNAL(triggered()), SLOT());
 
-	deleteAction = new QAction("Delete", this);
+	deleteAction = new QAction(tr("Delete"), this);
 	deleteAction->setIcon(QIcon("/media/icon/delete.png"));
 	deleteAction->setShortcut(tr(""));
-	deleteAction->setStatusTip("Delete");
+	deleteAction->setStatusTip(tr("Delete"));
 	connect(deleteAction, SIGNAL(triggered()), SLOT());
 
-	selectAllAction = new QAction("Select All", this);
+	selectAllAction = new QAction(tr("Select All"), this);
 	selectAllAction->setIcon(QIcon("/media/icon/selectAll.png"));
 	selectAllAction->setShortcut(tr("Ctrl+a"));
-	selectAllAction->setStatusTip("Select All");
+	selectAllAction->setStatusTip(tr("Select All"));
 	connect(selectAllAction, SIGNAL(triggered()), SLOT());
 
-	selectBranchAction = new QAction("Select Branch", this);
+	selectBranchAction = new QAction(tr("Select Branch"), this);
 	selectBranchAction->setIcon(QIcon("/media/icon/selectBranch.png"));
 	selectBranchAction->setShortcut(tr(""));
-	selectBranchAction->setStatusTip("Select Branch");
+	selectBranchAction->setStatusTip(tr("Select Branch"));
 	connect(selectBranchAction, SIGNAL(triggered()), SLOT());
 
-	selectTreeAction = new QAction("Select Tree", this);
+	selectTreeAction = new QAction(tr("Select Tree"), this);
 	selectTreeAction->setIcon(QIcon("/media/icon/selectTree.png"));
 	selectTreeAction->setShortcut(tr(""));
-	selectTreeAction->setStatusTip("Select Tree");
+	selectTreeAction->setStatusTip(tr("Select Tree"));
 	connect(selectTreeAction, SIGNAL(triggered()), SLOT());
 
-	PreferenceshAction = new QAction("Preferences...", this);
+	PreferenceshAction = new QAction(tr("Preferences..."), this);
 	PreferenceshAction->setShortcut(tr(""));
-	PreferenceshAction->setStatusTip("Preferences");
+	PreferenceshAction->setStatusTip(tr("Preferences"));
 	connect(PreferenceshAction, SIGNAL(triggered()), SLOT(preferencesSlot()));
 
-    keyBoardMappingAction = new QAction("Keyboard Mapping", this);
+    keyBoardMappingAction = new QAction(tr("Keyboard Mapping"), this);
     keyBoardMappingAction->setShortcut(tr("Ctrl+6"));
-    keyBoardMappingAction->setStatusTip("Keyboard Mapping");
+    keyBoardMappingAction->setStatusTip(tr("Keyboard Mapping"));
     connect(keyBoardMappingAction, SIGNAL(triggered()), SLOT(keyBoardMappingSlot()));
 
 	
-	fileMenu = menu->addMenu("&Edit");
+	fileMenu = menu->addMenu(tr("&Edit"));
 
 	fileMenu->addAction(undoAction);
 	fileMenu->addAction(rendoAction);
@@ -195,41 +195,41 @@ MainWindow::MainWindow(QWidget* parent)
 	// ************************************************
 	//	View Menu
 	// ************************************************
-	fileMenu = menu->addMenu("&View"); 
+	fileMenu = menu->addMenu(tr("&View")); 
 
 	// ************************************************
 	//	Display Menu
 	// ************************************************
-	fileMenu = menu->addMenu("&Display"); 
+	fileMenu = menu->addMenu(tr("&Display")); 
 
 	// ************************************************
 	//	Window Menu
 	// ************************************************
-	fileMenu = menu->addMenu("&Window"); 
+	fileMenu = menu->addMenu(tr("&Window")); 
 
 
 	// ************************************************
 	//	Help Menu
 	// ************************************************
-	helpAction = new QAction("Neutron 3D Help", this);
+	helpAction = new QAction(tr("Neutron 3D Help"), this);
 	helpAction->setIcon(QIcon("/media/icon/neutroHelp.png"));
 	helpAction->setShortcut(tr(""));
-	helpAction->setStatusTip("Neutron 3D Help");
+	helpAction->setStatusTip(tr("Neutron 3D Help"));
 	connect(helpAction, SIGNAL(triggered()), SLOT());
 
-	whatsNewAction = new QAction("What's New in Neutron 3D", this);
+	whatsNewAction = new QAction(tr("What's New in Neutron 3D"), this);
 	whatsNewAction->setIcon(QIcon("/media/icon/whatsNew.png"));
 	whatsNewAction->setShortcut(tr(""));
-	whatsNewAction->setStatusTip("What's New in Neutron 3");
+	whatsNewAction->setStatusTip(tr("What's New in Neutron 3"));
 	connect(whatsNewAction, SIGNAL(triggered()), SLOT());
 
-	aboutAction = new QAction("About", this);
+	aboutAction = new QAction(tr("About"), this);
 	aboutAction->setIcon(QIcon("/media/icon/about.png"));
 	aboutAction->setShortcut(tr(""));
-	aboutAction->setStatusTip("About Neutron 3D");
+	aboutAction->setStatusTip(tr("About Neutron 3D"));
 	connect(aboutAction, SIGNAL(triggered()), SLOT(aboutSlot()));
 
-	fileMenu = menu->addMenu("&Help"); 
+	fileMenu = menu->addMenu(tr("&Help")); 
 
 	fileMenu->addAction(helpAction);
 	fileMenu->addAction(whatsNewAction);
@@ -259,7 +259,7 @@ void MainWindow::projectManagerSlot()
 void MainWindow::openFileSlot()
 {
 	QFileDialog* openFileDialog = new QFileDialog(this);
-	openFileDialog->setWindowTitle("Open Scene File");
+	openFileDialog->setWindowTitle(tr("Open Scene File"));
 	openFileDialog->setViewMode(QFileDialog::List);
 	openFileDialog->setAcceptMode(QFileDialog::AcceptOpen);
     openFileDialog->getOpenFileName(this, tr("Open Scene"), "", tr("Scene Files (*.nkb *.nka)"));
@@ -268,7 +268,7 @@ void MainWindow::openFileSlot()
 void MainWindow::saveFileSlot()
 {
 	QFileDialog* saveFileDialog = new QFileDialog(this);
-	saveFileDialog->setWindowTitle("Save Scene");
+	saveFileDialog->setWindowTitle(tr("Save Scene"));
 	saveFileDialog->setViewMode(QFileDialog::List);
 	saveFileDialog->setAcceptMode(QFileDialog::AcceptSave);
 	saveFileDialog->getSaveFileName(this, tr("Save Scene"), "untitled", tr("Scene Files (*.nkb *.nka)"));
@@ -277,7 +277,7 @@ void MainWindow::saveFileSlot()
 void MainWindow::saveAsFileSlot()
 {
 	QFileDialog* saveAsFileDialog = new QFileDialog(this);
-	saveAsFileDialog->setWindowTitle("Save Scene As");
+	saveAsFileDialog->setWindowTitle(tr("Save Scene As"));
 	saveAsFileDialog->setViewMode(QFileDialog::List);
 	saveAsFileDialog->setAcceptMode(QFileDialog::AcceptSave);
 	saveAsFileDialog->getSaveFileName(this, tr("Save Scene As"), "untitled", tr("Scene Files (*.nkb *.nka)"));
@@ -286,7 +286,7 @@ void MainWindow::saveAsFileSlot()
 void MainWindow::importFileSlot()
 {
 	QFileDialog* importFileDialog = new QFileDialog(this);
-	importFileDialog->setWindowTitle("Import  File");
+	importFileDialog->setWindowTitle(tr("Import  File"));
 	importFileDialog->setViewMode(QFileDialog::List);
 	importFileDialog->setAcceptMode(QFileDialog::AcceptOpen);
     importFileDialog->getOpenFileName(this, tr("Import File"), "", tr("Import Files (*.nkb *.nka *.fbx *.obj *.3ds *.rib *.dwg)"));
@@ -295,7 +295,7 @@ void MainWindow::importFileSlot()
 void MainWindow::exportAllFileSlot()
 {
 	QFileDialog* exportAllFileDialog = new QFileDialog(this);
-	exportAllFileDialog->setWindowTitle("Export Scene");
+	exportAllFileDialog->setWindowTitle(tr("Export Scene"));
 	exportAllFileDialog->setViewMode(QFileDialog::List);
 	exportAllFileDialog->setAcceptMode(QFileDialog::AcceptSave);
 	exportAllFileDialog->getSaveFileName(this, tr("Export Scene"), "untitled", tr("Export Files (*.nkb *.nka *.fbx *.obj)"));
@@ -304,7 +304,7 @@ void MainWindow::exportAllFileSlot()
 void MainWindow::exportSelectedFileSlot()
 {
 	QFileDialog* exportSelectedFileDialog = new QFileDialog(this);
-	exportSelectedFileDialog->setWindowTitle("Export Selected Objects");
+	exportSelectedFileDialog->setWindowTitle(tr("Export Selected Objects"));
 	exportSelectedFileDialog->setViewMode(QFileDialog::List);
 	exportSelectedFileDialog->setAcceptMode(QFileDialog::AcceptSave);
 	exportSelectedFileDialog->getSaveFileName(this, tr("Export Selected Objects"), "untitled", tr("Export Files (*.nkb *.nka *.fbx *.obj)"));
