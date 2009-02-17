@@ -2,12 +2,14 @@
 #define PREFERENCES_H
 
 #include <QWidget>
+#include <QDialog>
 
 
-class Preferences : public QWidget
+
+class Preferences : public QDialog
 {
 public:
-    Preferences();
+    Preferences(QWidget* parent = 0);
     ~Preferences();
 	
 	void generalPage();

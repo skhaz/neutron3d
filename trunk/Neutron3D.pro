@@ -20,11 +20,13 @@ include(ui/Ui.pri)
 SOURCES += \
 	Main.cpp \
 	Application.cpp \
-	MainWindow.cpp
+	MainWindow.cpp \
+	Preferences.cpp
 
 HEADERS += \
 	Application.h \
-	MainWindow.h
+	MainWindow.h \
+	Preferences.h
 
 #QMAKESPEC = win-g++-64
 #QMAKESPEC = win-g++-32

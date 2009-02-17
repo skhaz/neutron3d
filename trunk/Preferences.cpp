@@ -3,13 +3,12 @@
 #include "Preferences.h"
 
 
-Preferences::Preferences()
+Preferences::Preferences(QWidget* parent)
+: QDialog(parent)
 {
-	
-    QWidget *form_preferences = new QWidget(this);
-    form_preferences->setWindowTitle("Preferences");
-	form_preferences->resize( 650, 350);
-    form_preferences->setMinimumSize( 450, 350 );
+	setWindowTitle("Preferences");
+	resize( 650, 350);
+    setMinimumSize( 450, 350 );
 	
 	
 	QListWidget *lst_categories = new QListWidget(this);
