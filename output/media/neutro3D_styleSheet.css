@@ -155,7 +155,8 @@ QListView {
 	color: black;
 	background-color:rgb(140, 160, 160);
 	selection-background-color: rgb(245, 150, 40);
-	padding: 0px 5px 0px 5px;
+    selection-color: black;
+	padding: 0px 0px 0px 0px;
 	border: 2px groove rgb(45,45,45);
 	border-radius: 4px;
 }
