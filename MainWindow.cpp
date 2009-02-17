@@ -313,7 +313,7 @@ void MainWindow::exportSelectedFileSlot()
 
  void MainWindow::preferencesSlot()
 {	
-	Preferences* pref = new Preferences();
+	Preferences* pref = new Preferences(this);
 	pref->show();
 }
  
