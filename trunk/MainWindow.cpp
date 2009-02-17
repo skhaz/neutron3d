@@ -310,11 +310,13 @@ void MainWindow::exportSelectedFileSlot()
 	exportSelectedFileDialog->getSaveFileName(this, tr("Export Selected Objects"), "untitled", tr("Export Files (*.nkb *.nka *.fbx *.obj)"));
 }
 
-void MainWindow::preferencesSlot()
-{
-	Preferences* pref = new Preferences(this);
+
+ void MainWindow::preferencesSlot()
+{	
+	Preferences* pref = new Preferences();
 	pref->show();
 }
+ 
 
 
 void MainWindow::aboutSlot()

@@ -3,13 +3,22 @@
 
 #include <QWidget>
 
+
 class Preferences : public QWidget
 {
-    Q_OBJECT
-
 public:
     Preferences();
     ~Preferences();
+	
+	void generalPage();
+	void colorPage();
+	
+
+private:
+    Q_OBJECT
+
+	protected slots:
+	void changePage();
 };
 
 #endif
