@@ -12,6 +12,11 @@ class About : public QDialog
 		
 	private:
 		Q_OBJECT
+
+    protected:
+        void mousePressEvent(QMouseEvent *event);
+
+
 };
 
 #endif
