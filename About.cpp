@@ -25,16 +25,16 @@ About::About(QWidget* parent)
 	
 	QLabel *version = new QLabel(tr("Version 0.1.0 - Beta"), this);
 	version->setAlignment(Qt::AlignCenter);
-	version->setStyleSheet(QString::fromUtf8("font-size: 12px;\n"
+    version->setStyleSheet(QString::fromUtf8("font-size: 14px;\n"
 										   "font-wight: bold;\n"
 										   "text-align: center;\n"));
 	
 	
-	QLabel *content = new QLabel(tr("Developers:\n"
-									"AndrÃ© Agenor M. da Luz\n"
+    QLabel *content = new QLabel(QString::fromUtf8("Developers:\n"
+                                    "André Agenor M. da Luz\n"
 									"Rodrigo Delduca Batista\n"
-									"Arleson Valentini Tonnera\n"), this);
-	content->setStyleSheet(QString::fromUtf8("font-size: 9px;\n"));
+                                    "Arleson Valentini Tonnera\n"), this);
+    content->setStyleSheet(QString::fromUtf8("font-size: 10px;\n"));
 	 
 	
 	QSpacerItem *hSpacer = new QSpacerItem(260, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
