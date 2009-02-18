@@ -6,7 +6,6 @@
 
 #include "About.h"
 
-
 About::About(QWidget* parent)
 : QDialog(parent)
 {
@@ -30,7 +29,7 @@ About::About(QWidget* parent)
 										   "text-align: center;\n"));
 	
 	
-    QLabel *content = new QLabel(QString::fromUtf8("Developers:\n"
+    QLabel *content = new QLabel(QLatin1String("Developers:\n"
                                     "André Agenor M. da Luz\n"
 									"Rodrigo Delduca Batista\n"
                                     "Arleson Valentini Tonnera\n"), this);
@@ -54,11 +53,16 @@ About::About(QWidget* parent)
 	
 	
 	setLayout(hLayout);
-	
+
 }
 
 About::~About()
 {
+}
+
+void About::mousePressEvent(QMouseEvent *event)
+{
+    close();
 }
 
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'ProjectManager.ui'
 **
-** Created: Wed 18. Feb 09:37:54 2009
+** Created: Wed 18. Feb 17:12:04 2009
 **      by: Qt User Interface Compiler version 4.4.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!

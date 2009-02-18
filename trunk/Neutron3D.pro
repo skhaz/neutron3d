@@ -21,12 +21,14 @@ SOURCES += \
 	Main.cpp \
 	Application.cpp \
 	MainWindow.cpp \
-	Preferences.cpp
+	Preferences.cpp \
+	About.cpp
 
 HEADERS += \
 	Application.h \
 	MainWindow.h \
-	Preferences.h
+	Preferences.h \
+	About.h
 
 #QMAKESPEC = win-g++-64
 #QMAKESPEC = win-g++-32

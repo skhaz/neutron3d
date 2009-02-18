@@ -77,7 +77,7 @@ void Application::splashScreen()
 	
     QVBoxLayout* layout = new QVBoxLayout;
     QSpacerItem* verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-    QSpacerItem* verticalSpacer1 = new QSpacerItem(40, 23, QSizePolicy::Fixed, QSizePolicy::Fixed);
+    QSpacerItem* verticalSpacer1 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Fixed);
 	
     layout->setContentsMargins( 0,0,0,0);
     layout->addItem(verticalSpacer);

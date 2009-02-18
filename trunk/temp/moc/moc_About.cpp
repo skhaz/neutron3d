@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'About.h'
 **
-** Created: Tue Feb 17 10:14:20 2009
+** Created: Wed 18. Feb 17:12:22 2009
 **      by: The Qt Meta Object Compiler version 59 (Qt 4.4.3)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../ui/About.h"
+#include "../../About.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'About.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 59

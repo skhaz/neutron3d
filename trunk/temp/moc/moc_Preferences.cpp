@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Preferences.h'
 **
-** Created: Tue Feb 17 10:26:52 2009
+** Created: Wed 18. Feb 17:12:21 2009
 **      by: The Qt Meta Object Compiler version 59 (Qt 4.4.3)
 **
 ** WARNING! All changes made in this file will be lost!
