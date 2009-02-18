@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'KeyboardMapping.ui'
 **
-** Created: Tue 17. Feb 10:31:39 2009
+** Created: Wed 18. Feb 09:37:54 2009
 **      by: Qt User Interface Compiler version 4.4.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
