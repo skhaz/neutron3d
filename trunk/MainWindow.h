@@ -4,8 +4,8 @@
 
 #include "ui/KeyboardMapping.h"
 #include "ui/ProjectManager.h"
-#include "ui/About.h"
 #include "Preferences.h"
+#include "About.h"
 
 
 #include <QMainWindow>
