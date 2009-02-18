@@ -314,7 +314,7 @@ void MainWindow::exportSelectedFileSlot()
  void MainWindow::preferencesSlot()
 {	
 	Preferences* pref = new Preferences(this);
-	pref->show();
+	pref->exec();
 }
  
 
@@ -322,5 +322,5 @@ void MainWindow::exportSelectedFileSlot()
 void MainWindow::aboutSlot()
 {
 	About* abt = new About(this);
-	abt->show();
+	abt->exec();
 }
