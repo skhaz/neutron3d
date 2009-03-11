@@ -1,6 +1,6 @@
 
-#ifndef _MainWindow_h
-#define _MainWindow_h
+#ifndef _MAINWINDOW_H
+#define _MAINWINDOW_H
 
 #include "ui/KeyboardMapping.h"
 #include "ui/ProjectManager.h"
@@ -9,20 +9,32 @@
 
 
 #include <QMainWindow>
-#include <QMessageBox>
-#include <QString>
 
+
+class QAction;
+class QMenu;
 
 
 class MainWindow : public QMainWindow
 {
+	Q_OBJECT
+	
 	public:
 		MainWindow(QWidget* parent = 0);
 		~MainWindow();
 
 	private:
-		Q_OBJECT
-
+		void createMenus();
+		void createActions();
+	
+	QMenu *fileMenu;
+	QMenu *editMenu;
+	QMenu *viewMenu;
+	QMenu *LayoutMenu;
+	QMenu *displayMenu;
+	QMenu *windowMenu;
+	QMenu *helpMenu;
+	
 		// File Menu
 		QAction* newAction;
 		QAction* openAction;
@@ -48,15 +60,19 @@ class MainWindow : public QMainWindow
 		QAction* selectTreeAction;
 		QAction* PreferenceshAction;
         QAction* keyBoardMappingAction;
+	
+		// View Menu
+		QAction* addLayoutAction;
+		QAction* dellLayoutAction;	
 
 		// Help Menu
 		QAction* helpAction;
 		QAction* whatsNewAction;
 		QAction* aboutAction;
 		
-		QMenu* fileMenu;
+		
 
-	protected slots:
+	private	slots:
 		void openFileSlot();
 		void saveFileSlot();
 		void saveAsFileSlot();
@@ -68,8 +84,6 @@ class MainWindow : public QMainWindow
 	
 		void preferencesSlot();
 		void aboutSlot();
-		
-
 };
 
 #endif
