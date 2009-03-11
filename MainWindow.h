@@ -84,6 +84,9 @@ class MainWindow : public QMainWindow
 	
 		void preferencesSlot();
 		void aboutSlot();
+	
+	protected:
+		void contextMenuEvent(QContextMenuEvent *event);
 };
 
 #endif

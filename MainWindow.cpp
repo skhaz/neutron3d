@@ -14,6 +14,18 @@ MainWindow::~MainWindow()
 {
 }
 
+void MainWindow::contextMenuEvent(QContextMenuEvent *event)
+{
+	QMenu menu(this);
+	menu.addAction(cutAction);
+	menu.addAction(copyAction);
+	menu.addAction(pasteAction);
+	menu.addAction(deleteAction);
+	menu.addSeparator();
+	menu.addAction(PreferenceshAction);
+	menu.exec(event->globalPos());
+}
+
 void MainWindow::createMenus()
 {	
 	// ************************************************
@@ -190,7 +202,7 @@ void MainWindow::createActions()
 	
 	deleteAction = new QAction(tr("Delete"), this);
 	deleteAction->setIcon(QIcon("/media/icon/delete.png"));
-	deleteAction->setShortcut(tr(""));
+	deleteAction->setShortcut(tr("Del"));
 	deleteAction->setStatusTip(tr("Delete"));
 	connect(deleteAction, SIGNAL(triggered()), SLOT());
 	
@@ -335,15 +347,12 @@ void MainWindow::exportSelectedFileSlot()
 	exportSelectedFileDialog->getSaveFileName(this, tr("Export Selected Objects"), "untitled", tr("Export Files (*.nkb *.nka *.fbx *.obj)"));
 }
 
-
  void MainWindow::preferencesSlot()
 {	
 	Preferences* pref = new Preferences(this);
 	pref->exec();
 }
  
-
-
 void MainWindow::aboutSlot()
 {
 	About* abt = new About(this);
