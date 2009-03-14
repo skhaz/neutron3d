@@ -1,11 +1,24 @@
 #include <QtGUI>
+
 #include "MainWindow.h"
+
+
 
 MainWindow::MainWindow(QWidget* parent)
 : QMainWindow(parent)
 {	
 	createActions();
 	createMenus();
+	
+	glPanel = new GLPanel(this);
+	glPanel->setGeometry(0, 0, width(), height());
+	
+	
+	QHBoxLayout *mainLayout = new QHBoxLayout;
+    mainLayout->setMargin(0);
+    mainLayout->addWidget(glPanel);
+    setLayout(mainLayout);
+	 
 	
 	setWindowTitle(tr("Neutron 3D v 0.0.1 - \\project/neutron/scene_001.nkb "));
 }
@@ -16,6 +29,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::contextMenuEvent(QContextMenuEvent *event)
 {
+	/*
 	QMenu menu(this);
 	menu.addAction(cutAction);
 	menu.addAction(copyAction);
@@ -24,6 +38,7 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
 	menu.addSeparator();
 	menu.addAction(PreferenceshAction);
 	menu.exec(event->globalPos());
+	 */
 }
 
 void MainWindow::createMenus()

@@ -6,12 +6,11 @@
 
 class About : public QDialog
 {
+	Q_OBJECT
+	
 	public:
 		About(QWidget* parent = 0);
 		~About();
-		
-	private:
-		Q_OBJECT
 
     protected:
         void mousePressEvent(QMouseEvent *event);
