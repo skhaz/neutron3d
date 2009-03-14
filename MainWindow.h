@@ -6,6 +6,7 @@
 #include "ui/ProjectManager.h"
 #include "Preferences.h"
 #include "About.h"
+#include "glPanel.h"
 
 
 #include <QMainWindow>
@@ -24,6 +25,8 @@ class MainWindow : public QMainWindow
 		~MainWindow();
 
 	private:
+	GLPanel *glPanel;
+	
 		void createMenus();
 		void createActions();
 	

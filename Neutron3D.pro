@@ -22,13 +22,21 @@ SOURCES += \
 	Application.cpp \
 	MainWindow.cpp \
 	Preferences.cpp \
-	About.cpp
+	About.cpp \
+	glPanel.cpp \
+	glView.cpp \
+	origin.cpp \
 
 HEADERS += \
 	Application.h \
 	MainWindow.h \
 	Preferences.h \
-	About.h
+	About.h \
+	glPanel.h \
+	glView.h \
+	origin.h
+
+QT	+= opengl
 
 #QMAKESPEC = win-g++-64
 #QMAKESPEC = win-g++-32
