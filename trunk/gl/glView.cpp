@@ -10,17 +10,17 @@ GLView::GLView(QWidget *parent)
 	
 	bgColor = QColor::fromRgbF(0.4, 0.4, 0.5, 1.0);
 	
-	angleView = 45;
+	angleView = 45.0;
 	near = 0.1;
 	far = 1000.0;
 
 	camType = 1;
 	
 	// navagacao
-	rotX = 30;
-	rotY = -30;
+	rotX = 30.0;
+	rotY = -30.0;
 	trX = trY = 0;
-	trZ = 5;
+	trZ = 5.0;
 	win = trZ;
 	
     setFocusPolicy(Qt::StrongFocus); // seta o focus para o painel assim o teclado funciona.
