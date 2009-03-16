@@ -1,4 +1,3 @@
-
 #ifndef _MAINWINDOW_H
 #define _MAINWINDOW_H
 
@@ -6,7 +5,7 @@
 #include "ui/ProjectManager.h"
 #include "Preferences.h"
 #include "About.h"
-#include "glPanel.h"
+#include "gl/glPanel.h"
 
 
 #include <QMainWindow>

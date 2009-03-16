@@ -1,9 +1,8 @@
-#ifndef PROJECTMANAGER_H
-#define PROJECTMANAGER_H
+#ifndef _PROJECTMANAGER_H
+#define _PROJECTMANAGER_H
 
 #include "ui_ProjectManager.h"
 
-#include <QWidget>
 #include <QDialog>
 
 class ProjectManager : public QDialog, private Ui_ProjectManager

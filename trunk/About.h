@@ -1,7 +1,6 @@
-#ifndef ABOUT_H
-#define ABOUT_H
+#ifndef _ABOUT_H
+#define _ABOUT_H
 
-#include <QWidget>
 #include <QDialog>
 
 class About : public QDialog

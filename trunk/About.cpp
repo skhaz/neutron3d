@@ -1,8 +1,5 @@
-#include <QWidget>
-#include <QDialog>
 #include <QLabel>
 #include <QLayout>
-#include <QApplication>
 
 #include "About.h"
 
@@ -30,7 +27,7 @@ About::About(QWidget* parent)
 	
 	
     QLabel *content = new QLabel(QLatin1String("Developers:\n"
-                                    "André Agenor M. da Luz\n"
+                                    "AndrÃˆ Agenor M. da Luz\n"
 									"Rodrigo Delduca Batista\n"
                                     "Arleson Valentini Tonnera\n"), this);
     content->setStyleSheet(QString::fromUtf8("font-size: 10px;\n"));
@@ -62,6 +59,7 @@ About::~About()
 
 void About::mousePressEvent(QMouseEvent *event)
 {
+	Q_UNUSED ( event );
     close();
 }
 
