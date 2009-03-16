@@ -3,8 +3,8 @@
 
 #include <QGLWidget>
 
-#include "gl/primitives.h"
-#include "gl/glDisplayInfo.h"
+#include "primitives.h"
+#include "glDisplayInfo.h"
 
 class Primitives;
 class GlDisplayInfo;
@@ -35,7 +35,7 @@ class GLView : public QGLWidget
 		
 	private:
 		Primitives cube;
-		GlDisplayInfo dispInfo;
+        GlDisplayInfo dispInfo;
 		
 		GLuint makeObject();
 		
@@ -44,8 +44,8 @@ class GLView : public QGLWidget
 		QColor bgColor;
 		
 		GLfloat angleView;
-		GLfloat near;
-		GLfloat far;
+        GLfloat nearPlane;
+        GLfloat farPlane;
 		GLfloat fAspect;
 
 		// navagacao

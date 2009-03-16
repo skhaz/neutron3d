@@ -3,7 +3,7 @@
 
 #include <QWidget>
 
-#include "gl/glView.h"
+#include "glView.h"
 
 class GLPanel : public QWidget
 {

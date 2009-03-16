@@ -1,6 +1,6 @@
 #include <QLayout>
 
-#include "gl/glPanel.h"
+#include "glPanel.h"
 
 GLPanel::GLPanel(QWidget *parent)
 : QWidget(parent)

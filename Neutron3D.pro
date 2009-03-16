@@ -13,7 +13,8 @@ CONFIG += \
 	console
 
 INCLUDEPATH += \
-	ui/
+	ui/ \
+	gl/
 
 include(ui/Ui.pri)
 

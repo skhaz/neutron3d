@@ -5,7 +5,7 @@
 #include "ui/ProjectManager.h"
 #include "Preferences.h"
 #include "About.h"
-#include "gl/glPanel.h"
+#include "glPanel.h"
 
 
 #include <QMainWindow>
