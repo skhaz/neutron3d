@@ -47,8 +47,7 @@ About::About(QWidget* parent)
 	hLayout->addWidget(hLine);
 	hLayout->addItem(hSpacer);
 	hLayout->addWidget(content);
-	
-	
+
 	setLayout(hLayout);
 
 }

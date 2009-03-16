@@ -2,7 +2,6 @@
 
 #include "Preferences.h"
 
-
 Preferences::Preferences(QWidget* parent)
 : QDialog(parent)
 {
@@ -66,7 +65,6 @@ Preferences::Preferences(QWidget* parent)
 	
 	
 	connect(bt_close, SIGNAL(clicked()), SLOT(close()));
-	
 }
 
 Preferences::~Preferences()

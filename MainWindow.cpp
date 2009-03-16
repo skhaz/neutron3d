@@ -2,6 +2,7 @@
 
 #include "MainWindow.h"
 
+#include "gl/perspecPanel.h"
 
 
 MainWindow::MainWindow(QWidget* parent)
@@ -10,17 +11,15 @@ MainWindow::MainWindow(QWidget* parent)
 	createActions();
 	createMenus();
 	
-	int X = width();
-	int Y = height();
 	glPanel = new GLPanel(this);
-	glPanel->setGeometry(0, 0, X *2, Y* 1.5);
+	//glPanel->setGeometry(0, 0, width(), height());
+	glPanel->setMinimumSize(640, 400);
 	
-	/*
 	QHBoxLayout *mainLayout = new QHBoxLayout;
     mainLayout->setMargin(0);
     mainLayout->addWidget(glPanel);
     setLayout(mainLayout);
-	*/ 
+	
 	
 	setWindowTitle(tr("Neutron 3D v 0.0.1 - \\project/neutron/scene_001.nkb "));
 }
@@ -94,6 +93,8 @@ void MainWindow::createMenus()
 		LayoutMenu = viewMenu->addMenu(tr("Layout"));
 		LayoutMenu->addAction(addLayoutAction);
 		LayoutMenu->addAction(dellLayoutAction);
+	viewMenu->addAction(perspectiveAction);
+
 	
 	// ************************************************
 	//	Display Menu
@@ -265,6 +266,11 @@ void MainWindow::createActions()
 	dellLayoutAction->setShortcut(tr(""));
 	dellLayoutAction->setStatusTip(tr("Delete Layout"));
 	connect(dellLayoutAction, SIGNAL(triggered()), SLOT());
+	
+	perspectiveAction = new QAction(tr("Perspective Panel"), this);
+	perspectiveAction->setShortcut(tr(""));
+	perspectiveAction->setStatusTip(tr("Perspective Panel"));
+	connect(perspectiveAction, SIGNAL(triggered()), SLOT(perspectiveSlot()));
 
 	// ************************************************
 	//	Display Menu
@@ -364,6 +370,14 @@ void MainWindow::exportSelectedFileSlot()
 	exportSelectedFileDialog->setViewMode(QFileDialog::List);
 	exportSelectedFileDialog->setAcceptMode(QFileDialog::AcceptSave);
 	exportSelectedFileDialog->getSaveFileName(this, tr("Export Selected Objects"), "untitled", tr("Export Files (*.nkb *.nka *.fbx *.obj)"));
+}
+
+void MainWindow::perspectiveSlot()
+{
+	PerspcPanel *perspcPanel = new PerspcPanel(this);
+	perspcPanel->setGeometry(width()/2, height()/2, 300, 300);
+	perspcPanel->show();
+	
 }
 
  void MainWindow::preferencesSlot()

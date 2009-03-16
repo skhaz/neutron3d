@@ -1,11 +1,10 @@
 #include <QLayout>
 
-#include "gl/glView.h"
 #include "gl/glPanel.h"
 
 GLPanel::GLPanel(QWidget *parent)
 : QWidget(parent)
-{
+{	
     glView = new GLView;
 	
     QHBoxLayout *mainLayout = new QHBoxLayout;
@@ -13,7 +12,7 @@ GLPanel::GLPanel(QWidget *parent)
     mainLayout->addWidget(glView);
     setLayout(mainLayout);
 	
-	//setWindowTitle(tr("Neutron 3D Viewport"));
+	setWindowTitle(tr("Perspective"));
 }
 
 GLPanel::~GLPanel()

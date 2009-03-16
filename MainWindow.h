@@ -66,6 +66,7 @@ class MainWindow : public QMainWindow
 		// View Menu
 		QAction* addLayoutAction;
 		QAction* dellLayoutAction;	
+		QAction* perspectiveAction;	
 
 		// Help Menu
 		QAction* helpAction;
@@ -83,6 +84,7 @@ class MainWindow : public QMainWindow
 		void exportSelectedFileSlot();
 		void projectManagerSlot();
         void keyBoardMappingSlot();
+		void perspectiveSlot();
 	
 		void preferencesSlot();
 		void aboutSlot();
