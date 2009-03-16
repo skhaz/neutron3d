@@ -1,6 +1,6 @@
 #include <QLayout>
 
-#include "gl/perspecPanel.h"
+#include "perspecPanel.h"
 
 PerspcPanel::PerspcPanel(QWidget *parent)
 : QDialog(parent)

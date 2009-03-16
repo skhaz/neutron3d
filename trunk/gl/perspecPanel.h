@@ -3,7 +3,7 @@
 
 #include <QDialog>
 
-#include "gl/glView.h"
+#include "glView.h"
 
 class PerspcPanel : public QDialog
 	{

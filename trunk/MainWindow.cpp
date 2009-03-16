@@ -1,8 +1,8 @@
-#include <QtGUI>
+#include <QtGui>
 
 #include "MainWindow.h"
 
-#include "gl/perspecPanel.h"
+#include "perspecPanel.h"
 
 
 MainWindow::MainWindow(QWidget* parent)
@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget* parent)
 	createMenus();
 	
 	glPanel = new GLPanel(this);
-	//glPanel->setGeometry(0, 0, width(), height());
+    glPanel->setGeometry(30, 30, width(), height());
 	glPanel->setMinimumSize(640, 400);
 	
 	QHBoxLayout *mainLayout = new QHBoxLayout;

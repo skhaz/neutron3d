@@ -1,7 +1,7 @@
 #include <QtOpenGL>
 
 
-#include "gl/glView.h"
+#include "glView.h"
 
 GLView::GLView(QWidget *parent)
 : QGLWidget(parent)
@@ -11,8 +11,8 @@ GLView::GLView(QWidget *parent)
 	bgColor = QColor::fromRgbF(0.4, 0.4, 0.5, 1.0);
 	
 	angleView = 45.0;
-	near = 0.1;
-	far = 1000.0;
+    nearPlane = 0.1;
+    farPlane = 1000.0;
 
 	camType = 1;
 	
@@ -88,13 +88,13 @@ void GLView::viewCamera()
 	if(camType == 0)
 	{
 		if( width() <= height())
-			glOrtho(-win + trX, win + trX, -win * height()/width() + trY, win * height()/width() + trY, near, far);
+            glOrtho(-win + trX, win + trX, -win * height()/width() + trY, win * height()/width() + trY, nearPlane, farPlane);
 		else
-			glOrtho(-win * width()/height() + trX, win * width()/height() + trX, -win + trY, win + trY, near, far);
+            glOrtho(-win * width()/height() + trX, win * width()/height() + trX, -win + trY, win + trY, nearPlane, farPlane);
 	}
 	else
 	{
-		gluPerspective(angleView, fAspect, near, far);
+        gluPerspective(angleView, fAspect, nearPlane, farPlane);
 	}
 	//gluLookAt(0, 0, 5, 0, 0, 0, 0, 1, -1);
 	

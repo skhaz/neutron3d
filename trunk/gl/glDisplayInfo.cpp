@@ -1,4 +1,4 @@
-#include "gl/glDisplayInfo.h"
+#include "glDisplayInfo.h"
 
 GlDisplayInfo::GlDisplayInfo()
 {
