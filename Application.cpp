@@ -88,12 +88,12 @@ void Application::splashScreen()
 	splash.show();
 	splash.showMessage ( "Open Neutron 3D - Version 0.1.0 Beta ", Qt::AlignLeft | Qt::AlignBottom, Qt::white );
 
-/*
+
 	processEvents();
 	QMutex mutex;
 	QWaitCondition sleep;
 	mutex.lock();
-	sleep.wait(&mutex, 1000); // pausa 1 segundos
+	sleep.wait(&mutex, 50); // pausa meio segundos
 	mutex.unlock();
 	
 	for (int i = 0; i <= 99; i++)
@@ -104,12 +104,12 @@ void Application::splashScreen()
 		
 		// pausa
 		mutex.lock();
-        sleep.wait(&mutex, 10);
+        sleep.wait(&mutex, 1);
 		mutex.unlock();
 
 		processEvents();
 	}
-*/
+
     splash.finish(mainWindow);	
 }
 

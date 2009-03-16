@@ -23,18 +23,27 @@ SOURCES += \
 	MainWindow.cpp \
 	Preferences.cpp \
 	About.cpp \
-	glPanel.cpp \
-	glView.cpp \
-	origin.cpp \
+	gl/glPanel.cpp \
+	gl/glView.cpp \
+	gl/glDisplayInfo.cpp \ 
+	gl/primitives.cpp \
+	math/vector2.cpp \
+	math/vector3.cpp \
+	math/point.cpp \
+	
 
 HEADERS += \
 	Application.h \
 	MainWindow.h \
 	Preferences.h \
 	About.h \
-	glPanel.h \
-	glView.h \
-	origin.h
+	gl/glPanel.h \
+	gl/glView.h \
+	gl/glDisplayInfo.h \
+	gl/primitives.h \
+	math/vector2.h \
+	math/vector3.h \
+	math/point.h \
 
 QT	+= opengl
 

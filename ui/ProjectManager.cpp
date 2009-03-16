@@ -1,6 +1,5 @@
 #include "ProjectManager.h"
 
-
 ProjectManager::ProjectManager(QWidget* parent)
 : QDialog(parent)
 {

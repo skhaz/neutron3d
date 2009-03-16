@@ -1,9 +1,8 @@
-#ifndef KEYBOARDMAPPING_H
-#define KEYBOARDMAPPING_H
+#ifndef _KEYBOARDMAPPING_H
+#define _KEYBOARDMAPPING_H
 
 #include "ui_KeyboardMapping.h"
 
-#include <QWidget>
 #include <QDialog>
 
 class KeyboardMapping : public QDialog, private Ui_KeyboardMapping

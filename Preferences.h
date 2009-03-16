@@ -1,10 +1,7 @@
-#ifndef PREFERENCES_H
-#define PREFERENCES_H
+#ifndef _PREFERENCES_H
+#define _PREFERENCES_H
 
-#include <QWidget>
 #include <QDialog>
-
-
 
 class Preferences : public QDialog
 {
