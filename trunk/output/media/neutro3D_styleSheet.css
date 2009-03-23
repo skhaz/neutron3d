@@ -156,7 +156,8 @@ QListView {
 	color: black;
 	background-color:rgb(140, 160, 160);
 	selection-background-color: rgb(245, 150, 40);
-    selection-color: black;
+    
+	selection-color: black;
 	padding: 0px 0px 0px 0px;
 	border: 2px groove rgb(45,45,45);
 	border-radius: 4px;
@@ -183,7 +184,7 @@ QGroupBox::title {
 	background-color: rgb(82,82,82,0);
 	subcontrol-origin: margin;
 	subcontrol-position: top left;
-	padding: 2px 5px 0px 15px;
+	padding: -5px 5px 0px 15px;
  }
 
 /* ---------------------- Text Edit ---------------------- */
