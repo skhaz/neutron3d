@@ -5,6 +5,7 @@
 
 #include "glView.h"
 
+
 class PerspcPanel : public QDialog
 	{
 		Q_OBJECT;

@@ -38,9 +38,9 @@ Preferences::Preferences(QWidget* parent)
 	
 	
 	QPushButton *bt_close = new QPushButton(tr("Close"), this);
-	bt_close->setFixedSize ( 100, 30 );
+	bt_close->setFixedSize ( 85, 25 );
 	QPushButton *bt_apply = new QPushButton(tr("Apply"), this);
-	bt_apply->setFixedSize ( 100, 30 );
+	bt_apply->setFixedSize ( 85, 25 );
 	
 	QSpacerItem *hSpacer = new QSpacerItem(260, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 	QSpacerItem *hSpacer1 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Fixed);

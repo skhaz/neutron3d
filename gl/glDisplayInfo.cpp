@@ -49,7 +49,7 @@ void GlDisplayInfo::drawGrid()
 	while (Zg <= 3.0)
 	{
 		// Desenha a linha X
-		glLineWidth(1);
+		glLineWidth(0.8);
 		
 		glBegin(GL_LINES);      
 		glVertex3f( -3.0,0.0f, Zg); 
@@ -65,7 +65,7 @@ void GlDisplayInfo::drawGrid()
 	while (Xg <= 3.0)
 	{
 		// Desenha a linha X
-		glLineWidth(0.5);
+		glLineWidth(0.3);
 		glBegin(GL_LINES);      
 		glVertex3f( Xg,0.0f, -3.0); 
 		glVertex3f( Xg,0.0f, 3.0);
@@ -81,7 +81,7 @@ void GlDisplayInfo::drawGrid()
 	// ****************************
 	
 	// Desenha a linha X
-	glLineWidth(1.5);
+	glLineWidth(1.2);
 	
 	float Zig = -3.0f;
 	// Loop para criar o grid de Z

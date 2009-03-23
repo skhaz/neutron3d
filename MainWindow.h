@@ -2,7 +2,7 @@
 #define _MAINWINDOW_H
 
 #include "ui/KeyboardMapping.h"
-#include "ui/ProjectManager.h"
+#include "ProjectManager.h"
 #include "Preferences.h"
 #include "About.h"
 #include "glPanel.h"

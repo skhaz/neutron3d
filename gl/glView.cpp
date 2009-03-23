@@ -42,10 +42,10 @@ void GLView::initializeGL()
 	qglClearColor(bgColor);
     object = makeObject();
 	
-    glEnable(GL_LINE_SMOOTH);
-	glEnable(GL_POLYGON_SMOOTH);
+    //glEnable(GL_LINE_SMOOTH);
+	//glEnable(GL_POLYGON_SMOOTH);
 	//glEnable(GL_POINT_SMOOTH);
-    glHint (GL_LINE_SMOOTH_HINT, GL_NICEST);
+    //glHint (GL_LINE_SMOOTH_HINT, GL_NICEST);
 	//glHint(GL_POINT, GL_NICEST);
 	
 	glShadeModel(GL_SMOOTH);
