@@ -4,13 +4,13 @@ DEPENDPATH += $$PWD
  
 FORMS += \
         KeyboardMapping.ui \
-        ProjectManager.ui \
+        #ProjectManager.ui \
 
 SOURCES += \
         KeyboardMapping.cpp \
-        ProjectManager.cpp \
+       # ProjectManager.cpp \
 
 HEADERS += \
         KeyboardMapping.h \
-        ProjectManager.h \
+       # ProjectManager.h \
 
