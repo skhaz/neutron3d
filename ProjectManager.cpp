@@ -1,6 +1,6 @@
 #include "ProjectManager.h"
 #include <QFileDialog>
-#include <QDir>
+
 
 ProjectManager::ProjectManager(QWidget *parent)
 : QDialog(parent)
@@ -218,7 +218,7 @@ void ProjectManager::newProject_Slot()
 }
 
 void ProjectManager::addProject_Slot()
-{	
+{	/*
 	QDir dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"), "", QFileDialog::ShowDirsOnly);
 	
 	QString tmpPath = dir.path();
@@ -229,7 +229,33 @@ void ProjectManager::addProject_Slot()
 		lst_projects->addItem(dir.dirName());
 		
 		list << dir ; // adiciona um QDir a lista
-	}
+	}*/
+
+	QDir dir;
+
+	QFileDialog *dialog = new QFileDialog( this, tr("Add Project"));
+	dialog->setFileMode(QFileDialog::Directory);
+	dialog->setOptions(QFileDialog::ShowDirsOnly);
+	dialog->setAcceptMode(QFileDialog::AcceptSave);
+	int test = dialog->exec();
+
+	dir = dialog->directory();
+
+	switch (test) 
+		{
+			case QMessageBox::Save:
+				lbl_Path->setText(dir.path());
+				lst_projects->addItem(dir.dirName());
+		
+				list << dir ; // adiciona um QDir a lista
+			break;
+			case QMessageBox::Cancel:
+			// Cancel was clicked
+			break;
+			default:
+			// should never be reached
+			break;
+		}
 }
 
 void ProjectManager::removeFromList_Slot()
