@@ -24,6 +24,7 @@ SOURCES += \
 	MainWindow.cpp \
 	Preferences.cpp \
 	ProjectManager.cpp \
+	NewProject.cpp \
 	About.cpp \
 	gl/glPanel.cpp \
 	gl/glView.cpp \
@@ -40,6 +41,7 @@ HEADERS += \
 	MainWindow.h \
 	Preferences.h \
 	ProjectManager.h \
+	NewProject.h \
 	About.h \
 	gl/glPanel.h \
 	gl/glView.h \
