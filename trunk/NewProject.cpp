@@ -79,17 +79,15 @@ NewProject::~NewProject()
 
 void NewProject::setPath_slot()
 {
-	QFileDialog *dialog = new QFileDialog(this);
-	dialog->setFileMode(QFileDialog::Directory);
-	
-	int test = dialog->exec();
-	
-	if (test == 1)
-	{
-		dir = new QDir(dialog->directory());
-		
-		le_path->setText(QString("%1").arg(dir->path()));
-	}
+     QString path = QFileDialog::getExistingDirectory(this, tr("Open Directory"),
+                        "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+
+     if ( !path.isEmpty() )
+        {
+                dir = new QDir(path);
+
+                le_path->setText(QString("%1").arg(dir->path()));
+        }
 }
 
 void NewProject::ok_slot()
