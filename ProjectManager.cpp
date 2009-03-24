@@ -221,16 +221,17 @@ void ProjectManager::newProject_Slot()
 
 void ProjectManager::addProject_Slot()
 {	
-	QDir dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"), "", QFileDialog::ShowDirsOnly);
+        QString path = QFileDialog::getExistingDirectory(this, tr("Open Directory"), "", QFileDialog::ShowDirsOnly);
 	
-	QString tmpPath = dir.path();
+        QDir dir;
+        dir.setPath(path);
 	
-	if( !tmpPath.isEmpty() )
+        if( !path.isEmpty() )
 	{
-		lbl_Path->setText(dir.path());
-		lst_projects->addItem(dir.dirName());
+            lbl_Path->setText(dir.path());
+            lst_projects->addItem(dir.dirName());
 		
-		list << dir ; // adiciona um QDir a lista
+            list << dir ; // adiciona um QDir a lista
 	}
 }
 
