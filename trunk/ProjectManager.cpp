@@ -1,6 +1,10 @@
 #include "ProjectManager.h"
-#include <QFileDialog>
 
+#include "NewProject.h"
+
+
+#include <QFileDialog>
+#include <QDir>
 
 ProjectManager::ProjectManager(QWidget *parent)
 : QDialog(parent)
@@ -27,26 +31,32 @@ ProjectManager::ProjectManager(QWidget *parent)
 	
 	lbl_SortBy = new QLabel(tr("Sort by:"));
 	cbx_sortBy = new QComboBox(this);
-	cbx_sortBy->setMinimumSize ( 85, 22 );
+	cbx_sortBy->setMinimumSize( 0, 24);
 	cbx_sortBy->addItem(tr("All"));
 	cbx_sortBy->addItem(tr("Name"));
 	cbx_sortBy->addItem(tr("Date"));
 	spacer_sortBy = new QSpacerItem( 30, 10, QSizePolicy::Expanding, QSizePolicy::Minimum );
 	
 	bt_newProject = new QPushButton(tr("New Project"));
-	bt_newProject->setMinimumSize ( 85, 25 );
+	bt_newProject->setMinimumSize( 85, 25 );
+
 	bt_addProject = new QPushButton(tr("Add Project"));
-	bt_addProject->setMinimumSize ( 85, 25 );
+	bt_addProject->setMinimumSize( 85, 25 );
+
 	bt_setActive = new QPushButton(tr("Set Active"));
-	bt_setActive->setMinimumSize ( 85, 25 );
+	bt_setActive->setMinimumSize( 85, 25 );
+
 	bt_removeFromList = new QPushButton(tr("Remove From List"));
-	bt_removeFromList->setMinimumSize ( 85, 25 );
+	bt_removeFromList->setMinimumSize( 120, 25 );
+
 	bt_importList = new QPushButton(tr("Import List"));
-	bt_importList->setMinimumSize ( 85, 25 );
+	bt_importList->setMinimumSize( 85, 25 );
+
 	bt_exportList = new QPushButton(tr("Export List"));
-	bt_exportList->setMinimumSize ( 85, 25 );
+	bt_exportList->setMinimumSize( 85, 25 );
+
 	bt_deleteProject = new QPushButton(tr("Delete Project"));
-	bt_deleteProject->setMinimumSize ( 85, 25 );
+	bt_deleteProject->setMinimumSize( 85, 25 );
 
 	spacer_buttons1 = new QSpacerItem( 10, 30, QSizePolicy::Minimum, QSizePolicy::Expanding );
 	spacer_buttons2 = new QSpacerItem( 10, 20, QSizePolicy::Minimum, QSizePolicy::Fixed );
@@ -94,7 +104,7 @@ ProjectManager::ProjectManager(QWidget *parent)
 	trw_folderType = new QTreeWidget(this);
 	lbl_usePreset = new QLabel(tr("Use Preset:"));
 	cbx_usePreset = new QComboBox(this);
-	cbx_usePreset->setMinimumSize ( 85, 22 );
+	cbx_usePreset->setMinimumSize( 0, 24);
 	cbx_usePreset->addItem(tr("Small Project"));
 	cbx_usePreset->addItem(tr("Medium Project"));
 	cbx_usePreset->addItem(tr("Big Project"));
@@ -105,15 +115,18 @@ ProjectManager::ProjectManager(QWidget *parent)
 	spacer_buttons8 = new QSpacerItem( 10, 30, QSizePolicy::Minimum, QSizePolicy::Expanding );
 	
 	bt_makeDefault = new QPushButton(tr("Make Default"));
-	bt_makeDefault->setMinimumSize ( 85, 25 );
-	bt_addFolder = new QPushButton(tr("Add Folder"));;
-	bt_addFolder->setMinimumSize ( 85, 25 );
-	bt_deleteFolder = new QPushButton(tr("Delete Folder"));;
-	bt_deleteFolder->setMinimumSize ( 85, 25 );
+	bt_makeDefault->setMinimumSize( 85, 25 );
+
+	bt_addFolder = new QPushButton(tr("Add Folder"));
+	bt_addFolder->setMinimumSize( 85, 25 );
+
+	bt_deleteFolder = new QPushButton(tr("Delete Folder"));
+	bt_deleteFolder->setMinimumSize( 85, 25 );
+
 	
 	lbl_folderType = new QLabel(tr("Folder Type"));
 	cbx_folderType = new QComboBox(this);
-	cbx_folderType->setMinimumSize ( 85, 22 );
+	cbx_folderType->setMinimumSize( 0, 24);
 	cbx_folderType->addItem(tr("General"));
 	cbx_folderType->addItem(tr("Animations"));
 	cbx_folderType->addItem(tr("Characters"));
@@ -156,7 +169,7 @@ ProjectManager::ProjectManager(QWidget *parent)
 	
 	// *****************************************************************
 	bt_close = new QPushButton(tr("Close"));
-	bt_close->setFixedSize ( 85, 25 );
+	bt_close->setMinimumSize( 85, 25 );
 	spacer_footer = new QSpacerItem( 30, 10, QSizePolicy::Expanding, QSizePolicy::Minimum );
 	
 	Layout_footer = new QHBoxLayout;
@@ -202,23 +215,12 @@ void ProjectManager::selectProject_Slot()
 
 void ProjectManager::newProject_Slot()
 {
-	/*
-	QFileDialog *dialog = new QFileDialog( this, tr("New Project"));
-	dialog->setFileMode(QFileDialog::Directory);
-	dialog->setOptions(QFileDialog::ShowDirsOnly);
-	dialog->setAcceptMode(QFileDialog::AcceptSave);
-	dialog->exec();
-	
-	QDir *folder = new QDir(dialog->directory());
-	//folder->mkdir("TesteFolder");
-	
-
-	lst_projects->addItem(folder->dirName());
-	*/
+	NewProject *npj = new NewProject(this);
+	npj->exec();
 }
 
 void ProjectManager::addProject_Slot()
-{	/*
+{	
 	QDir dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"), "", QFileDialog::ShowDirsOnly);
 	
 	QString tmpPath = dir.path();
@@ -229,33 +231,7 @@ void ProjectManager::addProject_Slot()
 		lst_projects->addItem(dir.dirName());
 		
 		list << dir ; // adiciona um QDir a lista
-	}*/
-
-	QDir dir;
-
-	QFileDialog *dialog = new QFileDialog( this, tr("Add Project"));
-	dialog->setFileMode(QFileDialog::Directory);
-	dialog->setOptions(QFileDialog::ShowDirsOnly);
-	dialog->setAcceptMode(QFileDialog::AcceptSave);
-	int test = dialog->exec();
-
-	dir = dialog->directory();
-
-	switch (test) 
-		{
-			case QMessageBox::Save:
-				lbl_Path->setText(dir.path());
-				lst_projects->addItem(dir.dirName());
-		
-				list << dir ; // adiciona um QDir a lista
-			break;
-			case QMessageBox::Cancel:
-			// Cancel was clicked
-			break;
-			default:
-			// should never be reached
-			break;
-		}
+	}
 }
 
 void ProjectManager::removeFromList_Slot()
