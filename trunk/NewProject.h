@@ -5,7 +5,12 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QSpacerItem>
+#include <QFileDialog>
 #include <QDir>
+#include <QMessageBox>
 
 class NewProject : public QDialog
 {
@@ -28,7 +33,20 @@ private:
 	QPushButton *bt_path;
 	QPushButton *bt_ok;
 	QPushButton *bt_cancel;
-	
+
+        QSpacerItem *spacerNewProject;
+        QSpacerItem *spacerPath;
+        QSpacerItem *spacerFooter;
+        QSpacerItem *spacerTop;
+        QSpacerItem *spacerBottom;
+
+        QHBoxLayout *Layout_newProject;
+        QHBoxLayout *Layout_path;
+        QHBoxLayout *Layout_footer;
+        QVBoxLayout *Layout_center;
+
+        QMessageBox *msgBox;
+
 	QDir *dir;
 };
 
