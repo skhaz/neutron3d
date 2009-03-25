@@ -92,19 +92,46 @@ void NewProject::setPath_slot()
 
 void NewProject::ok_slot()
 {
-	if( le_newProject->text() != "")
-	{
-		dir = new QDir(le_path->text());
-		dir->mkdir(le_newProject->text());
-		close();
-	}
-	else
-	{
-		QMessageBox msgBox;
-		msgBox.setText(tr("You need a name for the project."));
-		msgBox.setStandardButtons(QMessageBox::Ok);
-		msgBox.exec();
-	}
+    QString projectDir = le_newProject->text();
+
+    if (projectDir.isEmpty() != true)
+    {
+        dir = new QDir(le_path->text());
+
+        if (!dir->exists(projectDir))
+        {
+            // caso não exista
+            dir->mkdir(le_newProject->text());
+            close();
+        }
+        else
+        {
+            // caso exista
+            QMessageBox msgBox;
+            msgBox.setText(tr("Do you want overwrite this diretory?"));
+            msgBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+            int test = msgBox.exec();
+
+            switch (test)
+            {
+                case QMessageBox::Ok:
+                    dir->mkdir(le_newProject->text());
+                    close();
+                break;
+                case QMessageBox::Cancel:
+                    //close();
+                break;
+            }
+
+        }
+    }
+    else
+    {
+        QMessageBox msgBox;
+        msgBox.setText(tr("You need a name for the project."));
+        msgBox.setStandardButtons(QMessageBox::Ok);
+        msgBox.exec();
+    }
 }
 
 

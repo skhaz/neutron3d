@@ -5,6 +5,7 @@ INPUT(
 ./temp\obj\MainWindow.o
 ./temp\obj\Preferences.o
 ./temp\obj\ProjectManager.o
+./temp\obj\NewProject.o
 ./temp\obj\About.o
 ./temp\obj\glPanel.o
 ./temp\obj\glView.o
@@ -19,6 +20,7 @@ INPUT(
 ./temp\obj\moc_MainWindow.o
 ./temp\obj\moc_Preferences.o
 ./temp\obj\moc_ProjectManager.o
+./temp\obj\moc_NewProject.o
 ./temp\obj\moc_About.o
 ./temp\obj\moc_glPanel.o
 ./temp\obj\moc_glView.o
