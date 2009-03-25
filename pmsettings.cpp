@@ -3,3 +3,7 @@
 PMSettings::PMSettings()
 {
 }
+
+PMSettings::~PMSettings()
+{
+}

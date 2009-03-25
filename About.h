@@ -2,6 +2,8 @@
 #define _ABOUT_H
 
 #include <QDialog>
+#include <QLabel>
+#include <QLayout>
 
 class About : public QDialog
 {
@@ -14,7 +16,13 @@ class About : public QDialog
     protected:
         void mousePressEvent(QMouseEvent *event);
 
-
+private:
+        QLabel *title;
+        QLabel *version;
+        QLabel *content;
+        QSpacerItem *hSpacer;
+        QFrame *hLine;
+        QVBoxLayout *hLayout;
 };
 
 #endif
