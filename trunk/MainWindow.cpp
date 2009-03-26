@@ -8,20 +8,22 @@
 MainWindow::MainWindow(QWidget* parent)
 : QMainWindow(parent)
 {	
-	createActions();
-	createMenus();
+    setWindowTitle(tr("Neutron 3D v 0.0.1 - \\project/neutron/scene_001.nkb "));
+
+    createActions();
+    createMenus();
 	
-	glPanel = new GLPanel(this);
+    glPanel = new GLPanel(this);
     glPanel->setGeometry(30, 30, width(), height());
-	glPanel->setMinimumSize(640, 400);
+    glPanel->setMinimumSize(640, 400);
 	
-	QHBoxLayout *mainLayout = new QHBoxLayout;
+    QHBoxLayout *mainLayout = new QHBoxLayout;
     mainLayout->setMargin(0);
     mainLayout->addWidget(glPanel);
     setLayout(mainLayout);
 	
 	
-	setWindowTitle(tr("Neutron 3D v 0.0.1 - \\project/neutron/scene_001.nkb "));
+
 }
 
 MainWindow::~MainWindow()
@@ -30,18 +32,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::contextMenuEvent(QContextMenuEvent *event)
 {
-	if(QApplication::keyboardModifiers() != Qt::AltModifier)
-	{
-		QMenu menu(this);
-		menu.addAction(cutAction);
-		menu.addAction(copyAction);
-		menu.addAction(pasteAction);
-		menu.addAction(deleteAction);
-		menu.addSeparator();
-		menu.addAction(PreferenceshAction);
-		menu.exec(event->globalPos());
-	}
-	 
+    if(QApplication::keyboardModifiers() != Qt::AltModifier)
+    {
+        QMenu menu(this);
+        menu.addAction(cutAction);
+        menu.addAction(copyAction);
+        menu.addAction(pasteAction);
+        menu.addAction(deleteAction);
+        menu.addSeparator();
+        menu.addAction(PreferenceshAction);
+        menu.exec(event->globalPos());
+    }
 }
 
 void MainWindow::createMenus()
@@ -84,15 +85,15 @@ void MainWindow::createMenus()
 	editMenu->addAction(selectTreeAction);
 	editMenu->addSeparator();
 	editMenu->addAction(PreferenceshAction);
-    editMenu->addAction(keyBoardMappingAction);
+        editMenu->addAction(keyBoardMappingAction);
 	
 	// ************************************************
 	//	View Menu
 	// ************************************************
 	viewMenu = menuBar()->addMenu(tr("&View")); 
-		LayoutMenu = viewMenu->addMenu(tr("Layout"));
-		LayoutMenu->addAction(addLayoutAction);
-		LayoutMenu->addAction(dellLayoutAction);
+        LayoutMenu = viewMenu->addMenu(tr("Layout"));
+        LayoutMenu->addAction(addLayoutAction);
+        LayoutMenu->addAction(dellLayoutAction);
 	viewMenu->addAction(perspectiveAction);
 
 	
@@ -165,7 +166,7 @@ void MainWindow::createActions()
 	
 	projectManagerAction = new QAction(tr("Project &Manager"), this);
 	projectManagerAction->setIcon(QIcon("/media/icon/projectManager.png"));
-    projectManagerAction->setShortcut(tr("Ctrl+7"));
+        projectManagerAction->setShortcut(tr("Ctrl+7"));
 	projectManagerAction->setStatusTip(tr("Project Manager"));
 	connect(projectManagerAction, SIGNAL(triggered()), SLOT(projectManagerSlot()));
 	
@@ -179,7 +180,7 @@ void MainWindow::createActions()
 	recentProjectAction->setIcon(QIcon("/media/icon/recentProject.png"));
 	recentProjectAction->setShortcut(tr(""));
 	recentProjectAction->setStatusTip(tr("Recent Project"));
-    connect(recentProjectAction, SIGNAL(triggered()), SLOT());
+        connect(recentProjectAction, SIGNAL(triggered()), SLOT());
 	
 	exitAction = new QAction(tr("&Quit"), this);
 	exitAction->setIcon(QIcon("/media/icon/door_out.png"));
@@ -249,10 +250,10 @@ void MainWindow::createActions()
 	PreferenceshAction->setStatusTip(tr("Preferences"));
 	connect(PreferenceshAction, SIGNAL(triggered()), SLOT(preferencesSlot()));
 	
-    keyBoardMappingAction = new QAction(tr("Keyboard Mapping"), this);
-    keyBoardMappingAction->setShortcut(tr("Ctrl+6"));
-    keyBoardMappingAction->setStatusTip(tr("Keyboard Mapping"));
-    connect(keyBoardMappingAction, SIGNAL(triggered()), SLOT(keyBoardMappingSlot()));
+        keyBoardMappingAction = new QAction(tr("Keyboard Mapping"), this);
+        keyBoardMappingAction->setShortcut(tr("Ctrl+6"));
+        keyBoardMappingAction->setStatusTip(tr("Keyboard Mapping"));
+        connect(keyBoardMappingAction, SIGNAL(triggered()), SLOT(keyBoardMappingSlot()));
 	
 	// ************************************************
 	//	View Menu
@@ -313,17 +314,17 @@ void MainWindow::keyBoardMappingSlot()
 
 void MainWindow::projectManagerSlot()
 {
-	ProjectManager* pm = new ProjectManager(this);
-	pm->show();
+    ProjectManager* pm = new ProjectManager(this);
+    pm->show();
 	
 }
 
 void MainWindow::openFileSlot()
 {
-	QFileDialog* openFileDialog = new QFileDialog(this);
-	openFileDialog->setWindowTitle(tr("Open Scene File"));
-	openFileDialog->setViewMode(QFileDialog::List);
-	openFileDialog->setAcceptMode(QFileDialog::AcceptOpen);
+    QFileDialog* openFileDialog = new QFileDialog(this);
+    openFileDialog->setWindowTitle(tr("Open Scene File"));
+    openFileDialog->setViewMode(QFileDialog::List);
+    openFileDialog->setAcceptMode(QFileDialog::AcceptOpen);
     openFileDialog->getOpenFileName(this, tr("Open Scene"), "", tr("Scene Files (*.nkb *.nka)"));
 }
 

@@ -13,12 +13,13 @@
 #include <QComboBox>
 #include <QPushButton>
 #include <QTreeWidget>
-#include <QDir>
 #include <QStringList>
 #include <QString>
 #include <QList>
 #include <QMessageBox>
 #include <QDir>
+#include <QFileDialog>
+
 
 class ProjectManager : public QDialog
 {
