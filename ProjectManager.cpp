@@ -1,10 +1,5 @@
 #include "ProjectManager.h"
-
 #include "NewProject.h"
-
-
-#include <QFileDialog>
-#include <QDir>
 
 ProjectManager::ProjectManager(QWidget *parent)
 : QDialog(parent)

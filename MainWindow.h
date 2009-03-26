@@ -10,10 +10,8 @@
 
 #include <QMainWindow>
 
-
 class QAction;
 class QMenu;
-
 
 class MainWindow : public QMainWindow
 {

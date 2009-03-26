@@ -11,6 +11,8 @@
 #include <QTextStream>
 #include <QSplashScreen>
 #include <QProgressBar>
+#include <QPixmap>
+#include <QLayout>
 
 
 
@@ -31,6 +33,11 @@ class Application : public QApplication
 	private:
         QSplashScreen *splash;
         QProgressBar *pBar;
+        QPixmap pixmap;
+
+        QVBoxLayout *layout;
+        QSpacerItem *verticalSpacer;
+        QSpacerItem *verticalSpacer1;
 		
 
 		MainWindow* mainWindow;
