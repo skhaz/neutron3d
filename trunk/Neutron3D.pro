@@ -1,7 +1,7 @@
 
 TEMPLATE = app
 TARGET = Neutron3D
-DESTDIR = output
+DESTDIR = output/Application/bin
 
 OBJECTS_DIR = temp/obj
 MOC_DIR = temp/moc
@@ -54,13 +54,15 @@ HEADERS += \
 
 QT	+= opengl
 
+
+
+RESOURCES += \
+	media/application.qrc
+
+
 #QMAKESPEC = win-g++-64
 #QMAKESPEC = win-g++-32
 #QMAKESPEC = linux-g++-64
 #QMAKESPEC = linux-g++-32
 #QMAKESPEC = mac-g++-64
 #QMAKESPEC = mac-g++-32
-
-#RESOURCES += \
-#	media/themes/dark/dark.qrc
-

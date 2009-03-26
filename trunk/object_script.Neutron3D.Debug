@@ -25,4 +25,5 @@ INPUT(
 ./temp\obj\moc_glPanel.o
 ./temp\obj\moc_glView.o
 ./temp\obj\moc_perspecPanel.o
+./temp\obj\qrc_application.o
 );

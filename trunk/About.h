@@ -17,12 +17,13 @@ class About : public QDialog
         void mousePressEvent(QMouseEvent *event);
 
 private:
+        QLabel *picture;
         QLabel *title;
         QLabel *version;
         QLabel *content;
         QSpacerItem *hSpacer;
-        QFrame *hLine;
         QVBoxLayout *hLayout;
+        QVBoxLayout *hLayout1;
 };
 
 #endif

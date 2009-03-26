@@ -21,6 +21,9 @@ NewProject::NewProject(QWidget *parent)
 ,Layout_center(new QVBoxLayout)
 ,msgBox(new QMessageBox(this))
 {
+    msgBox->setStyleSheet(QString::fromUtf8("QPushButton{min-width: 85px;\n"
+                                                "min-height: 25px;\n}"));
+
 	setWindowTitle(tr("New Project"));
 	setMinimumSize(400, 155);
 	
@@ -122,7 +125,9 @@ void NewProject::ok_slot()
     else
     {
         msgBox->setText(tr("You need a name for the project."));
+        msgBox->setMaximumSize ( 0, 250 );
         msgBox->setStandardButtons(QMessageBox::Ok);
+
         msgBox->exec();
     }
 }
