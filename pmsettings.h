@@ -12,21 +12,19 @@ public:
     ~PMSettings();
 
     void setDir(QDir const& _dir);
-    QDir& getDir() const;
-
     void setName(QString const& _name);
-    QString& getName() const;
-
     void setDate(QDate const& _date);
-    QDate& getDate() const;
+    void setSize(float _size);
 
-    void setSize(float size);
+    QDir& getDir() const;
+    QString& getName() const;
+    QDate& getDate() const;
     float getSize();
 
 private:
     QDir dir;
     QString name;
-    QDate name;
+    QDate date;
     float size;
 };
 
