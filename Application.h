@@ -9,11 +9,15 @@
 #include <QString>
 #include <QTimer>
 #include <QTextStream>
+#include <QSplashScreen>
+#include <QProgressBar>
 
 
 
 class Application : public QApplication
 {
+    Q_OBJECT
+
 	public:
 		Application(int& argc, char** argv);
 		~Application();
@@ -25,8 +29,8 @@ class Application : public QApplication
 		void postLaunch();
 
 	private:
-		Q_OBJECT
-	
+        QSplashScreen *splash;
+        QProgressBar *pBar;
 		
 
 		MainWindow* mainWindow;
