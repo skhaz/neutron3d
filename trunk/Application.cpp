@@ -3,9 +3,9 @@
 #include <QFile>
 #include <QString>
 #include <QTextStream>
-#include <QSplashScreen>
+
 #include <QPixmap>
-#include <QProgressBar>
+
 #include <QLayout>
 #include <QString>
 
@@ -40,7 +40,7 @@ void Application::postLaunch()
 
 void Application::loadStyle()
 {
-    QString filename("media/neutro3D_styleSheet.css");
+    QString filename("neutro3D_styleSheet.css");
     QFile file(filename);
 	
 	if (file.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -54,10 +54,11 @@ void Application::loadStyle()
 
 void Application::splashScreen()
 {
-    QPixmap pixmap("media/themes/dark/splash.png");
-    QSplashScreen splash(pixmap);
+    QPixmap pixmap("splash.png");
+    splash = new QSplashScreen(pixmap);
+    splash->setFixedSize ( 700, 400 );
 	
-    QProgressBar* pBar = new QProgressBar(&splash);
+    pBar = new QProgressBar(splash);
     pBar->setAlignment(Qt::AlignBottom | Qt::AlignCenter);
     pBar->setMaximumSize(2000, 6);
     pBar->setGeometry(  QRect(0, 0, 700, 6) );
@@ -84,9 +85,9 @@ void Application::splashScreen()
     layout->addWidget(pBar);
     layout->addItem(verticalSpacer1);
     
-	splash.setLayout(layout);
-	splash.show();
-	splash.showMessage ( "Open Neutron 3D - Version 0.1.0 Beta ", Qt::AlignLeft | Qt::AlignBottom, Qt::white );
+    splash->setLayout(layout);
+    splash->show();
+    splash->showMessage ( "Open Neutron 3D - Version 0.1.0 Beta ", Qt::AlignLeft | Qt::AlignBottom, Qt::white );
 
 
 	processEvents();
@@ -100,7 +101,7 @@ void Application::splashScreen()
 	{
 		pBar->setValue(i);
 
-		splash.showMessage (QString("Loading components... %1%").arg(i), Qt::AlignLeft | Qt::AlignBottom, Qt::white );
+        splash->showMessage (QString("Loading components... %1%").arg(i), Qt::AlignLeft | Qt::AlignBottom, Qt::white );
 		
 		// pausa
 		mutex.lock();
@@ -110,6 +111,6 @@ void Application::splashScreen()
 		processEvents();
 	}
 
-    splash.finish(mainWindow);	
+    splash->finish(mainWindow);
 }
 
