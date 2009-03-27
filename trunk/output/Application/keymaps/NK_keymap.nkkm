@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<neutron3d type="Keymap" neutron3d_version="0.0.2009.001" syntax_version="1.0">
+   <keymap name="Neutron 3D">
+      <group name="General" guid="{00000000-0000-0000-0000-000000000000}">
+         <key
+            name="Help"
+            key="F1"
+            guid="{9B6849A0-5A1D-11D1-8006-00A024191B70}" isoldcmdmap="True">
+	    </key>
+      </group>
+   </keymap>
+</neutron3d>
