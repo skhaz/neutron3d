@@ -63,6 +63,7 @@ ProjectManager::ProjectManager(QWidget *parent)
 
 	cbx_sortBy->setMinimumSize( 0, 24);
 	cbx_sortBy->addItem(tr("All"));
+	cbx_sortBy->insertSeparator(1);
 	cbx_sortBy->addItem(tr("Name"));
 	cbx_sortBy->addItem(tr("Date"));
 

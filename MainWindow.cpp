@@ -9,21 +9,13 @@ MainWindow::MainWindow(QWidget* parent)
 : QMainWindow(parent)
 {	
     setWindowTitle(tr("Neutron 3D v 0.0.1 - \\project/neutron/scene_001.nkb "));
-
-    createActions();
+	setDockOptions(QMainWindow::AnimatedDocks | QMainWindow::AllowTabbedDocks);
+	setDockNestingEnabled ( true );
+    
+	perspectiveSlot();
+	
+	createActions();
     createMenus();
-	
-    glPanel = new GLPanel(this);
-    glPanel->setGeometry(30, 30, width(), height());
-    glPanel->setMinimumSize(640, 400);
-	
-    QHBoxLayout *mainLayout = new QHBoxLayout;
-    mainLayout->setMargin(0);
-    mainLayout->addWidget(glPanel);
-    setLayout(mainLayout);
-	
-	
-
 }
 
 MainWindow::~MainWindow()
@@ -39,6 +31,8 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
         menu.addAction(copyAction);
         menu.addAction(pasteAction);
         menu.addAction(deleteAction);
+		menu.addSeparator();
+		menu.addAction(perspectiveAction);
         menu.addSeparator();
         menu.addAction(PreferenceshAction);
         menu.exec(event->globalPos());
@@ -374,11 +368,14 @@ void MainWindow::exportSelectedFileSlot()
 }
 
 void MainWindow::perspectiveSlot()
-{
-	PerspcPanel *perspcPanel = new PerspcPanel(this);
-	perspcPanel->setGeometry(width()/2, height()/2, 300, 300);
-	perspcPanel->show();
-	
+{	
+	glPanel = new GLPanel(this);
+	if(! glPanel->isFloating ())
+	{
+		glPanel->setMinimumSize(100, 100);
+	}
+	glPanel->show();
+	addDockWidget(Qt::LeftDockWidgetArea,glPanel);
 }
 
  void MainWindow::preferencesSlot()
@@ -392,3 +389,4 @@ void MainWindow::aboutSlot()
 	About* abt = new About(this);
 	abt->exec();
 }
+
