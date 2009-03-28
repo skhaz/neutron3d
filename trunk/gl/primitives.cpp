@@ -10,18 +10,19 @@ Primitives::~Primitives()
 
 void Primitives::cube()
 {
+	/*
 	qglColor(QColor::fromRgbF(0.5, 0.5, 0.5, 1.0));
 	GLUquadricObj *pObj;
 	pObj = gluNewQuadric();
 	gluSphere(pObj, 2.0, 30, 15);
-	
+	*/
 	glShadeModel(GL_SMOOTH);
 	
 	glBegin(GL_POINTS);			// Centro
 	qglColor(QColor::fromRgbF(0.0, 0.7, 0.0, 1.0));
 	glVertex3f(0.0, 0.0, 0.0);
 	glEnd();
-	/*
+	
 	glBegin(GL_QUADS);			// Face posterior
 	glNormal3f(0.0, 0.0, 1.0);	// Normal da face
 	qglColor(QColor::fromRgbF(0.0, 1.0, 1.0, 1.0));
@@ -93,7 +94,7 @@ void Primitives::cube()
 	qglColor(QColor::fromRgbF(0.0, 0.0, 0.0, 1.0));
 	glVertex3f(-1.0, -1.0, 1.0);
 	glEnd();	
-	 */
+	 
 }
 
 void Primitives::plane()

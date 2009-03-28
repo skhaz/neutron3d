@@ -7,12 +7,13 @@
 #include <QMutex>
 #include <QWaitCondition>
 
-Application::Application(int& argc, char** argv): QApplication(argc, argv)
+Application::Application(int& argc, char** argv)
+: QApplication(argc, argv)
 , mainWindow(new MainWindow)
 ,layout(new QVBoxLayout)
 ,verticalSpacer(new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding))
 ,verticalSpacer1(new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Fixed))
-{
+{	
 	splashScreen();
 
 	QTimer::singleShot(0, this, SLOT(postLaunch()));
