@@ -99,7 +99,6 @@ private:
 	QVBoxLayout *Layout_all; 
 
 	QList<QDir> list;
-       // QDir dir;
 };
 
 #endif

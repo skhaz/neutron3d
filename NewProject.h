@@ -34,18 +34,18 @@ private:
 	QPushButton *bt_ok;
 	QPushButton *bt_cancel;
 
-        QSpacerItem *spacerNewProject;
-        QSpacerItem *spacerPath;
-        QSpacerItem *spacerFooter;
-        QSpacerItem *spacerTop;
-        QSpacerItem *spacerBottom;
+	QSpacerItem *spacerNewProject;
+	QSpacerItem *spacerPath;
+	QSpacerItem *spacerFooter;
+	QSpacerItem *spacerTop;
+	QSpacerItem *spacerBottom;
 
-        QHBoxLayout *Layout_newProject;
-        QHBoxLayout *Layout_path;
-        QHBoxLayout *Layout_footer;
-        QVBoxLayout *Layout_center;
+	QHBoxLayout *Layout_newProject;
+	QHBoxLayout *Layout_path;
+	QHBoxLayout *Layout_footer;
+	QVBoxLayout *Layout_center;
 
-        QMessageBox *msgBox;
+	QMessageBox *msgBox;
 
 	QDir *dir;
 };

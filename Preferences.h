@@ -22,17 +22,17 @@ public:
     ~Preferences();
 
 private:
-        QListWidget *lst_categories;
-        QStackedWidget *stk_details;
-        QWidget *generalPage;
-        QWidget *mousePage;
-        QHBoxLayout *layout;
-        QPushButton *bt_close;
-        QPushButton *bt_apply;
-        QSpacerItem *hSpacer;
-        QSpacerItem *hSpacer1;
-        QHBoxLayout *hbl_footer;
-        QVBoxLayout *mainLayout;
+	QListWidget *lst_categories;
+	QStackedWidget *stk_details;
+	QWidget *generalPage;
+	QWidget *mousePage;
+	QHBoxLayout *layout;
+	QPushButton *bt_close;
+	QPushButton *bt_apply;
+	QSpacerItem *hSpacer;
+	QSpacerItem *hSpacer1;
+	QHBoxLayout *hbl_footer;
+	QVBoxLayout *mainLayout;
 };
 
 #endif

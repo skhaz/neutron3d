@@ -30,7 +30,7 @@ About::About(QWidget* parent)
                                         "text-align: center;\n"));
 	
     content->setText(QLatin1String("Developers:\n"
-                                    "Andr� Agenor M. da Luz\n"
+                                    "AndrÈà Agenor M. da Luz\n"
                                     "Rodrigo Delduca Batista\n"
                                     "Arleson Valentini Tonnera\n"));
 
@@ -48,7 +48,6 @@ About::About(QWidget* parent)
 
 
     setLayout(hLayout);
-
 }
 
 About::~About()
