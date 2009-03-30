@@ -14,9 +14,7 @@ ImageView::ImageView(QWidget *parent)
 	resize(500, 400);
 	
 	bt_open->setMinimumSize(85, 25);
-	
 	bt_normalSize->setMinimumSize(85, 25);
-	
 	bt_fitToWindow->setCheckable(true);
 	bt_fitToWindow->setMinimumSize(85, 25);
 	
@@ -43,6 +41,8 @@ ImageView::ImageView(QWidget *parent)
 	connect(bt_open, SIGNAL(clicked()), SLOT( open() ));
 	connect(bt_normalSize, SIGNAL(clicked()), SLOT( normalSize() ));
 	connect(bt_fitToWindow, SIGNAL(clicked()), SLOT( fitToWindow() ));
+
+    open();
 }
 ImageView::~ImageView()
 {

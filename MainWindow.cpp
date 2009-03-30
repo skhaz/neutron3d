@@ -89,6 +89,7 @@ void MainWindow::createMenus()
         LayoutMenu->addAction(addLayoutAction);
         LayoutMenu->addAction(dellLayoutAction);
 	viewMenu->addAction(perspectiveAction);
+    viewMenu->addAction(viewImageAction);
 
 	
 	// ************************************************
@@ -267,6 +268,12 @@ void MainWindow::createActions()
 	perspectiveAction->setStatusTip(tr("Perspective Panel"));
 	connect(perspectiveAction, SIGNAL(triggered()), SLOT(perspectiveSlot()));
 
+    viewImageAction = new QAction(tr("View Image"), this);
+    viewImageAction->setShortcut(tr("Ctrl+5"));
+    viewImageAction->setStatusTip(tr("View Image"));
+    connect(viewImageAction, SIGNAL(triggered()), SLOT(viewImageSlot()));
+
+
 	// ************************************************
 	//	Display Menu
 	// ************************************************
@@ -302,11 +309,8 @@ void MainWindow::createActions()
 
 void MainWindow::keyBoardMappingSlot()
 {
-	//KeyboardMapping* k = new KeyboardMapping(this);
-	//k->show();	
-	
-	ImageView *img = new ImageView(this);
-	img->show();
+    KeyboardMapping* k = new KeyboardMapping(this);
+    k->show();
 }
 
 void MainWindow::projectManagerSlot()
@@ -379,6 +383,12 @@ void MainWindow::perspectiveSlot()
 	}
 	glPanel->show();
 	addDockWidget(Qt::LeftDockWidgetArea,glPanel);
+}
+
+void MainWindow::viewImageSlot()
+{
+    ImageView *img = new ImageView(this);
+    img->exec();
 }
 
  void MainWindow::preferencesSlot()
