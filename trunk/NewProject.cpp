@@ -97,7 +97,7 @@ void NewProject::ok_slot()
 
         if (!dir->exists(projectDir))
         {
-            // caso não exista
+            // caso nao exista
             dir->mkdir(le_newProject->text());
             close();
         }
@@ -116,10 +116,8 @@ void NewProject::ok_slot()
                     close();
                 break;
                 case QMessageBox::Cancel:
-                    //close();
                 break;
             }
-
         }
     }
     else

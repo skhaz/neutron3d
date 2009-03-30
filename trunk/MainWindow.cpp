@@ -2,7 +2,7 @@
 
 #include "MainWindow.h"
 
-#include "perspecPanel.h"
+#include "imageView.h"
 
 
 MainWindow::MainWindow(QWidget* parent)
@@ -302,8 +302,11 @@ void MainWindow::createActions()
 
 void MainWindow::keyBoardMappingSlot()
 {
-   KeyboardMapping* k = new KeyboardMapping(this);
-    k->show();
+	//KeyboardMapping* k = new KeyboardMapping(this);
+	//k->show();	
+	
+	ImageView *img = new ImageView(this);
+	img->show();
 }
 
 void MainWindow::projectManagerSlot()

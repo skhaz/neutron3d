@@ -10,54 +10,51 @@ class Primitives;
 class GlDisplayInfo;
 
 class GLView : public QGLWidget
-	{
-		Q_OBJECT
+{
+	Q_OBJECT
 		
-	public:
-		GLView(QWidget *parent = 0);
-		~GLView();
+public:
+	GLView(QWidget *parent = 0);
+	~GLView();
 		
-		void setBgColor( QColor _BgColor);
+	void setBgColor( QColor _BgColor);
 		
-		void viewCamera();
-		void viewPosition();
-		void camMov(int x, int y);
-		
-		
-	protected:
-		void initializeGL();
-		void paintGL();
-		void resizeGL(int width, int height);
-		void mousePressEvent(QMouseEvent *event);
-		void mouseMoveEvent(QMouseEvent *event);
-        void keyPressEvent(QKeyEvent *event);
+	void viewCamera();
+	void viewPosition();
+	void camMov(int x, int y);
 		
 		
-	private:
-		Primitives cube;
-        GlDisplayInfo dispInfo;
+protected:
+	void initializeGL();
+	void paintGL();
+	void resizeGL(int width, int height);
+	void mousePressEvent(QMouseEvent *event);
+	void mouseMoveEvent(QMouseEvent *event);
+	void keyPressEvent(QKeyEvent *event);
 		
-		GLuint makeObject();
 		
-		GLuint object;
+private:
+	Primitives cube;
+	GlDisplayInfo dispInfo;
 		
-		QColor bgColor;
+	GLuint makeObject();
+	GLuint object;
 		
-		GLfloat angleView;
-        GLfloat nearPlane;
-        GLfloat farPlane;
-		GLfloat fAspect;
+	QColor bgColor;
+		
+	GLfloat angleView;
+	GLfloat nearPlane;
+	GLfloat farPlane;
+	GLfloat fAspect;
 
-		// navagacao
-		int camType;
-		
-		GLfloat win;
-		GLfloat rotX, rotY, rotX_ini, rotY_ini;
-		GLfloat trX, trY, trZ, trX_ini, trY_ini, trZ_ini;
-		int x_ini,y_ini;
-		Qt::MouseButton btClicked;
-		
-	};
+	// navagacao
+	int camType;
+	GLfloat win;
+	GLfloat rotX, rotY, rotX_ini, rotY_ini;
+	GLfloat trX, trY, trZ, trX_ini, trY_ini, trZ_ini;
+	int x_ini,y_ini;
+	Qt::MouseButton btClicked;
+};
 
 #endif
 

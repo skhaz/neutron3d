@@ -9,21 +9,21 @@ class About : public QDialog
 {
 	Q_OBJECT
 	
-	public:
-		About(QWidget* parent = 0);
-		~About();
+public:
+	About(QWidget* parent = 0);
+	~About();
 
-    protected:
-        void mousePressEvent(QMouseEvent *event);
+protected:
+	void mousePressEvent(QMouseEvent *event);
 
 private:
-        QLabel *picture;
-        QLabel *title;
-        QLabel *version;
-        QLabel *content;
-        QSpacerItem *hSpacer;
-        QVBoxLayout *hLayout;
-        QVBoxLayout *hLayout1;
+	QLabel *picture;
+	QLabel *title;
+	QLabel *version;
+	QLabel *content;
+	QSpacerItem *hSpacer;
+	QVBoxLayout *hLayout;
+	QVBoxLayout *hLayout1;
 };
 
 #endif
