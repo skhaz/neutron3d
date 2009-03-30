@@ -63,7 +63,8 @@ private:
 	// View Menu
 	QAction* addLayoutAction;
 	QAction* dellLayoutAction;	
-	QAction* perspectiveAction;	
+    QAction* perspectiveAction;
+    QAction* viewImageAction;
 
 	// Help Menu
 	QAction* helpAction;
@@ -83,6 +84,7 @@ private	slots:
 	void projectManagerSlot();
 	void keyBoardMappingSlot();
 	void perspectiveSlot();
+    void viewImageSlot();
 	
 	void preferencesSlot();
 	void aboutSlot();

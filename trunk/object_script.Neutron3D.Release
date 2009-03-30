@@ -14,7 +14,8 @@ INPUT(
 ./temp\obj\vector2.o
 ./temp\obj\vector3.o
 ./temp\obj\point.o
-./temp\obj\perspecPanel.o
+./temp\obj\flowLayout.o
+./temp\obj\imageView.o
 ./temp\obj\moc_KeyboardMapping.o
 ./temp\obj\moc_Application.o
 ./temp\obj\moc_MainWindow.o
@@ -24,6 +25,6 @@ INPUT(
 ./temp\obj\moc_About.o
 ./temp\obj\moc_glPanel.o
 ./temp\obj\moc_glView.o
-./temp\obj\moc_perspecPanel.o
+./temp\obj\moc_imageView.o
 ./temp\obj\qrc_application.o
 );
