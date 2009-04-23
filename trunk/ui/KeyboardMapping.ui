@@ -1,0 +1,2056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KeyboardMapping</class>
+ <widget class="QDialog" name="KeyboardMapping">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1045</width>
+    <height>762</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1045</width>
+    <height>715</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Keyboard_Mapping</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_10">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="lbl_presetShortcut">
+       <property name="text">
+        <string>Preset Shortcut</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cbx_presetShortcut">
+       <item>
+        <property name="text">
+         <string>Neutron 3D</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>XSI</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Maya</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3DS Max</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>------------</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Add Preset</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Load Preset</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Remove Preset</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bt_exportKeyMap">
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Export Key Map</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bt_restoreDefaults">
+       <property name="minimumSize">
+        <size>
+         <width>85</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Restore Defaults</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <item>
+      <widget class="QGroupBox" name="grb_comandList">
+       <property name="title">
+        <string/>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="lbl_group">
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="text">
+             <string>Group:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListView" name="lv_group"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="lbl_commands">
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="text">
+             <string>Commands:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListView" name="lv_commands"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QGroupBox" name="grb_description">
+         <property name="styleSheet">
+          <string notr="true">QGroupBox::title {
+	subcontrol-position: top center;
+}</string>
+         </property>
+         <property name="title">
+          <string>Description:</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QLabel" name="lbl_description">
+            <property name="text">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Grande, Segoe UI'; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Aqui vai a descrição do comando selecionado.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;Poderá ser texto &lt;span style=&quot; font-weight:600;&quot;&gt;formatado&lt;/span&gt; e em multiplas linhas&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="grb_help">
+         <property name="styleSheet">
+          <string notr="true">QGroupBox::title {
+	subcontrol-position: top center;
+}</string>
+         </property>
+         <property name="title">
+          <string>Help:</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QLabel" name="lbl_help">
+            <property name="text">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Grande, Segoe UI'; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Hold command and drop in your prefered key.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;For multiple keys first click on auxiliary key.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QPushButton" name="bt_ok">
+         <property name="minimumSize">
+          <size>
+           <width>85</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>OK</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bt_cancel">
+         <property name="minimumSize">
+          <size>
+           <width>85</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Cancel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bt_help">
+         <property name="minimumSize">
+          <size>
+           <width>85</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Help</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grb_keyboard">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>280</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox::title {
+	subcontrol-position: top center;
+}</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QPushButton" name="bt_f2">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_f8">
+      <property name="geometry">
+       <rect>
+        <x>415</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_5">
+      <property name="geometry">
+       <rect>
+        <x>235</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>$
+5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_9Pad">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_f6">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_space">
+      <property name="geometry">
+       <rect>
+        <x>205</x>
+        <y>235</y>
+        <width>221</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Space</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_7">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&amp;&amp;
+7</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_s">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>S</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_5Pad">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_v">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>V</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_coma">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;
+,</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_rightCtrl">
+      <property name="geometry">
+       <rect>
+        <x>564</x>
+        <y>235</y>
+        <width>91</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ctrl</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_leftArrow">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>235</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Left</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_slashPad">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_f1">
+      <property name="geometry">
+       <rect>
+        <x>75</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_f4">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F4</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_plusPad">
+      <property name="geometry">
+       <rect>
+        <x>970</x>
+        <y>100</y>
+        <width>40</width>
+        <height>86</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>+</string>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_leftCtrl">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>235</y>
+        <width>56</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ctrl</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_dotComa">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>:
+;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_j">
+      <property name="geometry">
+       <rect>
+        <x>365</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>J</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_7Pad">
+      <property name="geometry">
+       <rect>
+        <x>835</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_underline">
+      <property name="geometry">
+       <rect>
+        <x>505</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>_
+-</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_pageUp">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Page
+Up</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_enterPad">
+      <property name="geometry">
+       <rect>
+        <x>970</x>
+        <y>190</y>
+        <width>40</width>
+        <height>86</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enter</string>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_leftSlash">
+      <property name="geometry">
+       <rect>
+        <x>615</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>|
+\</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_leftBranchet">
+      <property name="geometry">
+       <rect>
+        <x>525</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>{
+[</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_12">
+      <property name="geometry">
+       <rect>
+        <x>615</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F12</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_upArrow">
+      <property name="geometry">
+       <rect>
+        <x>725</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Up</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_w">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>W</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_delete">
+      <property name="geometry">
+       <rect>
+        <x>595</x>
+        <y>55</y>
+        <width>61</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_0Pad">
+      <property name="geometry">
+       <rect>
+        <x>835</x>
+        <y>235</y>
+        <width>86</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_dotPad">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>235</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>.</string>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_leftCommand">
+      <property name="geometry">
+       <rect>
+        <x>114</x>
+        <y>235</y>
+        <width>86</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>command</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_f">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::checked {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(132, 92, 92, 255), stop:0.5 rgba(110, 70, 70, 255), stop:0.59 rgba(120, 80, 80, 255), stop:1 rgba(132, 92, 92, 255));
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>F</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_dot">
+      <property name="geometry">
+       <rect>
+        <x>475</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&gt;
+.</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_a">
+      <property name="geometry">
+       <rect>
+        <x>95</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>A</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_n">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>N</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_d">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>D</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_4">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>$
+4</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_rightSlash">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>?
+/</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_rightArrow">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>235</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Right</string>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_deletePad">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_capsLock">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>145</y>
+        <width>81</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Caps Lock</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_6">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>^
+6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_6Pad">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_k">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>K</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_leftAlt">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>235</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Alt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_esc">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Esc</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_9">
+      <property name="geometry">
+       <rect>
+        <x>415</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>(
+9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_f11">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F11</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_q">
+      <property name="geometry">
+       <rect>
+        <x>75</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Q</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_tab">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>61</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tab</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_rightShift">
+      <property name="geometry">
+       <rect>
+        <x>565</x>
+        <y>190</y>
+        <width>91</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Shift</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_f7">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F7</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_o">
+      <property name="geometry">
+       <rect>
+        <x>435</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>O</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_0">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>)
+0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_p">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>P</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_t">
+      <property name="geometry">
+       <rect>
+        <x>255</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>T</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_x">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_c">
+      <property name="geometry">
+       <rect>
+        <x>205</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>C</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_leftShift">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>101</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Shift</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_f3">
+      <property name="geometry">
+       <rect>
+        <x>165</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_numLock">
+      <property name="geometry">
+       <rect>
+        <x>835</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Num
+Lock</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_rightAlt">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>235</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Alt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_b">
+      <property name="geometry">
+       <rect>
+        <x>295</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>B</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_3Pad">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_u">
+      <property name="geometry">
+       <rect>
+        <x>345</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>U</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_10">
+      <property name="geometry">
+       <rect>
+        <x>525</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F10</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_8">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>*
+8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_home">
+      <property name="geometry">
+       <rect>
+        <x>725</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Home</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_equal">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>+
+=</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_1Pad">
+      <property name="geometry">
+       <rect>
+        <x>835</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_h">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>H</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_end">
+      <property name="geometry">
+       <rect>
+        <x>725</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>End</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_1">
+      <property name="geometry">
+       <rect>
+        <x>55</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>!
+1</string>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_8Pad">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_insert">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Insert</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_4Pad">
+      <property name="geometry">
+       <rect>
+        <x>835</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_rightBranchet">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>}
+]</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_2Pad">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_f9">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_rightCommand">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>235</y>
+        <width>86</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>command</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_downArrow">
+      <property name="geometry">
+       <rect>
+        <x>725</x>
+        <y>235</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Down</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_y">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_minusPad">
+      <property name="geometry">
+       <rect>
+        <x>970</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_l">
+      <property name="geometry">
+       <rect>
+        <x>455</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>L</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_f5">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>10</y>
+        <width>40</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>F5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_2">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>@
+2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_r">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>R</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_aspas">
+      <property name="geometry">
+       <rect>
+        <x>545</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&quot;
+'</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_multiplyPad">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>*</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_enter">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>145</y>
+        <width>66</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enter</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_e">
+      <property name="geometry">
+       <rect>
+        <x>165</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>E</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_z">
+      <property name="geometry">
+       <rect>
+        <x>115</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Z</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_m">
+      <property name="geometry">
+       <rect>
+        <x>385</x>
+        <y>190</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>M</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_3">
+      <property name="geometry">
+       <rect>
+        <x>145</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>#
+3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_i">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>I</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_til">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>55</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>`
+~</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_g">
+      <property name="geometry">
+       <rect>
+        <x>275</x>
+        <y>145</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::checked {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(92, 132, 92, 255), stop:0.5 rgba(70, 110, 70, 255), stop:0.59 rgba(80, 120, 80, 255), stop:1 rgba(92, 132, 92, 255));
+}
+</string>
+      </property>
+      <property name="text">
+       <string>G</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_pageDown">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>100</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Page
+Down</string>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QGroupBox" name="grb_newCommand">
+       <property name="styleSheet">
+        <string notr="true">QGroupBox::title {
+	subcontrol-position: top center;
+}</string>
+       </property>
+       <property name="title">
+        <string>Create New Command</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="lbl_nameCommand">
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Name: ...............</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="tbx_nameCommand"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="lbl_descriptionCommand">
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Description: ......</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="tbx_descriptionCommand"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="lbl_groupCommand">
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Group: ...............</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbx_group">
+              <item>
+               <property name="text">
+                <string>Polygons</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Curves</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Selection</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>----------</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Add Group</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Remove Group</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QPushButton" name="bt_newCommand">
+            <property name="minimumSize">
+             <size>
+              <width>85</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>New</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bt_editCommand">
+            <property name="minimumSize">
+             <size>
+              <width>85</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Edit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bt_deleteNewCommand">
+            <property name="minimumSize">
+             <size>
+              <width>85</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Delete</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="grb_commandScript">
+       <property name="styleSheet">
+        <string notr="true">QGroupBox::title {
+	subcontrol-position: top center;
+}</string>
+       </property>
+       <property name="title">
+        <string>Command Script</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QTextEdit" name="tbx_scriptEditor">
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOn</enum>
+          </property>
+          <property name="lineWrapMode">
+           <enum>QTextEdit::NoWrap</enum>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Lucida Grande, Segoe UI'; font-size:8pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QPushButton" name="bt_acceptScript">
+            <property name="minimumSize">
+             <size>
+              <width>85</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Accept</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bt_clearScript">
+            <property name="minimumSize">
+             <size>
+              <width>85</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Clear</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>cbx_presetShortcut</tabstop>
+  <tabstop>bt_exportKeyMap</tabstop>
+  <tabstop>bt_restoreDefaults</tabstop>
+  <tabstop>lv_group</tabstop>
+  <tabstop>lv_commands</tabstop>
+  <tabstop>bt_esc</tabstop>
+  <tabstop>bt_f1</tabstop>
+  <tabstop>bt_f2</tabstop>
+  <tabstop>bt_f3</tabstop>
+  <tabstop>bt_f4</tabstop>
+  <tabstop>bt_f5</tabstop>
+  <tabstop>bt_f6</tabstop>
+  <tabstop>bt_f7</tabstop>
+  <tabstop>bt_f8</tabstop>
+  <tabstop>bt_f9</tabstop>
+  <tabstop>bt_10</tabstop>
+  <tabstop>bt_f11</tabstop>
+  <tabstop>bt_12</tabstop>
+  <tabstop>bt_til</tabstop>
+  <tabstop>bt_1</tabstop>
+  <tabstop>bt_2</tabstop>
+  <tabstop>bt_3</tabstop>
+  <tabstop>bt_4</tabstop>
+  <tabstop>bt_5</tabstop>
+  <tabstop>bt_6</tabstop>
+  <tabstop>bt_7</tabstop>
+  <tabstop>bt_8</tabstop>
+  <tabstop>bt_9</tabstop>
+  <tabstop>bt_0</tabstop>
+  <tabstop>bt_underline</tabstop>
+  <tabstop>bt_equal</tabstop>
+  <tabstop>bt_delete</tabstop>
+  <tabstop>bt_tab</tabstop>
+  <tabstop>bt_q</tabstop>
+  <tabstop>bt_w</tabstop>
+  <tabstop>bt_e</tabstop>
+  <tabstop>bt_r</tabstop>
+  <tabstop>bt_t</tabstop>
+  <tabstop>bt_y</tabstop>
+  <tabstop>bt_u</tabstop>
+  <tabstop>bt_i</tabstop>
+  <tabstop>bt_o</tabstop>
+  <tabstop>bt_p</tabstop>
+  <tabstop>bt_leftBranchet</tabstop>
+  <tabstop>bt_rightBranchet</tabstop>
+  <tabstop>bt_leftSlash</tabstop>
+  <tabstop>bt_capsLock</tabstop>
+  <tabstop>bt_a</tabstop>
+  <tabstop>bt_s</tabstop>
+  <tabstop>bt_d</tabstop>
+  <tabstop>bt_f</tabstop>
+  <tabstop>bt_g</tabstop>
+  <tabstop>bt_h</tabstop>
+  <tabstop>bt_j</tabstop>
+  <tabstop>bt_k</tabstop>
+  <tabstop>bt_l</tabstop>
+  <tabstop>bt_dotComa</tabstop>
+  <tabstop>bt_aspas</tabstop>
+  <tabstop>bt_enter</tabstop>
+  <tabstop>bt_leftShift</tabstop>
+  <tabstop>bt_z</tabstop>
+  <tabstop>bt_x</tabstop>
+  <tabstop>bt_c</tabstop>
+  <tabstop>bt_v</tabstop>
+  <tabstop>bt_b</tabstop>
+  <tabstop>bt_n</tabstop>
+  <tabstop>bt_m</tabstop>
+  <tabstop>bt_coma</tabstop>
+  <tabstop>bt_dot</tabstop>
+  <tabstop>bt_rightSlash</tabstop>
+  <tabstop>bt_rightShift</tabstop>
+  <tabstop>bt_leftCtrl</tabstop>
+  <tabstop>bt_leftAlt</tabstop>
+  <tabstop>bt_leftCommand</tabstop>
+  <tabstop>bt_space</tabstop>
+  <tabstop>bt_rightCommand</tabstop>
+  <tabstop>bt_rightAlt</tabstop>
+  <tabstop>bt_rightCtrl</tabstop>
+  <tabstop>bt_insert</tabstop>
+  <tabstop>bt_home</tabstop>
+  <tabstop>bt_pageUp</tabstop>
+  <tabstop>bt_deletePad</tabstop>
+  <tabstop>bt_end</tabstop>
+  <tabstop>bt_pageDown</tabstop>
+  <tabstop>bt_upArrow</tabstop>
+  <tabstop>bt_leftArrow</tabstop>
+  <tabstop>bt_downArrow</tabstop>
+  <tabstop>bt_rightArrow</tabstop>
+  <tabstop>bt_numLock</tabstop>
+  <tabstop>bt_slashPad</tabstop>
+  <tabstop>bt_multiplyPad</tabstop>
+  <tabstop>bt_minusPad</tabstop>
+  <tabstop>bt_7Pad</tabstop>
+  <tabstop>bt_8Pad</tabstop>
+  <tabstop>bt_9Pad</tabstop>
+  <tabstop>bt_plusPad</tabstop>
+  <tabstop>bt_4Pad</tabstop>
+  <tabstop>bt_5Pad</tabstop>
+  <tabstop>bt_6Pad</tabstop>
+  <tabstop>bt_1Pad</tabstop>
+  <tabstop>bt_2Pad</tabstop>
+  <tabstop>bt_3Pad</tabstop>
+  <tabstop>bt_enterPad</tabstop>
+  <tabstop>bt_0Pad</tabstop>
+  <tabstop>bt_dotPad</tabstop>
+  <tabstop>tbx_nameCommand</tabstop>
+  <tabstop>tbx_descriptionCommand</tabstop>
+  <tabstop>cbx_group</tabstop>
+  <tabstop>bt_newCommand</tabstop>
+  <tabstop>bt_editCommand</tabstop>
+  <tabstop>bt_deleteNewCommand</tabstop>
+  <tabstop>tbx_scriptEditor</tabstop>
+  <tabstop>bt_acceptScript</tabstop>
+  <tabstop>bt_clearScript</tabstop>
+  <tabstop>bt_ok</tabstop>
+  <tabstop>bt_cancel</tabstop>
+  <tabstop>bt_help</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../media/application.qrc"/>
+ </resources>
+ <connections/>
+</ui>
