@@ -53,6 +53,8 @@ FormProjectManager::FormProjectManager(QWidget *parent)
 {
 	setMinimumSize(0, 480);
 	
+	trw_folderType->setHeaderHidden ( true );
+	
 	Layout_path->setMargin(0);
 	Layout_path->addWidget(lbl_projectPath);
 	Layout_path->addWidget(lbl_Path);

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'KeyboardMapping.ui'
 **
-** Created: Mon 30. Mar 14:49:46 2009
+** Created: Tue Apr 21 21:42:08 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -17,19 +17,49 @@
 #include <QtGui/QComboBox>
 #include <QtGui/QDialog>
 #include <QtGui/QGroupBox>
+#include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
 #include <QtGui/QListView>
 #include <QtGui/QPushButton>
-#include <QtGui/QSplitter>
+#include <QtGui/QSpacerItem>
 #include <QtGui/QTextEdit>
+#include <QtGui/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_KeyboardMapping
 {
 public:
+    QVBoxLayout *verticalLayout_10;
+    QHBoxLayout *horizontalLayout;
+    QLabel *lbl_presetShortcut;
+    QComboBox *cbx_presetShortcut;
+    QPushButton *bt_exportKeyMap;
+    QPushButton *bt_restoreDefaults;
+    QSpacerItem *horizontalSpacer;
+    QHBoxLayout *horizontalLayout_9;
+    QGroupBox *grb_comandList;
+    QHBoxLayout *horizontalLayout_8;
+    QVBoxLayout *verticalLayout_5;
+    QLabel *lbl_group;
+    QListView *lv_group;
+    QVBoxLayout *verticalLayout_6;
+    QLabel *lbl_commands;
+    QListView *lv_commands;
+    QVBoxLayout *verticalLayout_7;
+    QGroupBox *grb_description;
+    QVBoxLayout *verticalLayout_8;
+    QLabel *lbl_description;
+    QGroupBox *grb_help;
+    QVBoxLayout *verticalLayout_9;
+    QLabel *lbl_help;
+    QVBoxLayout *verticalLayout_4;
+    QPushButton *bt_ok;
+    QPushButton *bt_cancel;
+    QPushButton *bt_help;
+    QSpacerItem *verticalSpacer_2;
     QGroupBox *grb_keyboard;
     QPushButton *bt_f2;
     QPushButton *bt_f8;
@@ -131,49 +161,183 @@ public:
     QPushButton *bt_til;
     QPushButton *bt_g;
     QPushButton *bt_pageDown;
-    QGroupBox *grb_comandList;
-    QLabel *lbl_group;
-    QLabel *lbl_commands;
-    QSplitter *splitter;
-    QListView *lv_group;
-    QListView *lv_commands;
-    QGroupBox *grb_commandScript;
-    QTextEdit *tbx_scriptEditor;
-    QPushButton *bt_acceptScript;
-    QPushButton *bt_clearScript;
-    QPushButton *bt_ok;
-    QPushButton *bt_cancel;
-    QLabel *lbl_presetShortcut;
-    QComboBox *cbx_presetShortcut;
-    QPushButton *bt_exportKeyMap;
-    QPushButton *bt_help;
-    QGroupBox *grb_description;
-    QLabel *lbl_description;
-    QPushButton *bt_restoreDefaults;
-    QGroupBox *grb_help;
-    QLabel *lbl_help;
+    QHBoxLayout *horizontalLayout_7;
     QGroupBox *grb_newCommand;
-    QComboBox *cbx_group;
-    QLineEdit *tbx_descriptionCommand;
-    QLabel *lbl_descriptionCommand;
-    QLabel *lbl_groupCommand;
+    QHBoxLayout *horizontalLayout_5;
+    QVBoxLayout *verticalLayout_2;
+    QHBoxLayout *horizontalLayout_2;
     QLabel *lbl_nameCommand;
     QLineEdit *tbx_nameCommand;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *lbl_descriptionCommand;
+    QLineEdit *tbx_descriptionCommand;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *lbl_groupCommand;
+    QComboBox *cbx_group;
+    QVBoxLayout *verticalLayout;
     QPushButton *bt_newCommand;
     QPushButton *bt_editCommand;
     QPushButton *bt_deleteNewCommand;
+    QGroupBox *grb_commandScript;
+    QHBoxLayout *horizontalLayout_6;
+    QTextEdit *tbx_scriptEditor;
+    QVBoxLayout *verticalLayout_3;
+    QPushButton *bt_acceptScript;
+    QPushButton *bt_clearScript;
+    QSpacerItem *verticalSpacer;
 
     void setupUi(QDialog *KeyboardMapping)
     {
         if (KeyboardMapping->objectName().isEmpty())
             KeyboardMapping->setObjectName(QString::fromUtf8("KeyboardMapping"));
-        KeyboardMapping->resize(1030, 715);
-        KeyboardMapping->setMinimumSize(QSize(1030, 715));
-        KeyboardMapping->setMaximumSize(QSize(1030, 715));
+        KeyboardMapping->resize(1045, 762);
+        KeyboardMapping->setMinimumSize(QSize(1045, 715));
         KeyboardMapping->setStyleSheet(QString::fromUtf8(""));
+        verticalLayout_10 = new QVBoxLayout(KeyboardMapping);
+        verticalLayout_10->setObjectName(QString::fromUtf8("verticalLayout_10"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        lbl_presetShortcut = new QLabel(KeyboardMapping);
+        lbl_presetShortcut->setObjectName(QString::fromUtf8("lbl_presetShortcut"));
+
+        horizontalLayout->addWidget(lbl_presetShortcut);
+
+        cbx_presetShortcut = new QComboBox(KeyboardMapping);
+        cbx_presetShortcut->setObjectName(QString::fromUtf8("cbx_presetShortcut"));
+
+        horizontalLayout->addWidget(cbx_presetShortcut);
+
+        bt_exportKeyMap = new QPushButton(KeyboardMapping);
+        bt_exportKeyMap->setObjectName(QString::fromUtf8("bt_exportKeyMap"));
+        bt_exportKeyMap->setMinimumSize(QSize(80, 25));
+
+        horizontalLayout->addWidget(bt_exportKeyMap);
+
+        bt_restoreDefaults = new QPushButton(KeyboardMapping);
+        bt_restoreDefaults->setObjectName(QString::fromUtf8("bt_restoreDefaults"));
+        bt_restoreDefaults->setMinimumSize(QSize(85, 25));
+
+        horizontalLayout->addWidget(bt_restoreDefaults);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+
+        verticalLayout_10->addLayout(horizontalLayout);
+
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+        grb_comandList = new QGroupBox(KeyboardMapping);
+        grb_comandList->setObjectName(QString::fromUtf8("grb_comandList"));
+        horizontalLayout_8 = new QHBoxLayout(grb_comandList);
+        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
+        verticalLayout_5 = new QVBoxLayout();
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        lbl_group = new QLabel(grb_comandList);
+        lbl_group->setObjectName(QString::fromUtf8("lbl_group"));
+        lbl_group->setLayoutDirection(Qt::LeftToRight);
+
+        verticalLayout_5->addWidget(lbl_group);
+
+        lv_group = new QListView(grb_comandList);
+        lv_group->setObjectName(QString::fromUtf8("lv_group"));
+
+        verticalLayout_5->addWidget(lv_group);
+
+
+        horizontalLayout_8->addLayout(verticalLayout_5);
+
+        verticalLayout_6 = new QVBoxLayout();
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        lbl_commands = new QLabel(grb_comandList);
+        lbl_commands->setObjectName(QString::fromUtf8("lbl_commands"));
+        lbl_commands->setLayoutDirection(Qt::LeftToRight);
+
+        verticalLayout_6->addWidget(lbl_commands);
+
+        lv_commands = new QListView(grb_comandList);
+        lv_commands->setObjectName(QString::fromUtf8("lv_commands"));
+
+        verticalLayout_6->addWidget(lv_commands);
+
+
+        horizontalLayout_8->addLayout(verticalLayout_6);
+
+
+        horizontalLayout_9->addWidget(grb_comandList);
+
+        verticalLayout_7 = new QVBoxLayout();
+        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
+        grb_description = new QGroupBox(KeyboardMapping);
+        grb_description->setObjectName(QString::fromUtf8("grb_description"));
+        grb_description->setStyleSheet(QString::fromUtf8("QGroupBox::title {\n"
+"	subcontrol-position: top center;\n"
+"}"));
+        verticalLayout_8 = new QVBoxLayout(grb_description);
+        verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
+        lbl_description = new QLabel(grb_description);
+        lbl_description->setObjectName(QString::fromUtf8("lbl_description"));
+        lbl_description->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        lbl_description->setWordWrap(true);
+
+        verticalLayout_8->addWidget(lbl_description);
+
+
+        verticalLayout_7->addWidget(grb_description);
+
+        grb_help = new QGroupBox(KeyboardMapping);
+        grb_help->setObjectName(QString::fromUtf8("grb_help"));
+        grb_help->setStyleSheet(QString::fromUtf8("QGroupBox::title {\n"
+"	subcontrol-position: top center;\n"
+"}"));
+        verticalLayout_9 = new QVBoxLayout(grb_help);
+        verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
+        lbl_help = new QLabel(grb_help);
+        lbl_help->setObjectName(QString::fromUtf8("lbl_help"));
+        lbl_help->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+
+        verticalLayout_9->addWidget(lbl_help);
+
+
+        verticalLayout_7->addWidget(grb_help);
+
+
+        horizontalLayout_9->addLayout(verticalLayout_7);
+
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        bt_ok = new QPushButton(KeyboardMapping);
+        bt_ok->setObjectName(QString::fromUtf8("bt_ok"));
+        bt_ok->setMinimumSize(QSize(85, 25));
+
+        verticalLayout_4->addWidget(bt_ok);
+
+        bt_cancel = new QPushButton(KeyboardMapping);
+        bt_cancel->setObjectName(QString::fromUtf8("bt_cancel"));
+        bt_cancel->setMinimumSize(QSize(85, 25));
+
+        verticalLayout_4->addWidget(bt_cancel);
+
+        bt_help = new QPushButton(KeyboardMapping);
+        bt_help->setObjectName(QString::fromUtf8("bt_help"));
+        bt_help->setMinimumSize(QSize(85, 25));
+
+        verticalLayout_4->addWidget(bt_help);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_4->addItem(verticalSpacer_2);
+
+
+        horizontalLayout_9->addLayout(verticalLayout_4);
+
+
+        verticalLayout_10->addLayout(horizontalLayout_9);
+
         grb_keyboard = new QGroupBox(KeyboardMapping);
         grb_keyboard->setObjectName(QString::fromUtf8("grb_keyboard"));
-        grb_keyboard->setGeometry(QRect(5, 260, 1021, 286));
+        grb_keyboard->setMinimumSize(QSize(0, 280));
         grb_keyboard->setStyleSheet(QString::fromUtf8("QGroupBox::title {\n"
 "	subcontrol-position: top center;\n"
 "}"));
@@ -508,134 +672,138 @@ public:
         bt_pageDown->setGeometry(QRect(770, 100, 40, 40));
         bt_pageDown->setAutoRepeat(false);
         bt_pageDown->setAutoDefault(true);
-        grb_comandList = new QGroupBox(KeyboardMapping);
-        grb_comandList->setObjectName(QString::fromUtf8("grb_comandList"));
-        grb_comandList->setGeometry(QRect(5, 55, 521, 201));
-        lbl_group = new QLabel(grb_comandList);
-        lbl_group->setObjectName(QString::fromUtf8("lbl_group"));
-        lbl_group->setGeometry(QRect(15, 0, 81, 25));
-        lbl_group->setLayoutDirection(Qt::LeftToRight);
-        lbl_commands = new QLabel(grb_comandList);
-        lbl_commands->setObjectName(QString::fromUtf8("lbl_commands"));
-        lbl_commands->setGeometry(QRect(270, 0, 81, 25));
-        lbl_commands->setLayoutDirection(Qt::LeftToRight);
-        splitter = new QSplitter(grb_comandList);
-        splitter->setObjectName(QString::fromUtf8("splitter"));
-        splitter->setGeometry(QRect(10, 20, 500, 175));
-        splitter->setOrientation(Qt::Horizontal);
-        splitter->setHandleWidth(4);
-        splitter->setChildrenCollapsible(false);
-        lv_group = new QListView(splitter);
-        lv_group->setObjectName(QString::fromUtf8("lv_group"));
-        splitter->addWidget(lv_group);
-        lv_commands = new QListView(splitter);
-        lv_commands->setObjectName(QString::fromUtf8("lv_commands"));
-        splitter->addWidget(lv_commands);
-        grb_commandScript = new QGroupBox(KeyboardMapping);
-        grb_commandScript->setObjectName(QString::fromUtf8("grb_commandScript"));
-        grb_commandScript->setGeometry(QRect(505, 550, 521, 156));
-        grb_commandScript->setStyleSheet(QString::fromUtf8("QGroupBox::title {\n"
-"	subcontrol-position: top center;\n"
-"}"));
-        tbx_scriptEditor = new QTextEdit(grb_commandScript);
-        tbx_scriptEditor->setObjectName(QString::fromUtf8("tbx_scriptEditor"));
-        tbx_scriptEditor->setGeometry(QRect(5, 20, 406, 131));
-        tbx_scriptEditor->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-        tbx_scriptEditor->setLineWrapMode(QTextEdit::NoWrap);
-        bt_acceptScript = new QPushButton(grb_commandScript);
-        bt_acceptScript->setObjectName(QString::fromUtf8("bt_acceptScript"));
-        bt_acceptScript->setGeometry(QRect(415, 20, 100, 32));
-        bt_acceptScript->setMinimumSize(QSize(100, 32));
-        bt_clearScript = new QPushButton(grb_commandScript);
-        bt_clearScript->setObjectName(QString::fromUtf8("bt_clearScript"));
-        bt_clearScript->setGeometry(QRect(415, 55, 100, 32));
-        bt_clearScript->setMinimumSize(QSize(100, 32));
-        bt_ok = new QPushButton(KeyboardMapping);
-        bt_ok->setObjectName(QString::fromUtf8("bt_ok"));
-        bt_ok->setGeometry(QRect(920, 55, 100, 32));
-        bt_ok->setMinimumSize(QSize(100, 32));
-        bt_cancel = new QPushButton(KeyboardMapping);
-        bt_cancel->setObjectName(QString::fromUtf8("bt_cancel"));
-        bt_cancel->setGeometry(QRect(920, 90, 100, 32));
-        bt_cancel->setMinimumSize(QSize(100, 32));
-        lbl_presetShortcut = new QLabel(KeyboardMapping);
-        lbl_presetShortcut->setObjectName(QString::fromUtf8("lbl_presetShortcut"));
-        lbl_presetShortcut->setGeometry(QRect(20, 15, 76, 25));
-        cbx_presetShortcut = new QComboBox(KeyboardMapping);
-        cbx_presetShortcut->setObjectName(QString::fromUtf8("cbx_presetShortcut"));
-        cbx_presetShortcut->setGeometry(QRect(100, 15, 161, 26));
-        bt_exportKeyMap = new QPushButton(KeyboardMapping);
-        bt_exportKeyMap->setObjectName(QString::fromUtf8("bt_exportKeyMap"));
-        bt_exportKeyMap->setGeometry(QRect(280, 15, 100, 32));
-        bt_exportKeyMap->setMinimumSize(QSize(100, 32));
-        bt_help = new QPushButton(KeyboardMapping);
-        bt_help->setObjectName(QString::fromUtf8("bt_help"));
-        bt_help->setGeometry(QRect(920, 125, 100, 32));
-        bt_help->setMinimumSize(QSize(100, 32));
-        grb_description = new QGroupBox(KeyboardMapping);
-        grb_description->setObjectName(QString::fromUtf8("grb_description"));
-        grb_description->setGeometry(QRect(530, 55, 381, 116));
-        grb_description->setStyleSheet(QString::fromUtf8("QGroupBox::title {\n"
-"	subcontrol-position: top center;\n"
-"}"));
-        lbl_description = new QLabel(grb_description);
-        lbl_description->setObjectName(QString::fromUtf8("lbl_description"));
-        lbl_description->setGeometry(QRect(10, 25, 361, 81));
-        lbl_description->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-        lbl_description->setWordWrap(true);
-        bt_restoreDefaults = new QPushButton(KeyboardMapping);
-        bt_restoreDefaults->setObjectName(QString::fromUtf8("bt_restoreDefaults"));
-        bt_restoreDefaults->setGeometry(QRect(385, 15, 100, 32));
-        bt_restoreDefaults->setMinimumSize(QSize(100, 32));
-        grb_help = new QGroupBox(KeyboardMapping);
-        grb_help->setObjectName(QString::fromUtf8("grb_help"));
-        grb_help->setGeometry(QRect(530, 175, 381, 81));
-        grb_help->setStyleSheet(QString::fromUtf8("QGroupBox::title {\n"
-"	subcontrol-position: top center;\n"
-"}"));
-        lbl_help = new QLabel(grb_help);
-        lbl_help->setObjectName(QString::fromUtf8("lbl_help"));
-        lbl_help->setGeometry(QRect(10, 25, 361, 51));
-        lbl_help->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+
+        verticalLayout_10->addWidget(grb_keyboard);
+
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
         grb_newCommand = new QGroupBox(KeyboardMapping);
         grb_newCommand->setObjectName(QString::fromUtf8("grb_newCommand"));
-        grb_newCommand->setGeometry(QRect(5, 550, 496, 156));
         grb_newCommand->setStyleSheet(QString::fromUtf8("QGroupBox::title {\n"
 "	subcontrol-position: top center;\n"
 "}"));
-        cbx_group = new QComboBox(grb_newCommand);
-        cbx_group->setObjectName(QString::fromUtf8("cbx_group"));
-        cbx_group->setGeometry(QRect(95, 90, 176, 26));
-        tbx_descriptionCommand = new QLineEdit(grb_newCommand);
-        tbx_descriptionCommand->setObjectName(QString::fromUtf8("tbx_descriptionCommand"));
-        tbx_descriptionCommand->setGeometry(QRect(95, 60, 276, 22));
-        lbl_descriptionCommand = new QLabel(grb_newCommand);
-        lbl_descriptionCommand->setObjectName(QString::fromUtf8("lbl_descriptionCommand"));
-        lbl_descriptionCommand->setGeometry(QRect(10, 60, 81, 22));
-        lbl_descriptionCommand->setLayoutDirection(Qt::LeftToRight);
-        lbl_groupCommand = new QLabel(grb_newCommand);
-        lbl_groupCommand->setObjectName(QString::fromUtf8("lbl_groupCommand"));
-        lbl_groupCommand->setGeometry(QRect(10, 90, 81, 25));
-        lbl_groupCommand->setLayoutDirection(Qt::LeftToRight);
+        horizontalLayout_5 = new QHBoxLayout(grb_newCommand);
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         lbl_nameCommand = new QLabel(grb_newCommand);
         lbl_nameCommand->setObjectName(QString::fromUtf8("lbl_nameCommand"));
-        lbl_nameCommand->setGeometry(QRect(10, 30, 81, 22));
         lbl_nameCommand->setLayoutDirection(Qt::LeftToRight);
+
+        horizontalLayout_2->addWidget(lbl_nameCommand);
+
         tbx_nameCommand = new QLineEdit(grb_newCommand);
         tbx_nameCommand->setObjectName(QString::fromUtf8("tbx_nameCommand"));
-        tbx_nameCommand->setGeometry(QRect(95, 30, 276, 22));
+
+        horizontalLayout_2->addWidget(tbx_nameCommand);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_2);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        lbl_descriptionCommand = new QLabel(grb_newCommand);
+        lbl_descriptionCommand->setObjectName(QString::fromUtf8("lbl_descriptionCommand"));
+        lbl_descriptionCommand->setLayoutDirection(Qt::LeftToRight);
+
+        horizontalLayout_3->addWidget(lbl_descriptionCommand);
+
+        tbx_descriptionCommand = new QLineEdit(grb_newCommand);
+        tbx_descriptionCommand->setObjectName(QString::fromUtf8("tbx_descriptionCommand"));
+
+        horizontalLayout_3->addWidget(tbx_descriptionCommand);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_3);
+
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        lbl_groupCommand = new QLabel(grb_newCommand);
+        lbl_groupCommand->setObjectName(QString::fromUtf8("lbl_groupCommand"));
+        lbl_groupCommand->setLayoutDirection(Qt::LeftToRight);
+
+        horizontalLayout_4->addWidget(lbl_groupCommand);
+
+        cbx_group = new QComboBox(grb_newCommand);
+        cbx_group->setObjectName(QString::fromUtf8("cbx_group"));
+
+        horizontalLayout_4->addWidget(cbx_group);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_4);
+
+
+        horizontalLayout_5->addLayout(verticalLayout_2);
+
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         bt_newCommand = new QPushButton(grb_newCommand);
         bt_newCommand->setObjectName(QString::fromUtf8("bt_newCommand"));
-        bt_newCommand->setGeometry(QRect(385, 25, 100, 32));
-        bt_newCommand->setMinimumSize(QSize(100, 32));
+        bt_newCommand->setMinimumSize(QSize(85, 25));
+
+        verticalLayout->addWidget(bt_newCommand);
+
         bt_editCommand = new QPushButton(grb_newCommand);
         bt_editCommand->setObjectName(QString::fromUtf8("bt_editCommand"));
-        bt_editCommand->setGeometry(QRect(385, 60, 100, 32));
-        bt_editCommand->setMinimumSize(QSize(100, 32));
+        bt_editCommand->setMinimumSize(QSize(85, 25));
+
+        verticalLayout->addWidget(bt_editCommand);
+
         bt_deleteNewCommand = new QPushButton(grb_newCommand);
         bt_deleteNewCommand->setObjectName(QString::fromUtf8("bt_deleteNewCommand"));
-        bt_deleteNewCommand->setGeometry(QRect(385, 95, 100, 32));
-        bt_deleteNewCommand->setMinimumSize(QSize(100, 32));
+        bt_deleteNewCommand->setMinimumSize(QSize(85, 25));
+
+        verticalLayout->addWidget(bt_deleteNewCommand);
+
+
+        horizontalLayout_5->addLayout(verticalLayout);
+
+
+        horizontalLayout_7->addWidget(grb_newCommand);
+
+        grb_commandScript = new QGroupBox(KeyboardMapping);
+        grb_commandScript->setObjectName(QString::fromUtf8("grb_commandScript"));
+        grb_commandScript->setStyleSheet(QString::fromUtf8("QGroupBox::title {\n"
+"	subcontrol-position: top center;\n"
+"}"));
+        horizontalLayout_6 = new QHBoxLayout(grb_commandScript);
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        tbx_scriptEditor = new QTextEdit(grb_commandScript);
+        tbx_scriptEditor->setObjectName(QString::fromUtf8("tbx_scriptEditor"));
+        tbx_scriptEditor->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        tbx_scriptEditor->setLineWrapMode(QTextEdit::NoWrap);
+
+        horizontalLayout_6->addWidget(tbx_scriptEditor);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        bt_acceptScript = new QPushButton(grb_commandScript);
+        bt_acceptScript->setObjectName(QString::fromUtf8("bt_acceptScript"));
+        bt_acceptScript->setMinimumSize(QSize(85, 25));
+
+        verticalLayout_3->addWidget(bt_acceptScript);
+
+        bt_clearScript = new QPushButton(grb_commandScript);
+        bt_clearScript->setObjectName(QString::fromUtf8("bt_clearScript"));
+        bt_clearScript->setMinimumSize(QSize(85, 25));
+
+        verticalLayout_3->addWidget(bt_clearScript);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_3->addItem(verticalSpacer);
+
+
+        horizontalLayout_6->addLayout(verticalLayout_3);
+
+
+        horizontalLayout_7->addWidget(grb_commandScript);
+
+
+        verticalLayout_10->addLayout(horizontalLayout_7);
+
         QWidget::setTabOrder(cbx_presetShortcut, bt_exportKeyMap);
         QWidget::setTabOrder(bt_exportKeyMap, bt_restoreDefaults);
         QWidget::setTabOrder(bt_restoreDefaults, lv_group);
@@ -761,6 +929,41 @@ public:
     void retranslateUi(QDialog *KeyboardMapping)
     {
         KeyboardMapping->setWindowTitle(QApplication::translate("KeyboardMapping", "Keyboard_Mapping", 0, QApplication::UnicodeUTF8));
+        lbl_presetShortcut->setText(QApplication::translate("KeyboardMapping", "Preset Shortcut", 0, QApplication::UnicodeUTF8));
+        cbx_presetShortcut->clear();
+        cbx_presetShortcut->insertItems(0, QStringList()
+         << QApplication::translate("KeyboardMapping", "Neutron 3D", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("KeyboardMapping", "XSI", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("KeyboardMapping", "Maya", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("KeyboardMapping", "3DS Max", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("KeyboardMapping", "------------", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("KeyboardMapping", "Add Preset", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("KeyboardMapping", "Load Preset", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("KeyboardMapping", "Remove Preset", 0, QApplication::UnicodeUTF8)
+        );
+        bt_exportKeyMap->setText(QApplication::translate("KeyboardMapping", "Export Key Map", 0, QApplication::UnicodeUTF8));
+        bt_restoreDefaults->setText(QApplication::translate("KeyboardMapping", "Restore Defaults", 0, QApplication::UnicodeUTF8));
+        grb_comandList->setTitle(QString());
+        lbl_group->setText(QApplication::translate("KeyboardMapping", "Group:", 0, QApplication::UnicodeUTF8));
+        lbl_commands->setText(QApplication::translate("KeyboardMapping", "Commands:", 0, QApplication::UnicodeUTF8));
+        grb_description->setTitle(QApplication::translate("KeyboardMapping", "Description:", 0, QApplication::UnicodeUTF8));
+        lbl_description->setText(QApplication::translate("KeyboardMapping", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Lucida Grande, Segoe UI'; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Aqui vai a descri\303\247\303\243o do comando selecionado.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\">Poder\303\241 ser texto <span style=\" font-weight:600;\">formatado</span> e em multiplas linhas</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
+        grb_help->setTitle(QApplication::translate("KeyboardMapping", "Help:", 0, QApplication::UnicodeUTF8));
+        lbl_help->setText(QApplication::translate("KeyboardMapping", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Lucida Grande, Segoe UI'; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Hold command and drop in your prefered key.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\">For multiple keys first click on auxiliary key.</p></body></html>", 0, QApplication::UnicodeUTF8));
+        bt_ok->setText(QApplication::translate("KeyboardMapping", "OK", 0, QApplication::UnicodeUTF8));
+        bt_cancel->setText(QApplication::translate("KeyboardMapping", "Cancel", 0, QApplication::UnicodeUTF8));
+        bt_help->setText(QApplication::translate("KeyboardMapping", "Help", 0, QApplication::UnicodeUTF8));
         grb_keyboard->setTitle(QString());
         bt_f2->setText(QApplication::translate("KeyboardMapping", "F2", 0, QApplication::UnicodeUTF8));
         bt_f8->setText(QApplication::translate("KeyboardMapping", "F8", 0, QApplication::UnicodeUTF8));
@@ -886,50 +1089,10 @@ public:
         bt_g->setText(QApplication::translate("KeyboardMapping", "G", 0, QApplication::UnicodeUTF8));
         bt_pageDown->setText(QApplication::translate("KeyboardMapping", "Page\n"
 "Down", 0, QApplication::UnicodeUTF8));
-        grb_comandList->setTitle(QString());
-        lbl_group->setText(QApplication::translate("KeyboardMapping", "Group:", 0, QApplication::UnicodeUTF8));
-        lbl_commands->setText(QApplication::translate("KeyboardMapping", "Commands:", 0, QApplication::UnicodeUTF8));
-        grb_commandScript->setTitle(QApplication::translate("KeyboardMapping", "Command Script", 0, QApplication::UnicodeUTF8));
-        tbx_scriptEditor->setHtml(QApplication::translate("KeyboardMapping", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Lucida Grande, Segoe UI'; font-size:8pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
-        bt_acceptScript->setText(QApplication::translate("KeyboardMapping", "Accept", 0, QApplication::UnicodeUTF8));
-        bt_clearScript->setText(QApplication::translate("KeyboardMapping", "Clear", 0, QApplication::UnicodeUTF8));
-        bt_ok->setText(QApplication::translate("KeyboardMapping", "OK", 0, QApplication::UnicodeUTF8));
-        bt_cancel->setText(QApplication::translate("KeyboardMapping", "Cancel", 0, QApplication::UnicodeUTF8));
-        lbl_presetShortcut->setText(QApplication::translate("KeyboardMapping", "Preset Shortcut", 0, QApplication::UnicodeUTF8));
-        cbx_presetShortcut->clear();
-        cbx_presetShortcut->insertItems(0, QStringList()
-         << QApplication::translate("KeyboardMapping", "Neutron 3D", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("KeyboardMapping", "XSI", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("KeyboardMapping", "Maya", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("KeyboardMapping", "3DS Max", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("KeyboardMapping", "------------", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("KeyboardMapping", "Add Preset", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("KeyboardMapping", "Load Preset", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("KeyboardMapping", "Remove Preset", 0, QApplication::UnicodeUTF8)
-        );
-        bt_exportKeyMap->setText(QApplication::translate("KeyboardMapping", "Export Key Map", 0, QApplication::UnicodeUTF8));
-        bt_help->setText(QApplication::translate("KeyboardMapping", "Help", 0, QApplication::UnicodeUTF8));
-        grb_description->setTitle(QApplication::translate("KeyboardMapping", "Description:", 0, QApplication::UnicodeUTF8));
-        lbl_description->setText(QApplication::translate("KeyboardMapping", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Lucida Grande, Segoe UI'; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Aqui vai a descri\303\247\303\243o do comando selecionado.</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\">Poder\303\241 ser texto <span style=\" font-weight:600;\">formatado</span> e em multiplas linhas</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
-        bt_restoreDefaults->setText(QApplication::translate("KeyboardMapping", "Restore Defaults", 0, QApplication::UnicodeUTF8));
-        grb_help->setTitle(QApplication::translate("KeyboardMapping", "Help:", 0, QApplication::UnicodeUTF8));
-        lbl_help->setText(QApplication::translate("KeyboardMapping", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Lucida Grande, Segoe UI'; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Hold command and drop in your prefered key.</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\">For multiple keys first click on auxiliary key.</p></body></html>", 0, QApplication::UnicodeUTF8));
         grb_newCommand->setTitle(QApplication::translate("KeyboardMapping", "Create New Command", 0, QApplication::UnicodeUTF8));
+        lbl_nameCommand->setText(QApplication::translate("KeyboardMapping", "Name: ...............", 0, QApplication::UnicodeUTF8));
+        lbl_descriptionCommand->setText(QApplication::translate("KeyboardMapping", "Description: ......", 0, QApplication::UnicodeUTF8));
+        lbl_groupCommand->setText(QApplication::translate("KeyboardMapping", "Group: ...............", 0, QApplication::UnicodeUTF8));
         cbx_group->clear();
         cbx_group->insertItems(0, QStringList()
          << QApplication::translate("KeyboardMapping", "Polygons", 0, QApplication::UnicodeUTF8)
@@ -939,12 +1102,17 @@ public:
          << QApplication::translate("KeyboardMapping", "Add Group", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("KeyboardMapping", "Remove Group", 0, QApplication::UnicodeUTF8)
         );
-        lbl_descriptionCommand->setText(QApplication::translate("KeyboardMapping", "Description: ......", 0, QApplication::UnicodeUTF8));
-        lbl_groupCommand->setText(QApplication::translate("KeyboardMapping", "Group: ...............", 0, QApplication::UnicodeUTF8));
-        lbl_nameCommand->setText(QApplication::translate("KeyboardMapping", "Name: ...............", 0, QApplication::UnicodeUTF8));
         bt_newCommand->setText(QApplication::translate("KeyboardMapping", "New", 0, QApplication::UnicodeUTF8));
         bt_editCommand->setText(QApplication::translate("KeyboardMapping", "Edit", 0, QApplication::UnicodeUTF8));
         bt_deleteNewCommand->setText(QApplication::translate("KeyboardMapping", "Delete", 0, QApplication::UnicodeUTF8));
+        grb_commandScript->setTitle(QApplication::translate("KeyboardMapping", "Command Script", 0, QApplication::UnicodeUTF8));
+        tbx_scriptEditor->setHtml(QApplication::translate("KeyboardMapping", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Lucida Grande, Segoe UI'; font-size:8pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
+        bt_acceptScript->setText(QApplication::translate("KeyboardMapping", "Accept", 0, QApplication::UnicodeUTF8));
+        bt_clearScript->setText(QApplication::translate("KeyboardMapping", "Clear", 0, QApplication::UnicodeUTF8));
         Q_UNUSED(KeyboardMapping);
     } // retranslateUi
 
