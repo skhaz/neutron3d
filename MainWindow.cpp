@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget* parent)
     setWindowTitle(tr("Neutron 3D v 0.0.1 - \\project/neutron/scene_001.nkb "));
 	setDockOptions(QMainWindow::AnimatedDocks | QMainWindow::AllowTabbedDocks);
 	setDockNestingEnabled ( true );
+	
     
 	perspectiveSlot();
 	
@@ -61,6 +62,7 @@ void MainWindow::createMenus()
 	fileMenu->addAction(recentProjectAction);
 	fileMenu->addSeparator();
 	fileMenu->addAction(exitAction); 
+	
 	
 	// ************************************************
 	//	Edit Menu
