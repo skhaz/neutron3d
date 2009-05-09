@@ -2,9 +2,7 @@
 
 
 #include "glView.h"
-#include "Light.h"
 
-Light *mainLight = NULL;
 
 GLView::GLView(QWidget *parent)
 : QGLWidget(parent)
@@ -53,10 +51,6 @@ void GLView::initializeGL()
 	glEnable(GL_BLEND);
 	
 	glPointSize(4);
-	
-
-	
-	Light::Initialize();
 	
 	
 }
@@ -188,16 +182,11 @@ GLuint GLView::makeObject()
 	GLuint list = glGenLists(1);
 	glNewList(list, GL_COMPILE);
 	
-	mainLight = new Light(SPOT_LIGHT);
-	mainLight->setPosition(0, 2, 0);
-	mainLight->setSpotDirection(0, -1, 0);
-	mainLight->setAmbient(0.5, 0.5, 0.5, 0.5);
-	mainLight->setDiffuse(2.0, 2.0, 2.0, 1.0);
-	
-	//dispInfo.drawGrid();
+
+	dispInfo.drawGrid();
 	dispInfo.drawOrigin();
-	//primitive.cube();
-	//primitive.circle();
+	primitive.cube();
+	primitive.circle();
 	
 	glEndList();
 	return list;
