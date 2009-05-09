@@ -33,7 +33,6 @@ SOURCES += \
 	gl/glView.cpp \
 	gl/glDisplayInfo.cpp \ 
 	gl/primitives.cpp \
-	math/vector2.cpp \
 	math/vector3.cpp \
 	math/point.cpp \
 	
@@ -53,7 +52,6 @@ HEADERS += \
 	gl/glView.h \
 	gl/glDisplayInfo.h \ 
 	gl/primitives.h \
-	math/vector2.h \
 	math/vector3.h \
 	math/point.h \
 
