@@ -2,9 +2,7 @@
 #define _GLVIEW_H
 
 #include <QGLWidget>
-#include "Primitives.h"
 
-class Primitives;
 
 class GLView : public QGLWidget
 {
@@ -30,7 +28,6 @@ protected:
 		
 		
 private:
-	Primitives primitive;
 		
 	GLfloat angleView;
 	GLfloat nearPlane;
