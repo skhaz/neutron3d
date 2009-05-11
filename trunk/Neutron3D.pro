@@ -31,8 +31,6 @@ SOURCES += \
 	PMSettings.cpp \
 	gl/glPanel.cpp \
 	gl/glView.cpp \
-	gl/glDisplayInfo.cpp \ 
-	gl/primitives.cpp \
 	math/vector3.cpp \
 	math/point.cpp \
 	
@@ -49,9 +47,7 @@ HEADERS += \
 	PMLogic.h \
 	PMSettings.h \
 	gl/glPanel.h \
-	gl/glView.h \
-	gl/glDisplayInfo.h \ 
-	gl/primitives.h \
+	gl/glView.h \ 
 	math/vector3.h \
 	math/point.h \
 

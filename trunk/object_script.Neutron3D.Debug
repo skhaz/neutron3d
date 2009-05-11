@@ -12,8 +12,6 @@ INPUT(
 ./temp\obj\PMSettings.o
 ./temp\obj\glPanel.o
 ./temp\obj\glView.o
-./temp\obj\glDisplayInfo.o
-./temp\obj\primitives.o
 ./temp\obj\vector3.o
 ./temp\obj\point.o
 ./temp\obj\moc_KeyboardMapping.o
